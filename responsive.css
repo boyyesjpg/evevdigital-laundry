@@ -1,0 +1,389 @@
+/* ==========================================================================
+   EVEVLAUNDRY — RESPONSIVE CSS & MOBILE ERGONOMICS (360px - 414px+)
+   Zero Horizontal Overflow • Thumb-Friendly CTA (>= 48px) • Anti-Truncation
+   ========================================================================== */
+
+/* Global Box Sizing & Anti Horizontal Overflow */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+img,
+picture,
+svg,
+video,
+iframe {
+  max-width: 100%;
+}
+
+/* ==========================================================================
+   OVERRIDE LEGACY TRUNCATION / CLIPPING RULES (GLOBAL)
+   Memastikan nama layanan, menu, harga & deskripsi 100% terbaca utuh
+   ========================================================================== */
+.evev-service-card,
+.evev-service-body,
+.evev-price-card,
+.evev-price-features,
+.evev-price-features li,
+.evev-price-features li span,
+.evev-pillar-card,
+.service-box,
+.service-card,
+.service-item,
+.service-grid,
+.price-card,
+.price-box,
+.th-product,
+.product-content,
+.box-title,
+.product-title,
+.evev-price-title,
+.evev-price-amount,
+.evev-price-amount .nominal,
+.evev-price-amount .unit,
+.evev-price-meta,
+.service-desc,
+.price,
+.sec-title,
+.hero-title {
+  max-width: none !important;
+  overflow: visible !important;
+  white-space: normal !important;
+  text-overflow: clip !important;
+  -webkit-line-clamp: unset !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+}
+
+/* Preserve clean rounded-corner clipping ONLY on image containers */
+.evev-service-thumb,
+.product-img,
+.blog-img,
+.team-img,
+.img-box1 .img1,
+.img-box1 .img2,
+.img-box2 .img1,
+.img-box2 .img2,
+.faq-img1 .img1,
+.faq-img2,
+.appointment-img1 .img1,
+.contact-map {
+  overflow: hidden !important;
+}
+
+/* Uniform thumb-friendly buttons across all viewports */
+.th-btn,
+.theme-btn,
+.btn,
+button[type="submit"],
+a.th-btn,
+a.theme-btn {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  touch-action: manipulation;
+  line-height: 1.3;
+  text-align: center;
+  white-space: normal;
+}
+
+/* Ensure footer leaves safe space for fixed template switcher bar */
+footer.footer-wrapper {
+  padding-bottom: 84px !important;
+}
+
+/* ==========================================================================
+   TABLET & MOBILE BREAKPOINT (<= 767px)
+   ========================================================================== */
+@media only screen and (max-width: 767px) {
+  html,
+  body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+
+  section,
+  header,
+  footer,
+  .th-hero-wrapper,
+  .container,
+  .th-container {
+    max-width: 100vw !important;
+  }
+
+  .container,
+  .th-container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* Prevent Bootstrap negative margins causing horizontal scroll */
+  .row {
+    margin-left: -8px !important;
+    margin-right: -8px !important;
+  }
+  .row > * {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  /* Compact vertical rhythm on mobile */
+  .space {
+    padding-top: 56px !important;
+    padding-bottom: 56px !important;
+  }
+  .space-top {
+    padding-top: 56px !important;
+  }
+  .space-bottom {
+    padding-bottom: 56px !important;
+  }
+
+  /* Header & Mobile Toggle Ergonomics */
+  .th-header .header-top {
+    padding: 8px 0 !important;
+  }
+  .th-header .menu-area {
+    padding: 10px 0 !important;
+  }
+  .th-menu-toggle {
+    min-width: 48px !important;
+    min-height: 48px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 10px !important;
+  }
+
+  /* Hero Readability on Mobile */
+  .hero-1 .hero-inner,
+  .hero-2 .hero-inner,
+  .hero-3 .hero-inner {
+    padding-top: 90px !important;
+    padding-bottom: 90px !important;
+    min-height: 520px !important;
+  }
+  .hero-title,
+  .hero-1 .hero-title,
+  .hero-2 .hero-title,
+  .hero-3 .hero-title {
+    font-size: 28px !important;
+    line-height: 1.24 !important;
+    margin-bottom: 14px !important;
+  }
+  .hero-text,
+  .hero-1 .hero-text,
+  .hero-2 .hero-text,
+  .hero-3 .hero-text {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 22px !important;
+  }
+  .sec-title {
+    font-size: 24px !important;
+    line-height: 1.28 !important;
+  }
+
+  /* Stack Hero & CTA button groups full width for effortless thumb taps */
+  .hero-1 .btn-group,
+  .hero-2 .btn-group,
+  .hero-3 .btn-group,
+  .cta-group {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    width: 100% !important;
+  }
+  .hero-1 .btn-group .th-btn,
+  .hero-2 .btn-group .th-btn,
+  .hero-3 .btn-group .th-btn,
+  .cta-group .th-btn {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  /* Checklist single column on small mobile */
+  .checklist.list-two-column ul {
+    grid-template-columns: 1fr !important;
+    columns: 1 !important;
+    gap: 8px !important;
+  }
+
+  /* Counter cards clean Bento layout */
+  .counter-card-wrap {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    padding: 20px 16px !important;
+  }
+  .counter-card-wrap .divider {
+    display: none !important;
+  }
+
+  /* Forms & Inputs — 16px font prevents iOS auto-zoom */
+  input.form-control,
+  select.form-select,
+  textarea.form-control {
+    min-height: 48px !important;
+    font-size: 16px !important;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+  }
+
+  /* Accordion buttons thumb-friendly */
+  .accordion-button {
+    min-height: 52px !important;
+    font-size: 15px !important;
+    line-height: 1.45 !important;
+    padding: 14px 16px !important;
+    text-align: left !important;
+  }
+
+  /* Hide slider arrows on mobile so they never overlap text */
+  .th-hero-wrapper .icon-box,
+  .slider-arrow {
+    display: none !important;
+  }
+}
+
+/* ==========================================================================
+   ERGONOMIC SMALL MOBILE TARGET (360px - 480px, incl. 360px - 414px)
+   ========================================================================== */
+@media only screen and (max-width: 480px) {
+  html,
+  body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+
+  /* Thumb-friendly CTA minimum height 48px */
+  .theme-btn,
+  .th-btn,
+  .btn,
+  a.theme-btn,
+  a.th-btn,
+  button[type="submit"] {
+    min-height: 48px !important;
+    padding: 12px 18px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 14.5px !important;
+    font-weight: 700 !important;
+    touch-action: manipulation !important;
+  }
+
+  /* Bento-style compact card padding for 360px - 414px screens */
+  .evev-service-body,
+  .evev-price-card,
+  .evev-pillar-card,
+  .appointment-area-wrapper,
+  .testi-area-wrapper {
+    padding: 20px 18px !important;
+  }
+
+  .evev-service-thumb {
+    height: 196px !important;
+  }
+
+  .evev-price-title {
+    font-size: 19px !important;
+  }
+
+  .evev-price-amount .nominal {
+    font-size: 28px !important;
+  }
+
+  .evev-price-features li {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+
+  .brand-logo-fallback {
+    font-size: 20px !important;
+  }
+
+  /* Zero-collision Floating Controls on 360px - 414px */
+  .floating-wa-btn {
+    bottom: 16px !important;
+    right: 14px !important;
+    width: 52px !important;
+    height: 52px !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+  }
+
+  .floating-theme-btn,
+  .theme-toggle-btn.floating-theme-btn {
+    bottom: 78px !important;
+    right: 16px !important;
+    width: 48px !important;
+    height: 48px !important;
+  }
+
+  #evev-template-switcher {
+    bottom: 16px !important;
+    left: 12px !important;
+    right: auto !important;
+    transform: none !important;
+    padding: 6px 8px !important;
+    gap: 4px !important;
+    max-width: calc(100vw - 82px) !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  #evev-template-switcher::-webkit-scrollbar {
+    display: none;
+  }
+
+  #evev-template-switcher > span {
+    display: none !important;
+  }
+
+  #evev-template-switcher .switcher-pill {
+    min-height: 38px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 6px 10px !important;
+    font-size: 11.5px !important;
+    white-space: nowrap !important;
+  }
+
+  footer.footer-wrapper {
+    padding-bottom: 96px !important;
+  }
+}
+
+/* Extra-narrow 360px fine-tuning */
+@media only screen and (max-width: 375px) {
+  .hero-title,
+  .hero-1 .hero-title,
+  .hero-2 .hero-title,
+  .hero-3 .hero-title {
+    font-size: 25px !important;
+  }
+  .sec-title {
+    font-size: 22px !important;
+  }
+  .evev-price-amount .nominal {
+    font-size: 26px !important;
+  }
+  #evev-template-switcher .switcher-pill {
+    padding: 6px 8px !important;
+    font-size: 11px !important;
+  }
+}

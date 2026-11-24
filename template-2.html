@@ -1,1468 +1,1326 @@
 <!doctype html>
-<html class="no-js" lang="id">
+<html class="no-js" lang="id" data-theme="light">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>evevlaundry | Layanan Premium Dry Cleaning & Wet Cleaning Jas, Gaun Pesta & Bedcover Jakarta</title>
-    <meta name="author" content="Laun">
-    <meta name="description" content="Spesialis dry cleaning jas formal, kebaya payet, gaun pengantin & bedcover king size Jakarta Timur. Pelarut ramah serat kain, garansi anti-rusak, gratis pick-up.">
-    <meta name="keywords" content="Laun - Laundry Service & Dry Cleaning HTML Template">
+    <title>evevlaundry | Layanan Premium Dry Cleaning &amp; Wet Cleaning Jas, Gaun Pesta &amp; Bedcover Jakarta Timur</title>
+    <meta name="author" content="evevlaundry">
+    <meta name="description" content="Spesialis dry cleaning jas formal, wet cleaning kebaya payet, gaun pengantin, jaket kulit &amp; bedcover mewah di Jakarta Timur. Pelarut ramah serat eco-solvent, garansi anti-susut, gratis pick-up radius 5 km.">
+    <meta name="keywords" content="dry cleaning jakarta timur, cuci jas formal jatinegara, cuci kebaya payet, laundry gaun pengantin, wet cleaning batik sutra, evevlaundry">
     <meta name="robots" content="INDEX,FOLLOW">
+
+    <!-- Anti-FOUC Script (Aktif Sebelum CSS Dimuat) -->
+    <script>
+        (function () {
+            try {
+                var saved = localStorage.getItem("evev_theme_preference") || localStorage.getItem("evev_theme");
+                var theme = (saved === "dark" || saved === "light")
+                    ? saved
+                    : (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+                document.documentElement.classList.add("theme-preload");
+                document.documentElement.setAttribute("data-theme", theme);
+                document.documentElement.style.colorScheme = theme;
+            } catch (e) {}
+        })();
+    </script>
 
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Favicons - Place favicon.ico in the root directory -->
-    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicons/apple-icon-152x152.png">
+    <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicons/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicons/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
     <link rel="manifest" href="assets/img/favicons/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#075985">
 
-    <!--==============================
-	  Google Fonts
-	============================== -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800;900&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 
-
-    <!--==============================
-	    All CSS File
-	============================== -->
-    <!-- Bootstrap -->
+    <!-- All CSS Files -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <!-- Fontawesome Icon -->
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-    <!-- Magnific Popup -->
     <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
-    <!-- Swiper Js -->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-    <!-- Theme Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="theme-toggle.css">
+    <link rel="stylesheet" href="responsive.css">
 
+    <!-- Variant 2 Dry Cleaning Precision Layout & Contrast Safeguards -->
+    <style>
+        .brand-logo-fallback {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Archivo', sans-serif;
+            font-weight: 800;
+            font-size: 24px;
+            letter-spacing: -0.5px;
+            color: #075985;
+            text-decoration: none;
+        }
+        [data-theme="dark"] .brand-logo-fallback,
+        .footer-wrapper .brand-logo-fallback {
+            color: #7DD3FC;
+        }
+
+        /* Hero Scrim for > 7:1 White Text Legibility */
+        .hero-2 .th-hero-bg {
+            position: relative;
+            background-size: cover !important;
+            background-position: center !important;
+        }
+        .hero-2 .th-hero-bg::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(95deg, rgba(7, 13, 25, 0.9) 0%, rgba(7, 13, 25, 0.72) 55%, rgba(7, 13, 25, 0.4) 100%);
+            z-index: 1;
+        }
+        .hero-2 .th-hero-bg > img.hero-photo-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+        .hero-2 .hero-style2 {
+            position: relative;
+            z-index: 3;
+        }
+
+        /* Live Open/Close Badge */
+        .live-status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: 700;
+            background: rgba(125, 211, 252, 0.16);
+            color: #E0F2FE !important;
+        }
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .status-dot.is-open { background: #4ADE80; box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.28); }
+        .status-dot.is-closed { background: #F87171; }
+
+        /* 3 Pillars Top Cards */
+        .evev-pillar-card {
+            background: #FFFFFF;
+            border: 1px solid rgba(15, 23, 42, 0.1);
+            border-radius: 18px;
+            padding: 26px 24px;
+            height: 100%;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+        }
+        [data-theme="dark"] .evev-pillar-card {
+            background: #131C2E;
+            border-color: rgba(248, 250, 252, 0.14);
+        }
+        .evev-pillar-icon {
+            width: 54px;
+            height: 54px;
+            border-radius: 14px;
+            background: #E0F2FE;
+            color: #0C4A6E;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+        [data-theme="dark"] .evev-pillar-icon {
+            background: rgba(125, 211, 252, 0.16);
+            color: #7DD3FC;
+        }
+
+        /* Symmetric Service & Price Cards — 100% Readable, Zero Clipping */
+        .evev-service-card {
+            background: #FFFFFF;
+            border: 1px solid rgba(15, 23, 42, 0.1);
+            border-radius: 18px;
+            overflow: visible;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            box-shadow: 0 8px 26px rgba(15, 23, 42, 0.06);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .evev-service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 36px rgba(7, 89, 133, 0.16);
+        }
+        [data-theme="dark"] .evev-service-card {
+            background: #131C2E;
+            border-color: rgba(248, 250, 252, 0.14);
+        }
+        .evev-service-thumb {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+            border-radius: 18px 18px 0 0;
+        }
+        .evev-service-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        .evev-service-card:hover .evev-service-thumb img {
+            transform: scale(1.05);
+        }
+        .evev-service-badge {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: #075985;
+            color: #FFFFFF !important;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 999px;
+            letter-spacing: 0.3px;
+        }
+        .evev-service-price-pill {
+            position: absolute;
+            bottom: 14px;
+            right: 14px;
+            background: rgba(9, 13, 22, 0.92);
+            color: #7DD3FC !important;
+            font-size: 14px;
+            font-weight: 800;
+            padding: 6px 14px;
+            border-radius: 10px;
+        }
+        .evev-service-body {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 auto;
+        }
+        .evev-service-body .box-title {
+            font-size: 20px;
+            line-height: 1.35;
+            margin-bottom: 10px;
+            white-space: normal;
+            overflow: visible;
+        }
+        .evev-service-body .service-desc {
+            font-size: 14.5px;
+            line-height: 1.65;
+            margin-bottom: 18px;
+            white-space: normal;
+            overflow: visible;
+        }
+
+        /* Symmetric Price List Grid (100% Terlihat & Tajam) */
+        .evev-price-card {
+            background: #FFFFFF;
+            border: 1.5px solid rgba(15, 23, 42, 0.12);
+            border-radius: 20px;
+            padding: 28px 24px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            overflow: visible !important;
+            box-shadow: 0 8px 26px rgba(15, 23, 42, 0.06);
+            transition: transform 0.25s ease, border-color 0.25s ease;
+        }
+        .evev-price-card:hover {
+            transform: translateY(-5px);
+            border-color: #075985;
+        }
+        .evev-price-card.is-popular {
+            border: 2px solid #075985;
+            box-shadow: 0 16px 38px rgba(7, 89, 133, 0.16);
+        }
+        [data-theme="dark"] .evev-price-card {
+            background: #131C2E;
+            border-color: rgba(248, 250, 252, 0.15);
+        }
+        [data-theme="dark"] .evev-price-card.is-popular {
+            border-color: #7DD3FC;
+        }
+        .evev-price-badge {
+            display: inline-block;
+            align-self: flex-start;
+            background: #E0F2FE;
+            color: #0C4A6E !important;
+            font-size: 12px;
+            font-weight: 800;
+            padding: 5px 12px;
+            border-radius: 999px;
+            margin-bottom: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+        .evev-price-card.is-popular .evev-price-badge {
+            background: #075985;
+            color: #FFFFFF !important;
+        }
+        [data-theme="dark"] .evev-price-badge {
+            background: rgba(125, 211, 252, 0.18);
+            color: #BAE6FD !important;
+        }
+        [data-theme="dark"] .evev-price-card.is-popular .evev-price-badge {
+            background: #7DD3FC;
+            color: #090D16 !important;
+        }
+        .evev-price-title {
+            font-size: 21px;
+            font-weight: 800;
+            line-height: 1.3;
+            margin-bottom: 10px;
+            white-space: normal;
+            overflow: visible;
+        }
+        .evev-price-amount {
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+        .evev-price-amount .nominal {
+            font-size: 31px;
+            font-weight: 900;
+            color: #075985;
+            line-height: 1.15;
+        }
+        [data-theme="dark"] .evev-price-amount .nominal {
+            color: #7DD3FC;
+        }
+        .evev-price-amount .unit {
+            font-size: 15px;
+            font-weight: 700;
+            color: #334155;
+        }
+        [data-theme="dark"] .evev-price-amount .unit {
+            color: #CBD5E1 !important;
+        }
+        .evev-price-meta {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: #0F5132 !important;
+            background: #ECFDF5;
+            padding: 6px 12px;
+            border-radius: 8px;
+            margin-bottom: 18px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            align-self: flex-start;
+        }
+        [data-theme="dark"] .evev-price-meta {
+            color: #A7F3D0 !important;
+            background: rgba(16, 185, 129, 0.16);
+        }
+        .evev-price-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 24px 0;
+            flex: 1 1 auto;
+        }
+        .evev-price-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 14.5px;
+            line-height: 1.55;
+            margin-bottom: 10px;
+            white-space: normal;
+            overflow: visible;
+        }
+        .evev-price-features li i {
+            color: #15803D;
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+        [data-theme="dark"] .evev-price-features li i {
+            color: #4ADE80;
+        }
+        .evev-price-note {
+            background: #E0F2FE;
+            color: #0C4A6E;
+            border: 1.5px dashed #075985;
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin-top: 32px;
+            text-align: center;
+            font-size: 14.5px;
+            line-height: 1.65;
+            font-weight: 500;
+        }
+        [data-theme="dark"] .evev-price-note {
+            background: rgba(125, 211, 252, 0.1);
+            color: #E2E8F0;
+            border-color: rgba(125, 211, 252, 0.45);
+        }
+
+        /* Consistent Image Proportions */
+        .img-box2 .img1 img { width: 100%; height: 420px; object-fit: cover; border-radius: 18px; }
+        .img-box2 .img2 img { width: 100%; height: 220px; object-fit: cover; border-radius: 14px; }
+        .team-box.style2 .team-img img { width: 100%; height: 320px; object-fit: cover; border-radius: 14px; }
+        .testi-box .testi-box_author img { width: 64px; height: 64px; object-fit: cover; border-radius: 50%; }
+        .testi-box .testi-box_image img { width: 100%; height: 180px; object-fit: cover; border-radius: 12px; margin-top: 14px; }
+        .blog-box .blog-img img { width: 100%; height: 230px; object-fit: cover; border-radius: 14px 14px 0 0; }
+        .faq-img2 img { width: 100%; height: 340px; object-fit: cover; border-radius: 18px; }
+        .appointment-img1 .img1 img { width: 100%; height: 520px; object-fit: cover; border-radius: 20px; }
+        .recent-post .media-img img { width: 80px; height: 80px; object-fit: cover; border-radius: 10px; }
+
+        /* Counter Strip High Contrast */
+        .evev-counter-strip {
+            background: #075985;
+            border-radius: 20px;
+            padding: 36px 28px;
+            color: #FFFFFF;
+        }
+        .evev-counter-strip h2,
+        .evev-counter-strip p,
+        .evev-counter-strip span {
+            color: #FFFFFF !important;
+        }
+        [data-theme="dark"] .evev-counter-strip {
+            background: #0C4A6E;
+            border: 1px solid rgba(125, 211, 252, 0.3);
+        }
+
+        /* Floating Controls Positioning */
+        .floating-theme-btn {
+            position: fixed;
+            bottom: 92px;
+            right: 26px;
+            z-index: 9998;
+            width: 48px;
+            height: 48px;
+        }
+        #evev-template-switcher {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 9997;
+            background: rgba(9, 13, 22, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 8px 16px;
+            border-radius: 999px;
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid rgba(248, 250, 252, 0.18);
+        }
+        #evev-template-switcher .switcher-pill {
+            color: #F8FAFC !important;
+            text-decoration: none;
+            font-size: 12.5px;
+            font-weight: 700;
+            padding: 6px 12px;
+            border-radius: 999px;
+            transition: background 0.2s ease;
+            white-space: nowrap;
+        }
+        #evev-template-switcher .switcher-pill.active,
+        #evev-template-switcher .switcher-pill:hover {
+            background: #075985;
+            color: #FFFFFF !important;
+        }
+
+        @media (max-width: 767px) {
+            .floating-theme-btn {
+                bottom: 84px;
+                right: 16px;
+            }
+            #evev-template-switcher {
+                left: 12px;
+                transform: none;
+                bottom: 18px;
+                max-width: calc(100vw - 90px) !important;
+                overflow-x: auto;
+            }
+            .img-box2 .img1 img { height: 280px; }
+            .appointment-img1 .img1 img { height: 280px; margin-top: 24px; }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!--[if lte IE 9]>
-    	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  	<![endif]-->
-
-
-    <!--********************************
-   		Code Start From Here 
-	******************************** -->
-
-    <!--==============================
-     Preloader
-  ==============================-->
-    <div class="preloader ">
-        <button class="th-btn style2 preloaderCls">Tutup Preloader </button>
+    <!-- Preloader -->
+    <div class="preloader">
+        <button class="th-btn style2 preloaderCls">Tutup Preloader</button>
         <div class="preloader-inner">
             <div class="loader">
                 <div class="rot"></div>
-                <img src="assets/img/logo-white.svg" alt="Laun">
-            </div>
-        </div>
-    </div> <!--==============================
-    Sidemenu
-============================== -->
-    <div class="sidemenu-wrapper shopping-cart ">
-        <div class="sidemenu-content">
-            <button class="closeButton sideMenuCls"><i class="far fa-times"></i></button>
-            <div class="widget woocommerce widget_shopping_cart">
-                <h3 class="widget_title">Keranjang Layanan</h3>
-                <div class="widget_shopping_cart_content">
-                    <ul class="woocommerce-mini-cart cart_list product_list_widget ">
-                        <li class="woocommerce-mini-cart-item mini_cart_item">
-                            <a href="#" class="remove remove_from_cart_button"><i class="far fa-times"></i></a>
-                            <a href="#"><img src="assets/img/product/product_thumb_1_1.jpg" alt="Cart Image">Laundry Surf Excel</a>
-                            <span class="quantity">1 Ã—
-                                <span class="woocommerce-Price-amount amount">
-                                    <span class="woocommerce-Price-currencySymbol">$</span>45</span>
-                            </span>
-                        </li>
-                        <li class="woocommerce-mini-cart-item mini_cart_item">
-                            <a href="#" class="remove remove_from_cart_button"><i class="far fa-times"></i></a>
-                            <a href="#"><img src="assets/img/product/product_thumb_1_2.jpg" alt="Cart Image">Tide Fresh Coral Blast</a>
-                            <span class="quantity">1 Ã—
-                                <span class="woocommerce-Price-amount amount">
-                                    <span class="woocommerce-Price-currencySymbol">$</span>20</span>
-                            </span>
-                        </li>
-                        <li class="woocommerce-mini-cart-item mini_cart_item">
-                            <a href="#" class="remove remove_from_cart_button"><i class="far fa-times"></i></a>
-                            <a href="#"><img src="assets/img/product/product_thumb_1_3.jpg" alt="Cart Image">Laundry detergent Stain</a>
-                            <span class="quantity">1 Ã—
-                                <span class="woocommerce-Price-amount amount">
-                                    <span class="woocommerce-Price-currencySymbol">$</span>35</span>
-                            </span>
-                        </li>
-                        <li class="woocommerce-mini-cart-item mini_cart_item">
-                            <a href="#" class="remove remove_from_cart_button"><i class="far fa-times"></i></a>
-                            <a href="#"><img src="assets/img/product/product_thumb_1_4.jpg" alt="Cart Image">Surf Dishwashing liquid</a>
-                            <span class="quantity">1 Ã—
-                                <span class="woocommerce-Price-amount amount">
-                                    <span class="woocommerce-Price-currencySymbol">$</span>40</span>
-                            </span>
-                        </li>
-                        <li class="woocommerce-mini-cart-item mini_cart_item">
-                            <a href="#" class="remove remove_from_cart_button"><i class="far fa-times"></i></a>
-                            <a href="#"><img src="assets/img/product/product_thumb_1_5.jpg" alt="Cart Image">Persil Detergent Washing</a>
-                            <span class="quantity">1 Ã—
-                                <span class="woocommerce-Price-amount amount">
-                                    <span class="woocommerce-Price-currencySymbol">$</span>35</span>
-                            </span>
-                        </li>
-                    </ul>
-                    <p class="woocommerce-mini-cart__total total">
-                        <strong>Subtotal:</strong>
-                        <span class="woocommerce-Price-amount amount">
-                            <span class="woocommerce-Price-currencySymbol">$</span>65</span>
-                    </p>
-                    <p class="woocommerce-mini-cart__buttons buttons">
-                        <a href="#layanan" class="th-btn wc-forward">Lihat Keranjang</a>
-                        <a href="#layanan" class="th-btn checkout wc-forward">Selesaikan Pesanan</a>
-                    </p>
-                </div>
+                <img src="assets/img/logo-white.svg" alt="Logo evevlaundry Dry Cleaning" loading="lazy" onerror="this.style.display='none';">
             </div>
         </div>
     </div>
+
+    <!-- Popup Search -->
     <div class="popup-search-box">
-        <button class="searchClose"><i class="fas fa-times"></i></button>
-        <form action="#">
-            <input type="text" placeholder="What are you looking for?">
-            <button type="submit"><i class="fas fa-search"></i></button>
+        <button class="searchClose" aria-label="Tutup Pencarian"><i class="fas fa-times"></i></button>
+        <form action="#harga">
+            <input type="text" placeholder="Cari layanan (mis. dry clean jas, kebaya, gaun, bedcover)...">
+            <button type="submit" aria-label="Cari"><i class="fas fa-search"></i></button>
         </form>
-    </div><!--==============================
-    Mobile Menu
-  ============================== -->
+    </div>
+
+    <!-- Mobile Menu -->
     <div class="th-menu-wrapper">
         <div class="th-menu-area text-center">
-            <button class="th-menu-toggle"><i class="fas fa-times"></i></button>
+            <button class="th-menu-toggle" aria-label="Tutup Menu Mobile"><i class="fas fa-times"></i></button>
             <div class="mobile-logo">
-                <a href="#layanan"><img src="assets/img/logo.svg" alt="Laun"></a>
+                <a href="template-2.html" class="brand-logo-fallback">
+                    <img src="assets/img/logo.svg" alt="Logo evevlaundry" loading="lazy" onerror="this.outerHTML='<span><i class=\'fas fa-sparkles\'></i> evevlaundry</span>';">
+                </a>
             </div>
             <div class="th-mobile-menu">
                 <ul>
-                    <li class="menu-item-has-children">
-                        <a href="#layanan">Home</a>
-                        <ul class="sub-menu">
-                            <li><a href="#layanan">Laundry Services</a></li>
-                            <li><a href="#layanan">Home Dry Cleaning</a></li>
-                            <li><a href="#layanan">Laundry & Dry Services</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#tentang">Tentang Kami</a></li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Service</a>
-                        <ul class="sub-menu">
-                            <li><a href="#layanan">Service</a></li>
-                            <li><a href="#layanan">Service Details</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Pages</a>
-                        <ul class="sub-menu">
-                            <li class="menu-item-has-children">
-                                <a href="#">Shop</a>
-                                <ul class="sub-menu">
-                                    <li><a href="#layanan">Shop</a></li>
-                                    <li><a href="#layanan">Shop Details</a></li>
-                                    <li><a href="#layanan">Cart Page</a></li>
-                                    <li><a href="#layanan">Selesaikan Pesanan</a></li>
-                                    <li><a href="#layanan">Wishlist</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#tentang">Team</a></li>
-                            <li><a href="#tentang">Team Details</a></li>
-                            <li><a href="#layanan">Proto Gallery</a></li>
-                            <li><a href="#faq">Faq Page</a></li>
-                            <li><a href="#layanan">Price Package</a></li>
-                            <li><a href="#">Error Page</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Blogs</a>
-                        <ul class="sub-menu">
-                            <li>
-                                <a href="#">Blog Layout</a>
-                                <ul class="sub-menu">
-                                    <li><a href="#tentang">Blog Grid 02 Columns</a></li>
-                                    <li><a href="#tentang">Blog Grid 03 Columns</a></li>
-                                    <li><a href="#tentang">Blog List</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#tentang">Blog Sidebar</a>
-                                <ul class="sub-menu">
-                                    <li><a href="#tentang">Blog Left Sidebar</a></li>
-                                    <li><a href="#tentang">Blog Right Sidebar</a></li>
-                                    <li><a href="#tentang">Blog No Sidebar</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#tentang">Blog Details</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#kontak">Contact</a>
-                    </li>
+                    <li><a href="template-2.html">Beranda</a></li>
+                    <li><a href="#dry-clean">Keunggulan Dry Clean</a></li>
+                    <li><a href="#perawatan">Perawatan Kain</a></li>
+                    <li><a href="#harga">Daftar Harga</a></li>
+                    <li><a href="#alur-dryclean">Alur Proses</a></li>
+                    <li><a href="#booking-pickup">Jadwal Pick-Up</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <!--==============================
-	Header Area
-==============================-->
+    <!-- Header Area -->
     <header class="th-header header-layout2">
         <div class="header-top">
             <div class="container">
                 <div class="row justify-content-center justify-content-xl-between align-items-center gy-2">
                     <div class="col-auto d-none d-lg-block">
-                        <p class="header-notice text-theme">Spesialis Dry Cleaning Jas Formal, Gaun Pesta &amp; Bedcover Mewah Jakarta Timur</p>
-                            <span style="font-size:12px;color:#94a3b8;margin-left:15px;"><i class="fas fa-envelope text-theme me-1"></i> evevdigital@gmail.com &nbsp;|&nbsp; <i class="fas fa-map-marker-alt text-theme me-1"></i> Jl. Otista Raya No. 88, Jatinegara, Jakarta Timur</span>
+                        <p class="header-notice mb-0">
+                            <strong>Spesialis Dry Cleaning Jas Formal, Kebaya Payet &amp; Gaun Pesta Jakarta Timur</strong>
+                            <span class="ms-3"><i class="fas fa-map-marker-alt me-1"></i>Jl. Otista Raya No. 88, Jatinegara</span>
+                        </p>
                     </div>
                     <div class="col-auto">
-                        <div class="header-links">
-                            <ul>
-                                <li class="d-none d-md-inline-block"><i class="fa-solid fa-clock"></i>Jam Buka:
-                                    <span>Buka Setiap Hari: 07:00 - 21:00 WIB</span>
-                                </li>
-                                <li>
-                                    <div class="social-links">
-                                        <span class="social-title">Ikuti Kami:</span>
-                                        <a href="#kontak"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="#kontak"><i class="fab fa-twitter"></i></a>
-                                        <a href="#kontak"><i class="fab fa-linkedin-in"></i></a>
-                                        <a href="#kontak"><i class="fab fa-instagram"></i></a>
-                                        <a href="#kontak"><i class="fab fa-youtube"></i></a>
-                                    </div>
-                                </li>
-                            </ul>
+                        <div class="header-links d-flex align-items-center gap-3">
+                            <span class="live-status-badge"><span class="status-dot is-open"></span> Buka Setiap Hari: 07:00 - 21:00 WIB</span>
+                            <a href="https://wa.me/62895323418658?text=Halo%20evevlaundry%2C%20saya%20ingin%20konsultasi%20Dry%20Cleaning." data-wa-general="true" class="fw-bold"><i class="fab fa-whatsapp me-1"></i>+62 895-3234-18658</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="sticky-wrapper">
-            <!-- Main Menu Area -->
             <div class="menu-area">
                 <div class="container">
                     <div class="row align-items-center justify-content-between">
                         <div class="col-auto">
                             <div class="header-logo">
-                                <a href="#layanan"><img src="assets/img/logo.svg" alt="Laun"></a>
+                                <a href="template-2.html" class="brand-logo-fallback">
+                                    <img src="assets/img/logo.svg" alt="Logo evevlaundry Dry Cleaning" loading="lazy" onerror="this.outerHTML='<span><i class=\'fas fa-sparkles\'></i> evevlaundry</span>';">
+                                </a>
                             </div>
                         </div>
                         <div class="col-auto ms-xl-auto">
                             <nav class="main-menu d-none d-lg-inline-block">
                                 <ul>
-                                    <li><a href="template-2.html">BERANDA</a></li>
+                                    <li><a href="template-2.html" class="active">BERANDA</a></li>
                                     <li><a href="#dry-clean">DRY CLEANING</a></li>
                                     <li><a href="#perawatan">PERAWATAN KAIN</a></li>
+                                    <li><a href="#harga">DAFTAR HARGA</a></li>
                                     <li><a href="#booking-pickup">JADWAL PICK-UP</a></li>
-                                    <li><a href="#layanan">GARANSI KAIN</a></li>
                                     <li><a href="#faq">FAQ</a></li>
                                     <li><a href="#kontak">KONTAK</a></li>
                                 </ul>
                             </nav>
-
                         </div>
                         <div class="col-auto">
                             <div class="header-button">
-                                <button type="button" class="simple-icon searchBoxToggler"><i class="far fa-search"></i></button>
-                                <button type="button" class="simple-icon sideMenuToggler2">
-                                    <span class="badge">5</span>
-                                    <i class="fa-regular fa-cart-shopping"></i>
-                                </button>
-                                <button type="button" class="th-menu-toggle d-block d-lg-none"><i class="far fa-bars"></i></button>
-                                <a href="#kontak" class="th-btn th-radius">Pesan Antar-Jemput WA</a>
+                                <button type="button" class="simple-icon searchBoxToggler" aria-label="Cari Layanan"><i class="far fa-search"></i></button>
+                                <button type="button" class="th-menu-toggle d-block d-lg-none" aria-label="Buka Menu Navigasi"><i class="far fa-bars"></i></button>
+                                <a href="https://wa.me/62895323418658?text=Halo%20evevlaundry%2C%20saya%20ingin%20booking%20penjemputan%20Dry%20Cleaning%20busana%20formal." data-wa-general="true" class="th-btn th-radius btn-wa-booking"><i class="fab fa-whatsapp me-2"></i>Pesan Jemput WA</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </header><!--==============================
-Hero Area
-==============================-->
-    <div class="th-hero-wrapper hero-2 " id="hero">
-        <div class="swiper hero-slider2" id="heroSlider2">
+    </header>
+
+    <!-- Hero Area -->
+    <div class="th-hero-wrapper hero-2" id="hero">
+        <div class="swiper hero-slider2" id="heroSlider2" data-slider-options='{"effect":"slide","autoplay":{"delay":5500}}'>
             <div class="swiper-wrapper">
+                <!-- Slide 1 -->
                 <div class="swiper-slide">
                     <div class="hero-inner">
-                        <div class="th-hero-bg" data-bg-src="assets/img/evevlaundry/hero_dry_cleaning.webp">
-                            <img src="assets/img/hero/hero_overlay_2.png" alt="Hero Image">
+                        <div class="th-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1600&q=80');">
+                            <img class="hero-photo-bg" src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1600&q=80" alt="Dry cleaning jas formal presisi di evevlaundry Jakarta Timur" loading="lazy" style="object-fit: cover;">
                         </div>
                         <div class="container">
                             <div class="hero-style2">
-                                <span class="sub-title" data-ani="slideindown" data-ani-delay="0.4s">Welcome to our site</span>
-                                <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.5s">Your Garments Our Craftsmanship <span class="text-theme">.</span>
-                                </h1>
-                                <p class="hero-text" data-ani="slideindown" data-ani-delay="0.7s">The frequency of dry cleaning depends on factors such type of garment</p>
-                                <div class="btn-group" data-ani="slideinup" data-ani-delay="0.9s">
-                                    <a href="#tentang" class="th-btn style2">Pelajari Layanan</a>
+                                <span class="sub-title" data-ani="slideindown" data-ani-delay="0.3s">Spesialis Dry Cleaning &amp; Wet Cleaning Premium</span>
+                                <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.5s">Perawatan Presisi untuk Jas Formal, Kebaya &amp; Gaun Mewah</h1>
+                                <p class="hero-text" data-ani="slideindown" data-ani-delay="0.6s">Pelarut eco-solvent ramah serat yang menjaga struktur bahu jas, kilau payet kebaya, dan warna asli kain wol maupun sutra. Gratis antar-jemput radius 5 km.</p>
+                                <div class="btn-group" data-ani="slideinup" data-ani-delay="0.8s">
+                                    <a href="https://wa.me/62895323418658?text=Halo%20evevlaundry%2C%20saya%20ingin%20pesan%20layanan%20Dry%20Cleaning%20Jas%20Formal." data-wa-paket="Dry Cleaning Setelan Jas Formal" data-wa-harga="Rp 45.000/set" class="th-btn style2"><i class="fab fa-whatsapp me-2"></i>Konsultasi &amp; Pick-Up WA</a>
+                                    <a href="#harga" class="th-btn style5">Lihat Daftar Harga</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Slide 2 -->
                 <div class="swiper-slide">
                     <div class="hero-inner">
-                        <div class="th-hero-bg" data-bg-src="assets/img/evevlaundry/service_dry_cleaning_jas.webp">
-                            <img src="assets/img/hero/hero_overlay_2.png" alt="Hero Image">
+                        <div class="th-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=1600&q=80');">
+                            <img class="hero-photo-bg" src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=1600&q=80" alt="Perawatan kain wol, sutra, dan batik tulis di evevlaundry" loading="lazy" style="object-fit: cover;">
                         </div>
                         <div class="container">
                             <div class="hero-style2">
-                                <span class="sub-title" data-ani="slideindown" data-ani-delay="0.4s">We Clean, You Shine</span>
-                                <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.5s">Cleaning Clothes Sparkling Smiles <span class="text-theme">.</span>
-                                </h1>
-                                <p class="hero-text" data-ani="slideindown" data-ani-delay="0.7s">We use high-quality, eco-friendly detergents that are gentle on your clothes.</p>
-                                <div class="btn-group" data-ani="slideinup" data-ani-delay="0.9s">
-                                    <a href="#tentang" class="th-btn style2">Pelajari Layanan</a>
+                                <span class="sub-title" data-ani="slideindown" data-ani-delay="0.3s">Hand-Spotting Noda &amp; Garansi Anti-Susut</span>
+                                <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.5s">Kebaya Payet &amp; Batik Sutra Bersih Sempurna Tanpa Rusak</h1>
+                                <p class="hero-text" data-ani="slideindown" data-ani-delay="0.6s">Setiap busana diperiksa serat demi serat oleh teknisi spesialis kain, dibersihkan dengan cairan pH netral, dan dikemas menggunakan garment bag eksklusif.</p>
+                                <div class="btn-group" data-ani="slideinup" data-ani-delay="0.8s">
+                                    <a href="#harga" class="th-btn style2">Cek Tarif Transparan</a>
+                                    <a href="#booking-pickup" class="th-btn style5">Jadwalkan Penjemputan</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Slide 3 -->
                 <div class="swiper-slide">
                     <div class="hero-inner">
-                        <div class="th-hero-bg" data-bg-src="assets/img/evevlaundry/service_bedcover_selimut.webp">
-                            <img src="assets/img/hero/hero_overlay_2.png" alt="Hero Image">
+                        <div class="th-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=1600&q=80');">
+                            <img class="hero-photo-bg" src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=1600&q=80" alt="Perawatan bedcover mewah, duvet bulu angsa, dan gorden blackout" loading="lazy" style="object-fit: cover;">
                         </div>
                         <div class="container">
                             <div class="hero-style2">
-                                <span class="sub-title" data-ani="slideindown" data-ani-delay="0.4s">Dry Clean Pro</span>
-                                <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.5s">Quality Laundry Every Thread <span class="text-theme">.</span>
-                                </h1>
-                                <p class="hero-text" data-ani="slideindown" data-ani-delay="0.7s">It seems like "Quality Laundry Every Thread" might be a tagline or slogan.</p>
-                                <div class="btn-group" data-ani="slideinup" data-ani-delay="0.9s">
-                                    <a href="#tentang" class="th-btn style2">Pelajari Layanan</a>
+                                <span class="sub-title" data-ani="slideindown" data-ani-delay="0.3s">Tekstil Rumah Tangga Premium &amp; Anti Tungau</span>
+                                <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.5s">Bedcover King Size, Duvet &amp; Gorden Segar Kembali</h1>
+                                <p class="hero-text" data-ani="slideindown" data-ani-delay="0.6s">Mesin kapasitas besar dengan kontrol suhu presisi mengangkat debu mikro, alergen, dan bau apek tanpa membuat isi dakron menggumpal.</p>
+                                <div class="btn-group" data-ani="slideinup" data-ani-delay="0.8s">
+                                    <a href="https://wa.me/62895323418658" data-wa-paket="Bedcover King Size & Duvet Mewah" data-wa-harga="Rp 35.000/pcs" class="th-btn style2">Pesan Cuci Bedcover</a>
+                                    <a href="#perawatan" class="th-btn style5">Lihat Detail Layanan</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="swiper thumbsSlider">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="assets/img/evevlaundry/hero_dry_cleaning.webp" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/img/evevlaundry/service_dry_cleaning_jas.webp" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/img/evevlaundry/service_bedcover_selimut.webp" alt="">
-                </div>
-            </div>
-        </div>
-        <div class="hero-animated-bubble">
-            <img src="assets/img/shape/bubble_1.png" alt="Laun">
-            <img src="assets/img/shape/bubble_2.png" alt="Laun">
-            <img src="assets/img/shape/bubble_3.png" alt="Laun">
-            <img src="assets/img/shape/bubble_4.png" alt="Laun">
-            <img src="assets/img/shape/bubble_5.png" alt="Laun">
-            <img src="assets/img/shape/bubble_6.png" alt="Laun">
-            <img src="assets/img/shape/bubble_7.png" alt="Laun">
-            <img src="assets/img/shape/bubble_8.png" alt="Laun">
         </div>
     </div>
-    <!--======== / Hero Section ========--><!--==============================
-Service Area  
-==============================-->
 
-    <section id="layanan" class="service-sec " id="dry-clean">
-        <div class="container th-container">
-            <div class="service-card-wrapper">
-
-                <div class="service-card">
-                    <div class="service-card_inner">
-                        <div class="box-icon">
-                            <img src="assets/img/icon/service_card_1.svg" alt="Icon">
-                        </div>
-                        <div class="service-content">
-                            <h3 class="box-title"><a href="#layanan">Eco-Friendly Dry Solvents</a></h3>
-                            <p class="service-card_text">Most fabrics can be dry cleaned but there are exceptions</p>
+    <!-- 3 Keunggulan Utama Dry Cleaning -->
+    <section class="space-top" id="dry-clean">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4">
+                    <div class="evev-pillar-card">
+                        <div class="evev-pillar-icon"><i class="fas fa-leaf"></i></div>
+                        <div>
+                            <h3 class="box-title h5 mb-2">Eco-Solvent Ramah Serat</h3>
+                            <p class="mb-0">Pelarut bebas bau menyengat yang mengangkat noda minyak &amp; keringat tanpa membuat kain wol, sutra, atau linen menyusut.</p>
                         </div>
                     </div>
                 </div>
-
-                <div class="service-card">
-                    <div class="service-card_inner">
-                        <div class="box-icon">
-                            <img src="assets/img/icon/service_card_2.svg" alt="Icon">
-                        </div>
-                        <div class="service-content">
-                            <h3 class="box-title"><a href="#layanan">Detailing Manual &amp; Hand-Wash</a></h3>
-                            <p class="service-card_text">While dry cleaning is effective for many types , some.</p>
+                <div class="col-lg-4">
+                    <div class="evev-pillar-card">
+                        <div class="evev-pillar-icon"><i class="fas fa-hand-sparkles"></i></div>
+                        <div>
+                            <h3 class="box-title h5 mb-2">Detailing Manual &amp; Hand-Wash</h3>
+                            <p class="mb-0">Kebaya berpayet, brokat, dan gaun pengantin ditangani manual oleh spesialis noda untuk melindungi setiap manik dan bordiran.</p>
                         </div>
                     </div>
                 </div>
-
-                <div class="service-card">
-                    <div class="service-card_inner">
-                        <div class="box-icon">
-                            <img src="assets/img/icon/service_card_3.svg" alt="Icon">
-                        </div>
-                        <div class="service-content">
-                            <h3 class="box-title"><a href="#layanan">Garansi 100% Anti-Luntur</a></h3>
-                            <p class="service-card_text">Professional dry cleaners use industry sta techniques</p>
+                <div class="col-lg-4">
+                    <div class="evev-pillar-card">
+                        <div class="evev-pillar-icon"><i class="fas fa-shield-check"></i></div>
+                        <div>
+                            <h3 class="box-title h5 mb-2">Garansi 100% Anti-Luntur</h3>
+                            <p class="mb-0">Inspeksi 3 tahap sebelum &amp; sesudah cuci dengan garansi perawatan ulang gratis bila hasil belum memenuhi standar Anda.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section><!--==============================
-About Area  
-==============================-->
+    </section>
 
-    <div class="overflow-hidden space-top" id="about-sec">
+    <!-- About Dry Cleaning Section -->
+    <section class="overflow-hidden space-top" id="tentang">
         <div class="container">
-            <div class="row">
-                <div class="col-xl-5 mb-40 mb-xl-0">
+            <div class="row align-items-center gy-4">
+                <div class="col-xl-5">
                     <div class="img-box2">
                         <div class="img1">
-                            <img src="assets/img/evevlaundry/service_dry_cleaning_jas.webp" alt="About">
+                            <img src="https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?auto=format&fit=crop&w=800&q=80" alt="Deretan jas formal hasil dry cleaning presisi evevlaundry" loading="lazy" style="object-fit: cover;">
                         </div>
-                        <div class="img2">
-                            <img src="assets/img/evevlaundry/portfolio_pakaian_tersegel.webp" alt="Image">
-                        </div>
-                        <div id="tentang" class="about-shape-1"></div>
-                        <div class="about-shape-2"></div>
-                        <div class="about-big">
-                            <h3 class="about-big_text">PREMIUM DRY CLEANING</h3>
+                        <div class="img2 mt-3">
+                            <img src="https://images.unsplash.com/photo-1489274495757-95c7c837b101?auto=format&fit=crop&w=700&q=80" alt="Finishing uap boiler profesional untuk busana kerja dan pesta" loading="lazy" style="object-fit: cover;">
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-7">
-                    <div class="ps-xl-5 wow fadeInRight">
+                    <div class="ps-xl-5">
                         <div class="title-area mb-25">
-                            <span class="sub-title style1">Tentang Kami</span>
-                            <h2 class="sec-title mb-20">Pilihan Tepat Busana Pesta &amp; Jas Formal Anda</h2>
-                            <blockquote class="about-blockquote">
-                                <p>The frequency of dry cleaning depends on the type of garment and how man often it's worn.
-                                    Generally, items like suits and formalwear are cleaned after in wears, while casual
-                                    items may be cleaned less frequently.</p>
-                            </blockquote>
+                            <span class="sub-title style1">Tentang Divisi Dry Cleaning</span>
+                            <h2 class="sec-title mb-20">Pilihan Tepat untuk Busana Pesta, Jas Formal &amp; Koleksi Bernilai Tinggi</h2>
+                            <p class="about-desc">Tidak semua pakaian aman masuk mesin cuci biasa. Jas dengan lapisan kanvas dalam, kebaya payet, batik sutra tulis, hingga jaket kulit membutuhkan metode <strong>Dry Cleaning</strong> dan <strong>Wet Cleaning</strong> terkontrol agar siluet tetap tegas, warna tidak pudar, dan kain tetap bernapas.</p>
                         </div>
-                        <div class="checklist">
+                        <div class="checklist list-two-column mb-25">
                             <ul>
-                                <li>Revive Your Wardrobe, Refresh Your Day</li>
-                                <li>Where Every Garment Gets VIP Treatment</li>
+                                <li>Inspeksi Label &amp; Serat Kain Awal</li>
+                                <li>Spotting Noda Keringat, Tinta &amp; Minyak</li>
+                                <li>Finishing Steam Press Pembentuk Bahu</li>
+                                <li>Gratis Hanger Jas &amp; Cover Pelindung</li>
+                                <li>Kurir Khusus Antar-Jemput Busana</li>
+                                <li>Packing Gantung Anti Kusut Sampai Rumah</li>
                             </ul>
                         </div>
-                        <div class="about-text">
-                            <img src="assets/img/icon/about-icon.svg" alt="">
-                            <p>Store dry-cleaned garments in a cool, dry place, away from direct sunlight. Avoid using
-                                plastic bags, as they can trap moisture.</p>
+                        <div class="btn-group">
+                            <a href="https://wa.me/62895323418658?text=Halo%20evevlaundry%2C%20saya%20ingin%20konsultasi%20perawatan%20busana%20formal%20dan%20Dry%20Cleaning." data-wa-general="true" class="th-btn btn-wa-booking"><i class="fab fa-whatsapp me-2"></i>Konsultasi Spesialis Kain</a>
+                            <a href="#harga" class="th-btn border">Lihat Tarif Dry Clean</a>
                         </div>
-                        <a href="#tentang" class="th-btn">More Tentang Kami</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div><!--==============================
-Service Area  
-==============================-->
+    </section>
+
+    <!-- 6 Layanan Perawatan Khusus (Symmetric Grid — 100% Terbaca Jelas) -->
     <section id="perawatan" class="bg-top-center overflow-hidden space">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 offset-lg-3">
+                <div class="col-lg-8 offset-lg-2">
                     <div class="title-area text-center">
-                        <span class="sub-title">Our Best Services</span>
-                        <h2 class="sec-title">Perawatan Khusus untuk Pakaian Bernilai Tinggi Anda</h2>
+                        <span class="sub-title">Spesialisasi Perawatan Kain</span>
+                        <h2 class="sec-title">Perawatan Khusus untuk Setiap Jenis Busana &amp; Tekstil</h2>
+                        <p class="mt-2">Metode cuci disesuaikan dengan karakter material—mulai dari wol, sutra, brokat payet, hingga kulit asli dan tekstil kamar tidur.</p>
                     </div>
                 </div>
             </div>
-            <div class="slider-area">
-                <div class="swiper th-slider has-shadow" id="serviceSlider1" data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"2"},"1200":{"slidesPerView":"3"}}}'>
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="service-item">
-                                <div class="service-item_wrapper">
-                                    <div class="service-item_img">
-                                        <img src="assets/img/evevlaundry/service_dry_cleaning_jas.webp" alt="img">
-                                    </div>
-                                    <div class="service-item_icon">
-                                        <img src="assets/img/icon/service_2_1.svg" alt="Icon">
-                                    </div>
-                                </div>
-                                <div class="service-item_content" data-bg-src="assets/img/shape/service_shape_2.png">
-                                    <h3 class="box-title"><a href="#layanan">Garments Transformed</a></h3>
-                                    <p class="service-item_text">Dry cleaning uses a chemical solvent man in instead of man water to clean clothes.</p>
-                                    <a href="#layanan" class="th-btn border">Baca Selengkapnya</a>
-                                </div>
-                            </div>
+            <div class="row gy-4">
+                <!-- Card 1 -->
+                <div class="col-md-6 col-xl-4">
+                    <div class="evev-service-card">
+                        <div class="evev-service-thumb">
+                            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" alt="Dry cleaning setelan jas formal dan blazer kantor" loading="lazy" style="object-fit: cover;">
+                            <span class="evev-service-badge">Paling Dicari</span>
+                            <span class="evev-service-price-pill">Rp 45.000 / set</span>
                         </div>
-
-                        <div class="swiper-slide">
-                            <div class="service-item">
-                                <div class="service-item_wrapper">
-                                    <div class="service-item_img">
-                                        <img src="assets/img/evevlaundry/service_bedcover_selimut.webp" alt="img">
-                                    </div>
-                                    <div class="service-item_icon">
-                                        <img src="assets/img/icon/service_2_2.svg" alt="Icon">
-                                    </div>
-                                </div>
-                                <div class="service-item_content" data-bg-src="assets/img/shape/service_shape_2.png">
-                                    <h3 class="box-title"><a href="#layanan">Household Textile Care</a></h3>
-                                    <p class="service-item_text">The frequency of dry cleaning depends on factors like the type of garment man</p>
-                                    <a href="#layanan" class="th-btn border">Baca Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="service-item">
-                                <div class="service-item_wrapper">
-                                    <div class="service-item_img">
-                                        <img src="assets/img/evevlaundry/service_karpet_gorden.webp" alt="img">
-                                    </div>
-                                    <div class="service-item_icon">
-                                        <img src="assets/img/icon/service_2_3.svg" alt="Icon">
-                                    </div>
-                                </div>
-                                <div class="service-item_content" data-bg-src="assets/img/shape/service_shape_2.png">
-                                    <h3 class="box-title"><a href="#layanan">Leather & Suede Care</a></h3>
-                                    <p class="service-item_text">While many fabrics can dry cleaned some extremely delicate or heavily embellished</p>
-                                    <a href="#layanan" class="th-btn border">Baca Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="service-item">
-                                <div class="service-item_wrapper">
-                                    <div class="service-item_img">
-                                        <img src="assets/img/evevlaundry/service_baby_stroller.webp" alt="img">
-                                    </div>
-                                    <div class="service-item_icon">
-                                        <img src="assets/img/icon/service_2_1.svg" alt="Icon">
-                                    </div>
-                                </div>
-                                <div class="service-item_content" data-bg-src="assets/img/shape/service_shape_2.png">
-                                    <h3 class="box-title"><a href="#layanan">Dry Cleaning</a></h3>
-                                    <p class="service-item_text">Dry cleaning is a method of cleaning clothing and textiles that uses a solvent.</p>
-                                    <a href="#layanan" class="th-btn border">Baca Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="service-item">
-                                <div class="service-item_wrapper">
-                                    <div class="service-item_img">
-                                        <img src="assets/img/service/service_box_5.jpg" alt="img">
-                                    </div>
-                                    <div class="service-item_icon">
-                                        <img src="assets/img/icon/service_2_2.svg" alt="Icon">
-                                    </div>
-                                </div>
-                                <div class="service-item_content" data-bg-src="assets/img/shape/service_shape_2.png">
-                                    <h3 class="box-title"><a href="#layanan">Wash & Fold</a></h3>
-                                    <p class="service-item_text">Wash and fold (also known as drop-off laundry or fluff and fold a laundry service.</p>
-                                    <a href="#layanan" class="th-btn border">Baca Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="service-item">
-                                <div class="service-item_wrapper">
-                                    <div class="service-item_img">
-                                        <img src="assets/img/evevlaundry/service_dry_cleaning_jas.webp" alt="img">
-                                    </div>
-                                    <div class="service-item_icon">
-                                        <img src="assets/img/icon/service_2_3.svg" alt="Icon">
-                                    </div>
-                                </div>
-                                <div class="service-item_content" data-bg-src="assets/img/shape/service_shape_2.png">
-                                    <h3 class="box-title"><a href="#layanan">Ironing/Pressing</a></h3>
-                                    <p class="service-item_text">Ironing or pressing is the process of using a heated iron or press to out wrinkles</p>
-                                    <a href="#layanan" class="th-btn border">Baca Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <button data-slider-prev="#serviceSlider1" class="slider-arrow slider-prev"><i class="far fa-arrow-left"></i></button>
-                <button data-slider-next="#serviceSlider1" class="slider-arrow slider-next"><i class="far fa-arrow-right"></i></button>
-            </div>
-        </div>
-    </section><!--==============================
-Video Area  
-==============================-->
-    <div class="">
-        <div class="container">
-            <div class="video-box2" data-pos-for=".team-area2" data-sec-pos="bottom-half" data-bg-src="assets/img/evevlaundry/hero_steam_iron.webp">
-                <img src="assets/img/evevlaundry/hero_steam_iron.webp" alt="video">
-                <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="play-btn popup-video"><i class="fa-sharp fa-solid fa-play"></i></a>
-                <div class="animation-bubble">
-                    <div class="bubble-1"></div>
-                    <div class="bubble-2"></div>
-                    <div class="bubble-3"></div>
-                    <div class="bubble-4"></div>
-                    <div class="bubble-5"></div>
-                    <div class="bubble-6"></div>
-                    <div class="bubble-7"></div>
-                    <div class="bubble-8"></div>
-                    <div class="bubble-9"></div>
-                    <div class="bubble-10"></div>
-                </div>
-            </div>
-
-        </div>
-    </div><!--==============================
-Team Area  
-==============================-->
-    <section class="team-area2 bg-title space" data-bg-src="assets/img/bg/team_bg_2.jpg">
-        <div class="container z-index-common">
-            <div class="title-area text-center">
-                <span class="sub-title">Expert Team</span>
-                <h2 class="sec-title text-white">Our Expert Workers</h2>
-            </div>
-            <div class="slider-area">
-                <div class="swiper th-slider has-shadow" id="teamSlider1" data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"2"},"1200":{"slidesPerView":"3"}}}'>
-                    <div class="swiper-wrapper">
-                        <!-- Single Item -->
-                        <div class="swiper-slide">
-                            <div class="th-team team-box style2">
-                                <div class="team-img">
-                                    <img src="assets/img/team/team_2_1.jpg" alt="Team">
-                                    <div class="th-social">
-                                        <a target="_blank" href="https://facebook.com/" tabindex="0"><i class="fab fa-facebook-f"></i></a>
-                                        <a target="_blank" href="https://twitter.com/" tabindex="0"><i class="fab fa-twitter"></i></a>
-                                        <a target="_blank" href="https://instagram.com/" tabindex="0"><i class="fab fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                                <div class="team-content">
-                                    <div class="media-body">
-                                        <h3 class="box-title"><a href="#tentang">Hendra Wijaya</a></h3>
-                                        <span class="team-desig">Dry Cleaner</span>
-                                    </div>
-                                    <div class="share-btn"> <i class="fa-regular fa-share-nodes"></i></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Item -->
-                        <div class="swiper-slide">
-                            <div class="th-team team-box style2">
-                                <div class="team-img">
-                                    <img src="assets/img/team/team_2_2.jpg" alt="Team">
-                                    <div class="th-social">
-                                        <a target="_blank" href="https://facebook.com/" tabindex="0"><i class="fab fa-facebook-f"></i></a>
-                                        <a target="_blank" href="https://twitter.com/" tabindex="0"><i class="fab fa-twitter"></i></a>
-                                        <a target="_blank" href="https://instagram.com/" tabindex="0"><i class="fab fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                                <div class="team-content">
-                                    <div class="media-body">
-                                        <h3 class="box-title"><a href="#tentang">Ratna Sari</a></h3>
-                                        <span class="team-desig">Dry Cleaner</span>
-                                    </div>
-                                    <div class="share-btn"> <i class="fa-regular fa-share-nodes"></i></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Item -->
-                        <div class="swiper-slide">
-                            <div class="th-team team-box style2">
-                                <div class="team-img">
-                                    <img src="assets/img/team/team_2_3.jpg" alt="Team">
-                                    <div class="th-social">
-                                        <a target="_blank" href="https://facebook.com/" tabindex="0"><i class="fab fa-facebook-f"></i></a>
-                                        <a target="_blank" href="https://twitter.com/" tabindex="0"><i class="fab fa-twitter"></i></a>
-                                        <a target="_blank" href="https://instagram.com/" tabindex="0"><i class="fab fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                                <div class="team-content">
-                                    <div class="media-body">
-                                        <h3 class="box-title"><a href="#tentang">Dimas Ardiansyah</a></h3>
-                                        <span class="team-desig">Dry Cleaner</span>
-                                    </div>
-                                    <div class="share-btn"> <i class="fa-regular fa-share-nodes"></i></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Item -->
-                        <div class="swiper-slide">
-                            <div class="th-team team-box style2">
-                                <div class="team-img">
-                                    <img src="assets/img/team/team_2_1.jpg" alt="Team">
-                                    <div class="th-social">
-                                        <a target="_blank" href="https://facebook.com/" tabindex="0"><i class="fab fa-facebook-f"></i></a>
-                                        <a target="_blank" href="https://twitter.com/" tabindex="0"><i class="fab fa-twitter"></i></a>
-                                        <a target="_blank" href="https://instagram.com/" tabindex="0"><i class="fab fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                                <div class="team-content">
-                                    <div class="media-body">
-                                        <h3 class="box-title"><a href="#tentang">Maya Indah</a></h3>
-                                        <span class="team-desig">Dry Cleaner</span>
-                                    </div>
-                                    <div class="share-btn"> <i class="fa-regular fa-share-nodes"></i></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Item -->
-                        <div class="swiper-slide">
-                            <div class="th-team team-box style2">
-                                <div class="team-img">
-                                    <img src="assets/img/team/team_2_2.jpg" alt="Team">
-                                    <div class="th-social">
-                                        <a target="_blank" href="https://facebook.com/" tabindex="0"><i class="fab fa-facebook-f"></i></a>
-                                        <a target="_blank" href="https://twitter.com/" tabindex="0"><i class="fab fa-twitter"></i></a>
-                                        <a target="_blank" href="https://instagram.com/" tabindex="0"><i class="fab fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                                <div class="team-content">
-                                    <div class="media-body">
-                                        <h3 class="box-title"><a href="#tentang">Bambang Sudiro</a></h3>
-                                        <span class="team-desig">Dry Cleaner</span>
-                                    </div>
-                                    <div class="share-btn"> <i class="fa-regular fa-share-nodes"></i></div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-                <button data-slider-prev="#teamSlider1" class="slider-arrow slider-prev"><i class="far fa-arrow-left"></i></button>
-                <button data-slider-next="#teamSlider1" class="slider-arrow slider-next"><i class="far fa-arrow-right"></i></button>
-            </div>
-
-        </div>
-    </section><!--==============================
-About Area  
-==============================-->
-    <div class=" overflow-hidden space">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6 wow fadeInLeft">
-                    <div class="pe-xl-5 me-xl-5">
-                        <div class="title-area mb-25">
-                            <span class="sub-title style1">Why Choose Us</span>
-                            <h2 class="sec-title mb-20">We Take Pride in Perfecting Your</h2>
-                        </div>
-                    </div>
-                    <div class="feature-box_wrapper">
-                        <div class="feature-box">
-                            <div class="feature-box_step">
-                                <p class="box-number"><span class="step">Step</span> 01</p>
-                            </div>
-                            <div class="media-body">
-                                <h3 class="box-title">From Grime to Glamour in Every Thread</h3>
-                                <p class="feature-box_text">Dry cleaning uses a chemical solvent instead of water clean garments This method is especially effective for delicate</p>
-                            </div>
-                        </div>
-                        <div class="feature-box">
-                            <div class="feature-box_step">
-                                <p class="box-number"><span class="step">Step</span> 02</p>
-                            </div>
-                            <div class="media-body">
-                                <h3 class="box-title">Revive Your Wardrobe Refresh Style</h3>
-                                <p class="feature-box_text">The frequency of dry cleaning depends on factors like the type of garment, how often it's worn, and whether it gets</p>
-                            </div>
-                        </div>
-                        <div class="feature-box">
-                            <div class="feature-box_step">
-                                <p class="box-number"><span class="step">Step</span> 03</p>
-                            </div>
-                            <div class="media-body">
-                                <h3 class="box-title">Cleaning Excellence, Every Garment</h3>
-                                <p class="feature-box_text">If you have a stubborn stain, it's best to let the dry cleaner know about it and provide details about the stain.</p>
-                            </div>
+                        <div class="evev-service-body">
+                            <h3 class="box-title">Dry Cleaning Jas &amp; Blazer</h3>
+                            <p class="service-desc">Membersihkan noda kerah dan minyak tanpa merusak lapisan padding bahu maupun furing dalam. Selesai dibentuk presisi dengan steam press.</p>
+                            <a href="https://wa.me/62895323418658" data-wa-paket="Dry Cleaning Setelan Jas Formal" data-wa-harga="Rp 45.000/set" class="th-btn border mt-auto text-center">Pesan via WhatsApp</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-6">
-                    <div class="feature-image wow fadeInRight">
-                        <img src="assets/img/normal/feature_1_1.png" alt="">
+
+                <!-- Card 2 -->
+                <div class="col-md-6 col-xl-4">
+                    <div class="evev-service-card">
+                        <div class="evev-service-thumb">
+                            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Perawatan gaun pesta, kebaya payet, dan gaun pengantin" loading="lazy" style="object-fit: cover;">
+                            <span class="evev-service-badge">Hand-Wash VIP</span>
+                            <span class="evev-service-price-pill">Rp 125.000 / pcs</span>
+                        </div>
+                        <div class="evev-service-body">
+                            <h3 class="box-title">Gaun Pesta &amp; Gaun Pengantin</h3>
+                            <p class="service-desc">Penanganan ekstra hati-hati untuk tulle, satin, organza, dan payet tangan. Menghilangkan bekas makeup, parfum, dan debu lantai pada ujung gaun.</p>
+                            <a href="https://wa.me/62895323418658" data-wa-paket="Perawatan Gaun Pesta & Gaun Pengantin" data-wa-harga="Rp 125.000/pcs" class="th-btn mt-auto text-center">Pesan via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-6 col-xl-4">
+                    <div class="evev-service-card">
+                        <div class="evev-service-thumb">
+                            <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=800&q=80" alt="Wet cleaning batik sutra tulis dan kebaya brokat" loading="lazy" style="object-fit: cover;">
+                            <span class="evev-service-badge">Anti Luntur</span>
+                            <span class="evev-service-price-pill">Rp 55.000 / pcs</span>
+                        </div>
+                        <div class="evev-service-body">
+                            <h3 class="box-title">Kebaya Payet &amp; Batik Sutra</h3>
+                            <p class="service-desc">Menggunakan sabun lerak lembut dan wet cleaning pH netral agar warna batik tulis tetap hidup dan motif payet tidak lepas atau kusam.</p>
+                            <a href="https://wa.me/62895323418658" data-wa-paket="Wet Cleaning Kebaya Payet & Batik Sutra" data-wa-harga="Rp 55.000/pcs" class="th-btn border mt-auto text-center">Pesan via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-md-6 col-xl-4">
+                    <div class="evev-service-card">
+                        <div class="evev-service-thumb">
+                            <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=800&q=80" alt="Perawatan jaket kulit asli, suede, dan winter coat" loading="lazy" style="object-fit: cover;">
+                            <span class="evev-service-badge">Leather Care</span>
+                            <span class="evev-service-price-pill">Rp 85.000 / pcs</span>
+                        </div>
+                        <div class="evev-service-body">
+                            <h3 class="box-title">Jaket Kulit, Suede &amp; Coat</h3>
+                            <p class="service-desc">Pembersihan kering khusus kulit asli, suede, dan coat wol dilengkapi conditioning lotion agar kulit tetap lentur, lembap, dan bebas jamur.</p>
+                            <a href="https://wa.me/62895323418658" data-wa-paket="Jaket Kulit, Suede & Winter Coat" data-wa-harga="Rp 85.000/pcs" class="th-btn border mt-auto text-center">Pesan via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="col-md-6 col-xl-4">
+                    <div class="evev-service-card">
+                        <div class="evev-service-thumb">
+                            <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=80" alt="Dry dan wet cleaning bedcover king size serta duvet bulu angsa" loading="lazy" style="object-fit: cover;">
+                            <span class="evev-service-badge">Anti Tungau</span>
+                            <span class="evev-service-price-pill">Rp 35.000 / pcs</span>
+                        </div>
+                        <div class="evev-service-body">
+                            <h3 class="box-title">Bedcover King &amp; Duvet Mewah</h3>
+                            <p class="service-desc">Sanitasi mendalam untuk bedcover premium, quilt, dan duvet bulu angsa. Pengeringan terkendali menjaga volume tetap empuk dan segar.</p>
+                            <a href="https://wa.me/62895323418658" data-wa-paket="Bedcover King Size & Duvet Mewah" data-wa-harga="Rp 35.000/pcs" class="th-btn border mt-auto text-center">Pesan via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="col-md-6 col-xl-4">
+                    <div class="evev-service-card">
+                        <div class="evev-service-thumb">
+                            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Cuci gorden blackout, vitrase, dan tekstil interior rumah" loading="lazy" style="object-fit: cover;">
+                            <span class="evev-service-badge">Interior Care</span>
+                            <span class="evev-service-price-pill">Rp 20.000 / m²</span>
+                        </div>
+                        <div class="evev-service-body">
+                            <h3 class="box-title">Gorden Blackout &amp; Vitrase</h3>
+                            <p class="service-desc">Menghilangkan debu menahun dan bau asap pada gorden blackout berlapis maupun vitrase tipis tanpa merusak lapisan anti-UV.</p>
+                            <a href="https://wa.me/62895323418658" data-wa-paket="Gorden Blackout & Vitrase" data-wa-harga="Rp 20.000/m²" class="th-btn border mt-auto text-center">Pesan via WhatsApp</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-    </div><!--==============================
-Testimonial Area  
-==============================-->
-    <section class="overflow-hidden space-bottom" id="testi-sec">
+    <!-- Daftar Menu & Harga Simetris 100% Terlihat -->
+    <section class="space-bottom" id="harga">
         <div class="container">
             <div class="title-area text-center">
-                <span class="sub-title">Testimonials</span>
-                <h2 class="sec-title">Apa Kata Pelanggan Setia Kami</h2>
+                <span class="sub-title">Daftar Tarif Dry Cleaning Transparan</span>
+                <h2 class="sec-title">Menu &amp; Harga Paket Dry Cleaning Satuan</h2>
+                <p class="mx-auto mt-2" style="max-width: 680px;">Seluruh harga sudah termasuk spotting noda ringan, finishing uap presisi, hanger eksklusif, dan plastik pelindung anti debu.</p>
             </div>
-            <div class="slider-area">
-                <div class="swiper th-slider has-shadow" id="testiSlider1" data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"2"},"1200":{"slidesPerView":"3"}}}'>
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="testi-box">
-                                <div class="testi-box_profile">
-                                    <div class="testi-box_author">
-                                        <img src="assets/img/testimonial/testi_2_1.png" alt="Avater">
-                                    </div>
-                                    <div class="testi-box_info">
-                                        <h3 class="box-title">Cameron Williamson</h3>
-                                        <span class="testi-box_desig">E-commerce Solutions</span>
-                                    </div>
-                                </div>
-                                <p class="testi-box_text">â€œThe frequency of dry cleaning depends on factors like how often you wear the Serves garment, the type of and whetherâ€</p>
-
-                                <div class="testi-box_image">
-                                    <img src="assets/img/testimonial/testi_img_1.jpg" alt="image">
-                                </div>
-                            </div>
+            <div class="row gy-4">
+                <!-- Harga 1 -->
+                <div class="col-xl-4 col-md-6">
+                    <div class="evev-price-card is-popular">
+                        <span class="evev-price-badge">★ Paling Laris</span>
+                        <h3 class="evev-price-title">Setelan Jas Formal (Jas + Celana)</h3>
+                        <div class="evev-price-amount">
+                            <span class="nominal">Rp 45.000</span>
+                            <span class="unit">/ set</span>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="testi-box">
-                                <div class="testi-box_profile">
-                                    <div class="testi-box_author">
-                                        <img src="assets/img/testimonial/testi_2_2.png" alt="Avater">
-                                    </div>
-                                    <div class="testi-box_info">
-                                        <h3 class="box-title">Brooklyn Simmons</h3>
-                                        <span class="testi-box_desig">Disaster Recovery</span>
-                                    </div>
-                                </div>
-                                <p class="testi-box_text">â€œDiversity is a cornerstone of our farming philosophy. We carefully select a wide range of crops, ensuring balancedâ€</p>
-
-                                <div class="testi-box_image">
-                                    <img src="assets/img/testimonial/testi_img_2.jpg" alt="image">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="testi-box">
-                                <div class="testi-box_profile">
-                                    <div class="testi-box_author">
-                                        <img src="assets/img/testimonial/testi_2_3.png" alt="Avater">
-                                    </div>
-                                    <div class="testi-box_info">
-                                        <h3 class="box-title">Savannah Nguyen</h3>
-                                        <span class="testi-box_desig">UI/UX Designer</span>
-                                    </div>
-                                </div>
-                                <p class="testi-box_text">â€œThis not only helps to naturally deter pests and diseases but also promotes soil health by varying the different plantsâ€</p>
-
-                                <div class="testi-box_image">
-                                    <img src="assets/img/testimonial/testi_img_3.jpg" alt="image">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="testi-box">
-                                <div class="testi-box_profile">
-                                    <div class="testi-box_author">
-                                        <img src="assets/img/testimonial/testi_2_1.png" alt="Avater">
-                                    </div>
-                                    <div class="testi-box_info">
-                                        <h3 class="box-title">Cameron Williamson</h3>
-                                        <span class="testi-box_desig">Founder CEO</span>
-                                    </div>
-                                </div>
-                                <p class="testi-box_text">â€œGarments made of delicate fabrics, those with intricate detailing, and those labeled dry clean only should be taken dryâ€</p>
-
-                                <div class="testi-box_image">
-                                    <img src="assets/img/testimonial/testi_img_1.jpg" alt="image">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="testi-box">
-                                <div class="testi-box_profile">
-                                    <div class="testi-box_author">
-                                        <img src="assets/img/testimonial/testi_2_2.png" alt="Avater">
-                                    </div>
-                                    <div class="testi-box_info">
-                                        <h3 class="box-title">Brooklyn Simmons</h3>
-                                        <span class="testi-box_desig">Project Manager</span>
-                                    </div>
-                                </div>
-                                <p class="testi-box_text">â€œThe frequency of dry cleaning depends on factors such as the type of garment, how often it's worn, and if exposed stainsâ€</p>
-
-                                <div class="testi-box_image">
-                                    <img src="assets/img/testimonial/testi_img_2.jpg" alt="image">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="testi-box">
-                                <div class="testi-box_profile">
-                                    <div class="testi-box_author">
-                                        <img src="assets/img/testimonial/testi_2_3.png" alt="Avater">
-                                    </div>
-                                    <div class="testi-box_info">
-                                        <h3 class="box-title">Savannah Nguyen</h3>
-                                        <span class="testi-box_desig">E-commerce Solutions</span>
-                                    </div>
-                                </div>
-                                <p class="testi-box_text">â€œThe frequency of dry cleaning depends on factors like how often you wear the Serves garment, the type of fabricâ€ </p>
-
-                                <div class="testi-box_image">
-                                    <img src="assets/img/testimonial/testi_img_3.jpg" alt="image">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="testi-box">
-                                <div class="testi-box_profile">
-                                    <div class="testi-box_author">
-                                        <img src="assets/img/testimonial/testi_2_1.png" alt="Avater">
-                                    </div>
-                                    <div class="testi-box_info">
-                                        <h3 class="box-title">Cameron Williamson</h3>
-                                        <span class="testi-box_desig">Disaster Recovery</span>
-                                    </div>
-                                </div>
-                                <p class="testi-box_text">â€œDiversity is a cornerstone of our farming philosophy. We carefully select a wide range of crops, ensuring balancedâ€</p>
-
-                                <div class="testi-box_image">
-                                    <img src="assets/img/testimonial/testi_img_1.jpg" alt="image">
-                                </div>
-                            </div>
-                        </div>
+                        <div class="evev-price-meta"><i class="far fa-clock"></i> Estimasi 2-3 Hari • Express +50%</div>
+                        <ul class="evev-price-features">
+                            <li><i class="fas fa-check-circle"></i><span>Pelarut eco-solvent aman bagi wol &amp; kanvas jas</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Spotting noda kerah, ketiak &amp; manset</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Steam press khusus membentuk siluet bahu</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Gratis hanger tebal &amp; cover pelindung jas</span></li>
+                        </ul>
+                        <a href="https://wa.me/62895323418658" data-wa-paket="Setelan Jas Formal (Jas + Celana)" data-wa-harga="Rp 45.000/set" class="th-btn w-100 text-center mt-auto"><i class="fab fa-whatsapp me-2"></i>Pesan Paket Jas</a>
                     </div>
                 </div>
-                <button data-slider-prev="#testiSlider1" class="slider-arrow slider-prev"><i class="far fa-arrow-left"></i></button>
-                <button data-slider-next="#testiSlider1" class="slider-arrow slider-next"><i class="far fa-arrow-right"></i></button>
+
+                <!-- Harga 2 -->
+                <div class="col-xl-4 col-md-6">
+                    <div class="evev-price-card">
+                        <span class="evev-price-badge">Perawatan Lembut</span>
+                        <h3 class="evev-price-title">Kebaya Payet &amp; Batik Sutra</h3>
+                        <div class="evev-price-amount">
+                            <span class="nominal">Rp 55.000</span>
+                            <span class="unit">/ pcs</span>
+                        </div>
+                        <div class="evev-price-meta"><i class="far fa-clock"></i> Estimasi 3 Hari • Anti Luntur</div>
+                        <ul class="evev-price-features">
+                            <li><i class="fas fa-check-circle"></i><span>Hand-wash &amp; wet cleaning khusus bahan halus</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Formula lerak pH netral menjaga warna batik</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Proteksi kancing, bordir, dan taburan payet</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Finishing uap vertikal bebas bekas setrika</span></li>
+                        </ul>
+                        <a href="https://wa.me/62895323418658" data-wa-paket="Kebaya Payet & Batik Sutra" data-wa-harga="Rp 55.000/pcs" class="th-btn style3 w-100 text-center mt-auto"><i class="fab fa-whatsapp me-2"></i>Pilih Paket Ini</a>
+                    </div>
+                </div>
+
+                <!-- Harga 3 -->
+                <div class="col-xl-4 col-md-6">
+                    <div class="evev-price-card">
+                        <span class="evev-price-badge">VIP Bridal Care</span>
+                        <h3 class="evev-price-title">Gaun Pesta &amp; Gaun Pengantin</h3>
+                        <div class="evev-price-amount">
+                            <span class="nominal">Rp 125.000</span>
+                            <span class="unit">/ pcs</span>
+                        </div>
+                        <div class="evev-price-meta"><i class="far fa-clock"></i> Estimasi 4-5 Hari • Garment Bag</div>
+                        <ul class="evev-price-features">
+                            <li><i class="fas fa-check-circle"></i><span>Detailing manual noda makeup &amp; ujung rok</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Aman untuk brokat, satin, tulle &amp; kristal</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Pengeringan dingin anti kerut &amp; anti kuning</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Kemasan gantung khusus siap simpan lemari</span></li>
+                        </ul>
+                        <a href="https://wa.me/62895323418658" data-wa-paket="Gaun Pesta & Gaun Pengantin" data-wa-harga="Rp 125.000/pcs" class="th-btn style3 w-100 text-center mt-auto"><i class="fab fa-whatsapp me-2"></i>Pilih Paket Ini</a>
+                    </div>
+                </div>
+
+                <!-- Harga 4 -->
+                <div class="col-xl-4 col-md-6">
+                    <div class="evev-price-card">
+                        <span class="evev-price-badge">Leather &amp; Suede</span>
+                        <h3 class="evev-price-title">Jaket Kulit, Suede &amp; Coat</h3>
+                        <div class="evev-price-amount">
+                            <span class="nominal">Rp 85.000</span>
+                            <span class="unit">/ pcs</span>
+                        </div>
+                        <div class="evev-price-meta"><i class="far fa-clock"></i> Estimasi 3-4 Hari • Moisturizer</div>
+                        <ul class="evev-price-features">
+                            <li><i class="fas fa-check-circle"></i><span>Pembersihan tanpa merendam lapisan kulit</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Aplikasi pelembap kulit anti pecah &amp; jamur</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Sikat halus khusus mengembalikan tekstur suede</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Penghilang bau apek dari penyimpanan lama</span></li>
+                        </ul>
+                        <a href="https://wa.me/62895323418658" data-wa-paket="Jaket Kulit, Suede & Coat" data-wa-harga="Rp 85.000/pcs" class="th-btn style3 w-100 text-center mt-auto"><i class="fab fa-whatsapp me-2"></i>Pilih Paket Ini</a>
+                    </div>
+                </div>
+
+                <!-- Harga 5 -->
+                <div class="col-xl-4 col-md-6">
+                    <div class="evev-price-card">
+                        <span class="evev-price-badge">Bedding Premium</span>
+                        <h3 class="evev-price-title">Bedcover King &amp; Duvet Mewah</h3>
+                        <div class="evev-price-amount">
+                            <span class="nominal">Rp 35.000</span>
+                            <span class="unit">/ pcs</span>
+                        </div>
+                        <div class="evev-price-meta"><i class="far fa-clock"></i> Estimasi 2-3 Hari • Anti Tungau</div>
+                        <ul class="evev-price-features">
+                            <li><i class="fas fa-check-circle"></i><span>Mesin kapasitas jumbo menjaga dakron empuk</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Sanitasi anti tungau, bakteri &amp; alergen debu</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Parfum lembut hypoallergenic aman untuk anak</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Packing tas plastik tebal siap masuk lemari</span></li>
+                        </ul>
+                        <a href="https://wa.me/62895323418658" data-wa-paket="Bedcover King & Duvet Mewah" data-wa-harga="Rp 35.000/pcs" class="th-btn style3 w-100 text-center mt-auto"><i class="fab fa-whatsapp me-2"></i>Pilih Paket Ini</a>
+                    </div>
+                </div>
+
+                <!-- Harga 6 -->
+                <div class="col-xl-4 col-md-6">
+                    <div class="evev-price-card">
+                        <span class="evev-price-badge">Interior Rumah</span>
+                        <h3 class="evev-price-title">Gorden Blackout &amp; Vitrase</h3>
+                        <div class="evev-price-amount">
+                            <span class="nominal">Rp 20.000</span>
+                            <span class="unit">/ m²</span>
+                        </div>
+                        <div class="evev-price-meta"><i class="far fa-clock"></i> Estimasi 3 Hari • Lipat Presisi</div>
+                        <ul class="evev-price-features">
+                            <li><i class="fas fa-check-circle"></i><span>Ekstraksi debu halus &amp; bau asap polusi</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Aman untuk lapisan blackout &amp; ring gorden</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Setrika uap agar jatuhnya gorden tetap rapi</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Gratis jemput &amp; antar area Jakarta Timur</span></li>
+                        </ul>
+                        <a href="https://wa.me/62895323418658" data-wa-paket="Gorden Blackout & Vitrase" data-wa-harga="Rp 20.000/m²" class="th-btn style3 w-100 text-center mt-auto"><i class="fab fa-whatsapp me-2"></i>Tanya &amp; Pesan WA</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="evev-price-note">
+                <strong><i class="fas fa-award me-1"></i> Layanan Prioritas Busana Formal:</strong>
+                Butuh jas atau kebaya selesai cepat dalam <strong>24 jam</strong> untuk acara besok? Tersedia layanan <em>Express VIP</em> • <strong>Gratis antar-jemput radius 5 km</strong> dari Jl. Otista Raya, Jatinegara • Konsultasi foto noda gratis via WhatsApp <strong>+62 895-3234-18658</strong>.
             </div>
         </div>
-    </section> <!--==============================
-Counter Area  
-==============================-->
-    <div class="counter-sec11" data-pos-for=".appointment-area" data-sec-pos="bottom-half">
-        <div class="container th-container">
-            <div class="counter-card-wrap style2 bg-theme">
-                <div class="counter-card style2">
-                    <div class="media-body">
-                        <h2 class="box-number"><span class="counter-number">16</span>M+</h2>
-                        <p class="box-text">Busana Mewah Berhasil Dirawat</p>
-                    </div>
-                </div>
-                <div class="divider"></div>
-                <div class="counter-card style2">
-                    <div class="media-body">
-                        <h2 class="box-number"><span class="counter-number">18</span>k+</h2>
-                        <p class="box-text">Helai Busana Selesai Tepat Waktu</p>
-                    </div>
-                </div>
-                <div class="divider"></div>
-                <div class="counter-card style2">
-                    <div class="media-body">
-                        <h2 class="box-number"><span class="counter-number">12</span>M+</h2>
-                        <p class="box-text">Tingkat Kepuasan Pelanggan</p>
-                    </div>
-                </div>
-                <div class="divider"></div>
-            </div>
-        </div>
-    </div> <!--==============================
-appointment Area  
-==============================-->
-    <section class="appointment-area position-relative overflow-hidden bg-top-center space" id="booking-pickup" data-bg-src="assets/img/bg/appointment_bg_1.jpg">
+    </section>
+
+    <!-- 4-Step Dry Cleaning Process -->
+    <section class="overflow-hidden space-bottom" id="alur-dryclean">
         <div class="container">
-            <div class="row">
+            <div class="title-area text-center">
+                <span class="sub-title">SOP 4 Tahap Presisi</span>
+                <h2 class="sec-title">Bagaimana Kami Merawat Busana Kesayangan Anda</h2>
+            </div>
+            <div class="row gy-4 justify-content-center">
+                <div class="col-xl-3 col-md-6">
+                    <div class="process-box h-100">
+                        <p class="box-number">01</p>
+                        <h3 class="box-title">Inspeksi &amp; Tagging</h3>
+                        <p class="box-text">Pengecekan label perawatan, kancing, payet, dan titik noda serta penandaan kode unik agar tidak tertukar.</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                    <div class="process-box h-100">
+                        <p class="box-number">02</p>
+                        <h3 class="box-title">Pre-Spotting Noda</h3>
+                        <p class="box-text">Noda minyak, makeup, tinta, dan keringat ditangani lebih dulu memakai cairan spotting khusus sesuai jenis kain.</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                    <div class="process-box h-100">
+                        <p class="box-number">03</p>
+                        <h3 class="box-title">Eco-Solvent Cleaning</h3>
+                        <p class="box-text">Proses dry cleaning atau wet cleaning terkontrol menjaga bentuk asli, elastisitas serat, dan kecerahan warna.</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                    <div class="process-box h-100">
+                        <p class="box-number">04</p>
+                        <h3 class="box-title">Steam Press &amp; QC</h3>
+                        <p class="box-text">Finishing uap bertekanan, pengecekan akhir oleh supervisor QC, lalu dikemas gantung siap antar ke rumah Anda.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Counter Strip -->
+    <div class="space-bottom">
+        <div class="container">
+            <div class="evev-counter-strip">
+                <div class="row gy-4 text-center">
+                    <div class="col-md-4">
+                        <h2 class="mb-1 fw-bold"><span class="counter-number">9.400</span>+</h2>
+                        <p class="mb-0 fw-semibold">Jas Formal &amp; Gaun Mewah Dirawat</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2 class="mb-1 fw-bold"><span class="counter-number">99.6</span>%</h2>
+                        <p class="mb-0 fw-semibold">Tingkat Kepuasan &amp; Ketepatan Waktu</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2 class="mb-1 fw-bold">100%</h2>
+                        <p class="mb-0 fw-semibold">Garansi Perawatan Ulang Tanpa Biaya</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Pick-Up Form Area -->
+    <section class="appointment-area position-relative overflow-hidden space-bottom" id="booking-pickup">
+        <div class="container">
+            <div class="row align-items-center gy-4">
                 <div class="col-xl-6">
-                    <div class="appointment-area-wrapper">
-                        <form action="#" onsubmit="event.preventDefault(); window.open('https://api.whatsapp.com/send?phone=62895323418658&text=Halo%20EvEvLaundry,%20saya%20ingin%20konsultasi%20dan%20order%20laundry', '_blank');">
-                            <h3 class="text-center mt-n3">Jadwalkan Penjemputan Busana</h3>
+                    <div class="appointment-area-wrapper p-4 p-md-5 rounded-4">
+                        <form id="appointmentForm" class="appointment-form" data-wa-form="booking" action="#">
+                            <h3 class="sec-title text-center mb-2">Jadwalkan Penjemputan Busana</h3>
+                            <p class="text-center mb-4" style="font-size: 14.5px;">Kurir khusus busana formal kami akan menjemput langsung dengan tas pelindung anti kusut.</p>
                             <div class="row">
                                 <div class="form-group col-12">
-                                    <input type="text" class="form-control" name="name" id="name" placeholder="Nama Lengkap Pemilik Busana">
+                                    <input type="text" class="form-control" name="name" id="bookingName" placeholder="Nama Lengkap Pemilik Busana" required>
                                     <i class="fas fa-user"></i>
                                 </div>
                                 <div class="form-group col-12">
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="Nomor WhatsApp PIC">
-                                    <i class="fas fa-envelope"></i>
+                                    <input type="tel" class="form-control" name="phone" id="bookingPhone" placeholder="Nomor WhatsApp Aktif (cth: 0812-xxxx-xxxx)" required>
+                                    <i class="fab fa-whatsapp"></i>
                                 </div>
                                 <div class="form-group col-12">
-                                    <select name="subject" id="subject" class="form-select nice-select">
-                                        <option value="" disabled selected hidden>Pilih Jenis Busana / Layanan</option>
-                                        <option value="Dry Cleaning">Dry Cleaning</option>
-                                        <option value="Wash & Fold">Wash & Fold</option>
-                                        <option value="Ironing/Pressing">Ironing/Pressing</option>
-                                        <option value="Garments Transformed">Garments Transformed</option>
-                                        <option value="Household Textile Care">Household Textile Care</option>
-                                        <option value="Household Textile Care">Household Textile Care</option>
+                                    <select name="subject" id="bookingService" class="form-select" required>
+                                        <option value="" disabled selected hidden>Pilih Jenis Busana / Layanan Dry Clean</option>
+                                        <option value="Setelan Jas Formal — Rp 45.000/set">Setelan Jas Formal (Jas + Celana) — Rp 45.000/set</option>
+                                        <option value="Kebaya Payet & Batik Sutra — Rp 55.000/pcs">Kebaya Payet &amp; Batik Sutra — Rp 55.000/pcs</option>
+                                        <option value="Gaun Pesta & Gaun Pengantin — Rp 125.000/pcs">Gaun Pesta &amp; Gaun Pengantin — Rp 125.000/pcs</option>
+                                        <option value="Jaket Kulit, Suede & Coat — Rp 85.000/pcs">Jaket Kulit, Suede &amp; Coat — Rp 85.000/pcs</option>
+                                        <option value="Bedcover King & Duvet Mewah — Rp 35.000/pcs">Bedcover King &amp; Duvet Mewah — Rp 35.000/pcs</option>
+                                        <option value="Gorden Blackout & Vitrase — Rp 20.000/m²">Gorden Blackout &amp; Vitrase — Rp 20.000/m²</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-12">
-                                    <textarea name="message" id="message" cols="30" rows="3" class="form-control" placeholder="Alamat Penjemputan &amp; Catatan Khusus Pakaian"></textarea>
+                                    <input type="text" class="form-control" name="address" id="bookingAddress" placeholder="Alamat Penjemputan Lengkap (Jakarta Timur & sekitarnya)" required>
+                                    <i class="fas fa-location-dot"></i>
+                                </div>
+                                <div class="form-group col-12">
+                                    <textarea name="message" id="bookingMessage" cols="30" rows="3" class="form-control" placeholder="Catatan khusus (jenis noda, bahan sutra/payet, atau jadwal acara)..."></textarea>
                                     <i class="fas fa-pencil"></i>
                                 </div>
                                 <div class="form-btn col-12">
-                                    <button class="th-btn btn-fw th-radius">Appointment Now</button>
+                                    <button type="submit" class="th-btn btn-fw th-radius"><i class="fab fa-whatsapp me-2"></i>Kirim Jadwal Pick-Up via WA</button>
                                 </div>
                             </div>
-                            <p class="form-messages mb-0 mt-3"></p>
+                            <p class="form-messages mb-0 mt-3 text-center"></p>
                         </form>
                     </div>
                 </div>
-                <div class="col-xl-5">
-                    <div class="appointment-img1">
+                <div class="col-xl-6">
+                    <div class="appointment-img1 ps-xl-3">
                         <div class="img1">
-                            <img src="assets/img/evevlaundry/hero_dry_cleaning.webp" alt="faq">
+                            <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=900&q=80" alt="Busana formal bersih dan rapi siap antar evevlaundry" loading="lazy" style="object-fit: cover;">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section> <!--==============================
-Faq Area
-==============================-->
-    <div class="   overflow-hidden" id="faq-sec">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6">
-                    <div class="title-area mb-35 pe-xl-5 text-center text-xl-start">
-                        <span class="sub-title style1">Faq</span>
-                        <h2 class="sec-title">Frequently Asked Have Any Questions</h2>
-                        <p>The frequency of dry cleaning depends on factors like how often you wear garment, the type of
-                            fabric, and whether there are visible stains. A general guideline is every few wears or as
-                            needed.</p>
-                    </div>
-                    <div id="faq" class="faq-img2">
-                        <img src="assets/img/normal/faq_1_2.png" alt="faq">
-                    </div>
-                </div>
-                <div class="col-xl-6">
-                    <div class="accordion" id="faqAccordion">
-
-
-                        <div class="accordion-card style2">
-                            <div class="accordion-header" id="collapse-item-1">
-                                <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">How does dry cleaning differ from traditional washing?</button>
-                            </div>
-                            <div id="collapse-1" class="accordion-collapse collapse show" aria-labelledby="collapse-item-1" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    <p class="faq-text">We value your feedback! Let us know about your experience and if
-                                        there's anything else we can do to make your laundry service even better. We're
-                                        always here to assist you.</p>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="accordion-card style2">
-                            <div class="accordion-header" id="collapse-item-2">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">Are there any fabrics that should not be dry cleaned?</button>
-                            </div>
-                            <div id="collapse-2" class="accordion-collapse collapse " aria-labelledby="collapse-item-2" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    <p class="faq-text">We value your feedback! Let us know about your experience and if
-                                        there's anything else we can do to make your laundry service even better. We're
-                                        always here to assist you.</p>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="accordion-card style2">
-                            <div class="accordion-header" id="collapse-item-3">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3">Are there any items that cannot be dry cleaned?</button>
-                            </div>
-                            <div id="collapse-3" class="accordion-collapse collapse " aria-labelledby="collapse-item-3" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    <p class="faq-text">We value your feedback! Let us know about your experience and if
-                                        there's anything else we can do to make your laundry service even better. We're
-                                        always here to assist you.</p>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="accordion-card style2">
-                            <div class="accordion-header" id="collapse-item-4">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-4" aria-expanded="false" aria-controls="collapse-4">What is the typical turnaround time for dry cleaning services?</button>
-                            </div>
-                            <div id="collapse-4" class="accordion-collapse collapse " aria-labelledby="collapse-item-4" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    <p class="faq-text">We value your feedback! Let us know about your experience and if
-                                        there's anything else we can do to make your laundry service even better. We're
-                                        always here to assist you.</p>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="accordion-card style2">
-                            <div class="accordion-header" id="collapse-item-5">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-5" aria-expanded="false" aria-controls="collapse-5">How often should I get my clothes dry cleaned?</button>
-                            </div>
-                            <div id="collapse-5" class="accordion-collapse collapse " aria-labelledby="collapse-item-5" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    <p class="faq-text">We value your feedback! Let us know about your experience and if
-                                        there's anything else we can do to make your laundry service even better. We're
-                                        always here to assist you.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--==============================
-Process Area  
-==============================-->
-    <section class="overflow-hidden space-top" id="process-sec">
-        <div class="container">
-            <div class="title-area text-center">
-                <span class="sub-title">Work Process</span>
-                <h2 class="sec-title">How We Work It!</h2>
-            </div>
-            <div class="row gy-4 justify-content-center">
-                <div class="col-xl-3 col-md-6 process-box-wrap">
-                    <div class="process-box">
-                        <div class="box-icon">
-                            <img src="assets/img/icon/process_box_1.svg" alt="icon">
-                            <div class="icon-shape"></div>
-                        </div>
-                        <p class="box-number">01</p>
-                        <h3 class="box-title">Drapery Refresh</h3>
-                        <p class="box-text">The frequency of dry cleaning depends on factors such as the type of garment</p>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6 process-box-wrap">
-                    <div class="process-box">
-                        <div class="box-icon">
-                            <img src="assets/img/icon/process_box_2.svg" alt="icon">
-                            <div class="icon-shape"></div>
-                        </div>
-                        <p class="box-number">02</p>
-                        <h3 class="box-title">Garment Guardian</h3>
-                        <p class="box-text">The frequency of dry cleaning depends on factors such as the type of garment</p>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6 process-box-wrap">
-                    <div class="process-box">
-                        <div class="box-icon">
-                            <img src="assets/img/icon/process_box_3.svg" alt="icon">
-                            <div class="icon-shape"></div>
-                        </div>
-                        <p class="box-number">03</p>
-                        <h3 class="box-title">Delicate Care</h3>
-                        <p class="box-text">Dry cleaning is effective at removing oil-based stains like grease, lipstick</p>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6 process-box-wrap">
-                    <div class="process-box">
-                        <div class="box-icon">
-                            <img src="assets/img/icon/process_box_4.svg" alt="icon">
-                            <div class="icon-shape"></div>
-                        </div>
-                        <p class="box-number">04</p>
-                        <h3 class="box-title">Express Press</h3>
-                        <p class="box-text">Many dry cleaners now use environmentally-friendly solvents and processes. Look</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </section>
 
-    <!--==============================
-Blog Area  
-==============================-->
-    <section class="overflow-hidden space" id="blog-sec">
+    <!-- Expert Team -->
+    <section class="space-bottom">
         <div class="container">
-            <div class="row justify-content-lg-between justify-content-center align-items-center">
-                <div class="col-lg-6">
-                    <div class="title-area text-center text-lg-start">
-                        <span class="sub-title style1">Blog Post</span>
-                        <h2 class="sec-title">Tips &amp; Edukasi Perawatan Pakaian</h2>
-                    </div>
-                </div>
-                <div class="col-auto">
-                    <div class="sec-btn">
-                        <div class="btn-group">
-                            <a href="#tentang" class="th-btn">Lihat Selengkapnya Post</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="title-area text-center">
+                <span class="sub-title">Tim Spesialis Dry Cleaning</span>
+                <h2 class="sec-title">Ditangani Langsung oleh Teknisi Kain Berpengalaman</h2>
             </div>
-            <div class="slider-area">
-                <div class="swiper th-slider has-shadow" id="blogSlider1" data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"2"},"1200":{"slidesPerView":"3"}}}'>
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="blog-box">
-                                <div class="blog-img">
-                                    <img src="assets/img/blog/blog_2_1.jpg" alt="blog image">
-                                </div>
-                                <div class="blog-box_wrapper">
-                                    <span class="blog-box_date">10 <span class="blog-box_month">nov</span> </span>
-                                    <span class="blog-box_year">2023</span>
-                                </div>
-                                <div class="blog-box_content">
-                                    <div class="blog-meta">
-                                        <a href="#tentang"><i class="fa-regular fa-user"></i>by admin</a>
-                                        <a href="#tentang"><i class="fa-regular fa-comments"></i>2 Comments</a>
-                                    </div>
-                                    <h3 class="box-title"><a href="#tentang">Pakaian Apa Saja yang Wajib Dicelup Dry Clean?</a></h3>
-                                    <p>The frequency of dry cleaning depends on the type of garment and how often worn</p>
-                                    <a href="#tentang" class="th-btn border">Baca Selengkapnya</a>
-                                </div>
+            <div class="row gy-4">
+                <div class="col-md-4">
+                    <div class="th-team team-box style2">
+                        <div class="team-img">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" alt="Hendra Wijaya Master Dry Cleaner evevlaundry" loading="lazy" style="object-fit: cover;">
+                        </div>
+                        <div class="team-content">
+                            <div class="media-body">
+                                <h3 class="box-title">Hendra Wijaya</h3>
+                                <span class="team-desig">Master Dry Cleaner &amp; Spotting</span>
                             </div>
                         </div>
-
-                        <div class="swiper-slide">
-                            <div class="blog-box">
-                                <div class="blog-img">
-                                    <img src="assets/img/blog/blog_2_2.jpg" alt="blog image">
-                                </div>
-                                <div class="blog-box_wrapper">
-                                    <span class="blog-box_date">15 <span class="blog-box_month">nov</span> </span>
-                                    <span class="blog-box_year">2023</span>
-                                </div>
-                                <div class="blog-box_content">
-                                    <div class="blog-meta">
-                                        <a href="#tentang"><i class="fa-regular fa-user"></i>by admin</a>
-                                        <a href="#tentang"><i class="fa-regular fa-comments"></i>3 Comments</a>
-                                    </div>
-                                    <h3 class="box-title"><a href="#tentang">Merawat Seragam Kerja & Jas Kantor Tetap Prima</a></h3>
-                                    <p>our meticulous dry cleaning services, where precision meets pristine care.</p>
-                                    <a href="#tentang" class="th-btn border">Baca Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="blog-box">
-                                <div class="blog-img">
-                                    <img src="assets/img/blog/blog_2_3.jpg" alt="blog image">
-                                </div>
-                                <div class="blog-box_wrapper">
-                                    <span class="blog-box_date">16 <span class="blog-box_month">nov</span> </span>
-                                    <span class="blog-box_year">2023</span>
-                                </div>
-                                <div class="blog-box_content">
-                                    <div class="blog-meta">
-                                        <a href="#tentang"><i class="fa-regular fa-user"></i>by admin</a>
-                                        <a href="#tentang"><i class="fa-regular fa-comments"></i>2 Comments</a>
-                                    </div>
-                                    <h3 class="box-title"><a href="#tentang">Panduan Menyimpan Gaun Pesta Agar Bebas Jamur</a></h3>
-                                    <p>Revitalize your wardrobe with expert dry cleaning for a pristine polished look.</p>
-                                    <a href="#tentang" class="th-btn border">Baca Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="blog-box">
-                                <div class="blog-img">
-                                    <img src="assets/img/blog/blog_2_1.jpg" alt="blog image">
-                                </div>
-                                <div class="blog-box_wrapper">
-                                    <span class="blog-box_date">17 <span class="blog-box_month">nov</span> </span>
-                                    <span class="blog-box_year">2023</span>
-                                </div>
-                                <div class="blog-box_content">
-                                    <div class="blog-meta">
-                                        <a href="#tentang"><i class="fa-regular fa-user"></i>by admin</a>
-                                        <a href="#tentang"><i class="fa-regular fa-comments"></i>4 Comments</a>
-                                    </div>
-                                    <h3 class="box-title"><a href="#tentang">Deep Cleaning Sepatu Sneakers & Tas Kulit Mewah</a></h3>
-                                    <p>meticulous dry cleaning, preserving fabrics and enhancing garment longevity."</p>
-                                    <a href="#tentang" class="th-btn border">Baca Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="blog-box">
-                                <div class="blog-img">
-                                    <img src="assets/img/blog/blog_2_2.jpg" alt="blog image">
-                                </div>
-                                <div class="blog-box_wrapper">
-                                    <span class="blog-box_date">19 <span class="blog-box_month">nov</span> </span>
-                                    <span class="blog-box_year">2023</span>
-                                </div>
-                                <div class="blog-box_content">
-                                    <div class="blog-meta">
-                                        <a href="#tentang"><i class="fa-regular fa-user"></i>by admin</a>
-                                        <a href="#tentang"><i class="fa-regular fa-comments"></i>4 Comments</a>
-                                    </div>
-                                    <h3 class="box-title"><a href="#tentang">Panduan Menyimpan Gaun Pesta Agar Bebas Jamur</a></h3>
-                                    <p>Elevate your wardrobe with meticulous dry cleaning precision and care."</p>
-                                    <a href="#tentang" class="th-btn border">Baca Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="blog-box">
-                                <div class="blog-img">
-                                    <img src="assets/img/blog/blog_2_3.jpg" alt="blog image">
-                                </div>
-                                <div class="blog-box_wrapper">
-                                    <span class="blog-box_date">20 <span class="blog-box_month">nov</span> </span>
-                                    <span class="blog-box_year">2023</span>
-                                </div>
-                                <div class="blog-box_content">
-                                    <div class="blog-meta">
-                                        <a href="#tentang"><i class="fa-regular fa-user"></i>by admin</a>
-                                        <a href="#tentang"><i class="fa-regular fa-comments"></i>4 Comments</a>
-                                    </div>
-                                    <h3 class="box-title"><a href="#tentang">Deep Cleaning Sepatu Sneakers & Tas Kulit Mewah</a></h3>
-                                    <p>The frequency of dry cleaning depends on the type of garment and how often worn</p>
-                                    <a href="#tentang" class="th-btn border">Baca Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
-                <button data-slider-prev="#blogSlider1" class="slider-arrow slider-prev"><i class="far fa-arrow-left"></i></button>
-                <button data-slider-next="#blogSlider1" class="slider-arrow slider-next"><i class="far fa-arrow-right"></i></button>
+                <div class="col-md-4">
+                    <div class="th-team team-box style2">
+                        <div class="team-img">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Ratna Sari Spesialis Gaun dan Kebaya Payet evevlaundry" loading="lazy" style="object-fit: cover;">
+                        </div>
+                        <div class="team-content">
+                            <div class="media-body">
+                                <h3 class="box-title">Ratna Sari</h3>
+                                <span class="team-desig">Spesialis Kebaya &amp; Gaun Pengantin</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="th-team team-box style2">
+                        <div class="team-img">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Dimas Ardiansyah Ahli Steam Pressing dan Leather Care" loading="lazy" style="object-fit: cover;">
+                        </div>
+                        <div class="team-content">
+                            <div class="media-body">
+                                <h3 class="box-title">Dimas Ardiansyah</h3>
+                                <span class="team-desig">Ahli Steam Press &amp; Leather Care</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </section> <!--==============================
-	Footer Area
-==============================-->
-    <div class="">
-        <div class="container z-index-common">
-            <div class="cta-wrap" data-overlay="title" data-opacity="9" data-bg-src="assets/img/bg/cta_bg_2.jpg">
-                <div class="row align-items-center">
-                    <div class="col-xl-7 col-lg-6 mb-5 mb-lg-0">
-                        <div class="title-area mb-0 text-center text-lg-start">
-                            <span class="sub-title style1">Get Free Contact For Services</span>
-                            <h2 class="sec-title text-white">You Get Premium Laundry Service From Us!</h2>
-                        </div>
-                    </div>
-                    <div class="col-xl-5 col-lg-6">
-                        <form class="cta-form">
-                            <div class="form-group">
-                                <input class="form-control" type="email" placeholder="Nomor WhatsApp PIC" required="">
-                                <button type="submit" class="th-btn style4">Get your services</button>
-                            </div>
+    </section>
 
-                        </form>
+    <!-- Testimonials (Authentic Indonesian Reviews) -->
+    <section class="overflow-hidden space-bottom" id="testi-sec">
+        <div class="container">
+            <div class="title-area text-center">
+                <span class="sub-title">Testimoni Pelanggan Dry Clean</span>
+                <h2 class="sec-title">Dipercaya Profesional &amp; Keluarga di Jakarta Timur</h2>
+            </div>
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="testi-box h-100 p-4 rounded-4">
+                        <div class="testi-box_profile mb-3">
+                            <div class="testi-box_author">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="Reza Mahendra pelanggan dry clean jas evevlaundry" loading="lazy" style="object-fit: cover;">
+                            </div>
+                            <div class="testi-box_info">
+                                <h3 class="box-title h5 mb-0">Reza Mahendra</h3>
+                                <span class="testi-box_desig">Manajer Keuangan — Tebet</span>
+                            </div>
+                        </div>
+                        <p class="testi-box_text mb-0">&ldquo;Setelan jas wol saya kembali rapi seperti baru keluar dari tailor. Bagian bahunya tetap tegas, nggak bau kimia, dan diantar langsung pakai cover gantung.&rdquo;</p>
                     </div>
                 </div>
-                <div class="cta-shape"><img src="assets/img/shape/line.png" alt=""></div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testi-box h-100 p-4 rounded-4">
+                        <div class="testi-box_profile mb-3">
+                            <div class="testi-box_author">
+                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80" alt="Clarissa Amanda pelanggan wet clean kebaya payet" loading="lazy" style="object-fit: cover;">
+                            </div>
+                            <div class="testi-box_info">
+                                <h3 class="box-title h5 mb-0">Clarissa Amanda</h3>
+                                <span class="testi-box_desig">Pengantin Baru — Jatinegara</span>
+                            </div>
+                        </div>
+                        <p class="testi-box_text mb-0">&ldquo;Sempat khawatir kebaya resepsi penuh payet bakal rontok saat dicuci, tapi hasil evevlaundry luar biasa bersih. Noda foundation di kerah hilang total dan payet tetap utuh.&rdquo;</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testi-box h-100 p-4 rounded-4">
+                        <div class="testi-box_profile mb-3">
+                            <div class="testi-box_author">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Dewi Anggraini pelanggan cuci bedcover dan gorden" loading="lazy" style="object-fit: cover;">
+                            </div>
+                            <div class="testi-box_info">
+                                <h3 class="box-title h5 mb-0">Dewi Anggraini</h3>
+                                <span class="testi-box_desig">Arsitek Interior — Matraman</span>
+                            </div>
+                        </div>
+                        <p class="testi-box_text mb-0">&ldquo;Cuci gorden blackout dan bedcover king size di sini selalu memuaskan. Gorden nggak menyusut, lapisan belakang aman, dan aromanya lembut banget.&rdquo;</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Area -->
+    <section class="overflow-hidden space-bottom" id="faq">
+        <div class="container">
+            <div class="row align-items-center gy-4">
+                <div class="col-xl-5">
+                    <div class="title-area mb-30 text-center text-xl-start">
+                        <span class="sub-title style1">Pertanyaan Umum Dry Clean</span>
+                        <h2 class="sec-title">FAQ Layanan Dry Cleaning &amp; Wet Cleaning</h2>
+                        <p>Masih ragu apakah busana Anda lebih cocok menggunakan metode Dry Cleaning atau Wet Cleaning? Simak panduan singkat berikut.</p>
+                    </div>
+                    <div class="faq-img2">
+                        <img src="https://images.unsplash.com/photo-1489274495757-95c7c837b101?auto=format&fit=crop&w=800&q=80" alt="Detail perawatan kain halus di outlet evevlaundry" loading="lazy" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-xl-7">
+                    <div class="accordion" id="faqAccordion2">
+                        <div class="accordion-card style2">
+                            <div class="accordion-header" id="faq2-head-1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-body-1" aria-expanded="true" aria-controls="faq2-body-1">Apa perbedaan Dry Cleaning dan Wet Cleaning di evevlaundry?</button>
+                            </div>
+                            <div id="faq2-body-1" class="accordion-collapse collapse show" aria-labelledby="faq2-head-1" data-bs-parent="#faqAccordion2">
+                                <div class="accordion-body">
+                                    <p class="faq-text"><strong>Dry Cleaning</strong> menggunakan pelarut eco-solvent tanpa air sehingga sangat aman untuk jas wol, blazer berstruktur, dan kain yang mudah menyusut. <strong>Wet Cleaning</strong> menggunakan air terfiltrasi dengan deterjen lembut pH netral dan gerakan mesin minim gesekan, ideal untuk batik sutra tulis dan kebaya brokat.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-card style2">
+                            <div class="accordion-header" id="faq2-head-2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-body-2" aria-expanded="false" aria-controls="faq2-body-2">Apakah aman untuk kebaya penuh payet dan gaun pengantin?</button>
+                            </div>
+                            <div id="faq2-body-2" class="accordion-collapse collapse" aria-labelledby="faq2-head-2" data-bs-parent="#faqAccordion2">
+                                <div class="accordion-body">
+                                    <p class="faq-text">Sangat aman. Kebaya berpayet, manik, dan gaun pengantin dikerjakan dengan teknik <strong>detailing manual (hand-spotting)</strong> tanpa putaran mesin keras sehingga hiasan tetap utuh dan berkilau.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-card style2">
+                            <div class="accordion-header" id="faq2-head-3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-body-3" aria-expanded="false" aria-controls="faq2-body-3">Berapa lama waktu pengerjaan Dry Cleaning?</button>
+                            </div>
+                            <div id="faq2-body-3" class="accordion-collapse collapse" aria-labelledby="faq2-head-3" data-bs-parent="#faqAccordion2">
+                                <div class="accordion-body">
+                                    <p class="faq-text">Standar pengerjaan setelan jas dan bedcover adalah 2–3 hari kerja, sedangkan gaun pengantin 4–5 hari agar proses pengeringan dingin berjalan optimal. Kami juga menyediakan opsi <strong>Express 24 Jam</strong> untuk kebutuhan acara mendadak.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-card style2">
+                            <div class="accordion-header" id="faq2-head-4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-body-4" aria-expanded="false" aria-controls="faq2-body-4">Bagaimana cara menyimpan jas atau gaun setelah di-dry clean?</button>
+                            </div>
+                            <div id="faq2-body-4" class="accordion-collapse collapse" aria-labelledby="faq2-head-4" data-bs-parent="#faqAccordion2">
+                                <div class="accordion-body">
+                                    <p class="faq-text">Setelah diterima di rumah, lepaskan plastik transparan sekali pakai dan simpan busana menggunakan hanger bahu lebar di dalam garment bag berbahan breathable (kain spunbond/katun) di lemari yang sejuk agar bebas jamur.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <div class="space-bottom">
+        <div class="container">
+            <div class="cta-wrap rounded-4 p-4 p-md-5" style="background: linear-gradient(135deg, #075985 0%, #0F172A 100%);">
+                <div class="row align-items-center gy-3">
+                    <div class="col-lg-8 text-center text-lg-start">
+                        <span class="sub-title style1">Konsultasi Gratis Foto Noda via WhatsApp</span>
+                        <h2 class="sec-title text-white mb-0">Ingin Jas, Kebaya, atau Gaun Pesta Kembali Prima?</h2>
+                    </div>
+                    <div class="col-lg-4 text-center text-lg-end">
+                        <a href="https://wa.me/62895323418658?text=Halo%20evevlaundry%2C%20saya%20mau%20konsultasi%20dan%20pesan%20Dry%20Cleaning." data-wa-general="true" class="th-btn style5 btn-wa-booking"><i class="fab fa-whatsapp me-2"></i>Chat Spesialis Sekarang</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <footer id="kontak" class="footer-wrapper footer-layout2" data-bg-src="assets/img/bg/footer_bg_2.jpg">
+    <!-- Footer Area -->
+    <footer id="kontak" class="footer-wrapper footer-layout2">
         <div class="widget-area">
             <div class="container">
-                <div class="row justify-content-between">
-                    <div class="col-md-6 col-xl-3">
+                <div class="row justify-content-between gy-4">
+                    <div class="col-md-6 col-xl-4">
                         <div class="widget footer-widget">
                             <div class="th-widget-about">
                                 <div class="about-logo">
-                                    <a href="#layanan"><img src="assets/img/logo-white.svg" alt="Laun"></a>
+                                    <a href="template-2.html" class="brand-logo-fallback">
+                                        <img src="assets/img/logo-white.svg" alt="Logo evevlaundry" loading="lazy" onerror="this.outerHTML='<span><i class=\'fas fa-sparkles\'></i> evevlaundry</span>';">
+                                    </a>
                                 </div>
-                                <p class="about-text">Layanan spesialis dry cleaning dan wet cleaning profesional busana formal, gaun pengantin, jas, dan tekstil rumah tangga di Jakarta Timur.<br><br>
-        <i class="fas fa-map-marker-alt text-theme me-2"></i>Jl. Otista Raya No. 88, Jatinegara, Jakarta Timur<br>
-        <i class="fas fa-envelope text-theme me-2"></i>evevdigital@gmail.com<br>
-        <i class="fab fa-whatsapp text-theme me-2"></i>0895-3234-18658</p>
-                                <div class="th-social">
-                                    <a href="#kontak"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#kontak"><i class="fab fa-twitter"></i></a>
-                                    <a href="#kontak"><i class="fab fa-linkedin-in"></i></a>
-                                    <a href="https://wa.me/62895323418658"><i class="fab fa-whatsapp"></i></a>
-                                </div>
+                                <p class="about-text">Divisi spesialis dry cleaning &amp; wet cleaning profesional untuk jas formal, kebaya payet, gaun pengantin, jaket kulit, dan tekstil rumah tangga di Jakarta Timur.</p>
+                                <p class="about-text mb-2">
+                                    <i class="fas fa-map-marker-alt me-2"></i><span data-config="alamat">Jl. Otista Raya No. 88, Kel. Bidara Cina, Kec. Jatinegara, Jakarta Timur 13330</span><br>
+                                    <i class="fab fa-whatsapp me-2 mt-2"></i><a href="https://wa.me/62895323418658" data-wa-general="true" data-config="whatsappDisplay">+62 895-3234-18658</a><br>
+                                    <i class="fas fa-envelope me-2 mt-2"></i><a href="mailto:evevdigital@gmail.com" data-config="email">evevdigital@gmail.com</a>
+                                </p>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-md-6 col-xl-auto">
                         <div class="widget widget_nav_menu footer-widget">
-                            <h3 class="widget_title">Layanan Pilihan</h3>
+                            <h3 class="widget_title">Layanan Dry Clean</h3>
                             <div class="menu-all-pages-container">
                                 <ul class="menu">
-                                    <li><a href="#layanan">Dry Cleaning</a></li>
-                                    <li><a href="#layanan">Dust Removal</a></li>
-                                    <li><a href="#layanan">Damage Repair</a></li>
-                                    <li><a href="#layanan">Sanitize clothes</a></li>
-                                    <li><a href="#layanan"> Laundry Service</a></li>
-
+                                    <li><a href="#harga">Dry Cleaning Jas Formal</a></li>
+                                    <li><a href="#harga">Wet Cleaning Kebaya &amp; Batik</a></li>
+                                    <li><a href="#harga">Perawatan Gaun Pengantin</a></li>
+                                    <li><a href="#harga">Jaket Kulit &amp; Suede Care</a></li>
+                                    <li><a href="#harga">Bedcover King &amp; Gorden</a></li>
+                                    <li><a href="template-1.html">Laundry Kiloan &amp; Setrika Uap</a></li>
+                                    <li><a href="template-3.html">Spa Sepatu &amp; Kontrak B2B</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-xl-auto">
-                        <div class="widget footer-widget">
-                            <h3 class="widget_title">Tips Perawatan Pakaian</h3>
-                            <div class="recent-post-wrap">
-                                <div class="recent-post">
-                                    <div class="media-img">
-                                        <a href="#tentang"><img src="assets/img/blog/recent-post-1-1.jpg" alt="Blog Image"></a>
-                                    </div>
-                                    <div class="media-body">
-                                        <div class="recent-post-meta">
-                                            <a href="#tentang"><i class="far fa-calendar"></i>21 October , 2023</a>
-                                        </div>
-                                        <h4 class="post-title"><a class="text-inherit" href="#tentang">Tips Menjaga Baju Putih Tetap Bersih Cemerlang</a></h4>
-                                    </div>
-                                </div>
-                                <div class="recent-post">
-                                    <div class="media-img">
-                                        <a href="#tentang"><img src="assets/img/blog/recent-post-1-2.jpg" alt="Blog Image"></a>
-                                    </div>
-                                    <div class="media-body">
-                                        <div class="recent-post-meta">
-                                            <a href="#tentang"><i class="far fa-calendar"></i>22 October , 2023</a>
-                                        </div>
-                                        <h4 class="post-title"><a class="text-inherit" href="#tentang">Manfaat Setrika Uap Boiler untuk Serat Pakaian</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                     <div class="col-md-6 col-xl-auto">
                         <div class="widget footer-widget">
                             <h3 class="widget_title">Jam Operasional Outlet</h3>
                             <div class="th-widget-schedule">
-                                <p class="schedule-info"><span>Mon - Tuesday</span><span>8:00 AM - 6:00 PM</span></p>
-                                <p class="schedule-info"><span>Wed:</span><span>9:00 AM - 5:00 PM</span></p>
-                                <p class="schedule-info"><span>Fri - Sat:</span><span>9:00 AM - 6:00 PM</span></p>
-                                <p class="schedule-info"><span>Sunday</span><span>Closed</span></p>
+                                <p class="schedule-info"><span>Senin - Jumat</span><span>07:00 - 21:00 WIB</span></p>
+                                <p class="schedule-info"><span>Sabtu - Minggu</span><span>07:00 - 21:00 WIB</span></p>
+                                <p class="schedule-info"><span>Hari Libur Nasional</span><span>08:00 - 20:00 WIB</span></p>
+                                <p class="schedule-info"><span>Kurir Antar-Jemput</span><span>Gratis Radius 5 KM</span></p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
 
         <div class="copyright-wrap">
             <div class="container">
                 <div class="row gy-2 align-items-center">
                     <div class="col-lg-6">
-                        <p class="copyright-text">Hak Cipta &copy; 2026 <strong>evevlaundry</strong> (PT. EVEVDIGITAL). Seluruh Hak Cipta Dilindungi.</p>
+                        <p class="copyright-text">Hak Cipta &copy; 2026 <strong>evevlaundry</strong> (EVEVDIGITAL). Seluruh Hak Cipta Dilindungi.</p>
                     </div>
-                    <div class="col-lg-6 text-center text-md-end">
-                        <div class="footer-links">
-                            <ul>
-                                <li><a href="#kontak">Privacy Policy</a></li>
-                                <li><a href="#kontak">Terms &amp; Condition</a></li>
-                            </ul>
+                    <div class="col-lg-6 text-center text-lg-end">
+                        <div class="th-social">
+                            <a href="https://wa.me/62895323418658" data-wa-general="true" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#kontak" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#kontak" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1470,102 +1328,45 @@ Blog Area
         </div>
     </footer>
 
-    <!--********************************
-			Code End  Here 
-	******************************** -->
-
     <!-- Scroll To Top -->
     <div class="scroll-top">
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;">
-            </path>
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
         </svg>
     </div>
 
-    <!--==============================
-    All Js File
-============================== -->
-    <!-- Jquery -->
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/62895323418658?text=Halo%20evevlaundry%2C%20saya%20ingin%20booking%20Dry%20Cleaning%20antar-jemput." class="floating-wa-btn" data-wa-general="true" target="_blank" rel="noopener noreferrer" aria-label="Chat WhatsApp evevlaundry">
+        <i class="fab fa-whatsapp"></i>
+        <span>Pesan Dry Clean WA</span>
+    </a>
+
+    <!-- Floating Dual Theme Toggle Button -->
+    <button type="button" class="theme-toggle-btn floating-theme-btn" title="Ganti Mode Terang/Gelap" aria-label="Ganti Mode Terang atau Gelap"></button>
+
+    <!-- Floating Template Switcher Bar -->
+    <div id="evev-template-switcher">
+        <span style="color:#CBD5E1;font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;"><i class="fas fa-tshirt" style="color:#7DD3FC;margin-right:6px;"></i>evevlaundry:</span>
+        <a href="template-1.html" class="switcher-pill">1. Kiloan &amp; Lipat</a>
+        <a href="template-2.html" class="switcher-pill active">2. Dry Cleaning Jas</a>
+        <a href="template-3.html" class="switcher-pill">3. Spa Sepatu &amp; B2B</a>
+    </div>
+
+    <!-- All JS Files -->
     <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
-    <!-- Swiper Js -->
     <script src="assets/js/swiper-bundle.min.js"></script>
-    <!-- Bootstrap -->
     <script src="assets/js/bootstrap.min.js"></script>
-    <!-- Magnific Popup -->
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <!-- Counter Up -->
     <script src="assets/js/jquery.counterup.min.js"></script>
-    <!-- Range Slider -->
     <script src="assets/js/jquery-ui.min.js"></script>
-    <!-- imagesloaded -->
     <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-
-    <!-- isotope -->
     <script src="assets/js/isotope.pkgd.min.js"></script>
-    <!-- nice select -->
     <script src="assets/js/nice-select.min.js"></script>
-
-    <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
 
-<!-- Floating WhatsApp Widget -->
-<a href="https://wa.me/62895323418658?text=Halo%20evevlaundry,%20saya%20mau%20order%20laundry%20antar%20jemput" class="floating-wa" target="_blank" rel="noopener noreferrer" style="position:fixed;bottom:25px;right:25px;z-index:9999;background-color:#25d366;color:#ffffff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 15px rgba(0,0,0,0.3);text-decoration:none;font-size:32px;transition:all 0.3s ease;">
-    <i class="fab fa-whatsapp"></i>
-</a>
-
-<!-- Theme Toggle Floating Button -->
-<button id="themeToggleBtn" onclick="toggleThemeMode()" title="Ganti Mode Terang/Gelap" style="position:fixed;bottom:95px;right:28px;z-index:9999;background:#0284c7;color:#ffffff;border:none;width:52px;height:52px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 15px rgba(0,0,0,0.25);font-size:22px;transition:all 0.3s ease;">
-    <i class="fas fa-moon" id="themeIcon"></i>
-</button>
-
-<!-- Floating Template Switcher Bar -->
-<div class="template-switcher-bar" style="position:fixed;bottom:25px;left:50%;transform:translateX(-50%);z-index:9999;background:rgba(15,23,42,0.92);backdrop-filter:blur(10px);padding:8px 18px;border-radius:30px;box-shadow:0 10px 25px rgba(0,0,0,0.4);display:flex;align-items:center;gap:12px;border:1px solid rgba(255,255,255,0.15);">
-    <span style="color:#94a3b8;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:1px;"><i class="fas fa-tshirt" style="color:#38bdf8;margin-right:6px;"></i>evevlaundry:</span>
-    <a href="template-1.html" class="ts-btn ts-1" style="color:#fff;text-decoration:none;font-size:13px;font-weight:600;padding:5px 12px;border-radius:20px;transition:all 0.2s;">1. Kiloan &amp; Lipat</a>
-    <span style="color:rgba(255,255,255,0.2);">|</span>
-    <a href="template-2.html" class="ts-btn ts-2" style="color:#fff;text-decoration:none;font-size:13px;font-weight:600;padding:5px 12px;border-radius:20px;transition:all 0.2s;">2. Dry Cleaning Jas</a>
-    <span style="color:rgba(255,255,255,0.2);">|</span>
-    <a href="template-3.html" class="ts-btn ts-3" style="color:#fff;text-decoration:none;font-size:13px;font-weight:600;padding:5px 12px;border-radius:20px;transition:all 0.2s;">3. Spa Sepatu &amp; B2B</a>
-</div>
-
-<script>
-function toggleThemeMode() {
-    var body = document.body;
-    var icon = document.getElementById('themeIcon');
-    if (body.classList.contains('dark-theme')) {
-        body.classList.remove('dark-theme');
-        icon.classList.remove('fa-sun');
-        icon.classList.add('fa-moon');
-        localStorage.setItem('evev_theme', 'light');
-    } else {
-        body.classList.add('dark-theme');
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
-        localStorage.setItem('evev_theme', 'dark');
-    }
-}
-(function() {
-    if (localStorage.getItem('evev_theme') === 'dark') {
-        document.body.classList.add('dark-theme');
-        var icon = document.getElementById('themeIcon');
-        if (icon) {
-            icon.classList.remove('fa-moon');
-            icon.classList.add('fa-sun');
-        }
-    }
-    var cur = window.location.pathname.split('/').pop();
-    if (cur === 'template-1.html' || cur === 'index.html' || cur === '') {
-        var el = document.querySelector('.ts-1');
-        if (el) { el.style.background = '#0284c7'; el.style.color = '#fff'; }
-    } else if (cur === 'template-2.html') {
-        var el = document.querySelector('.ts-2');
-        if (el) { el.style.background = '#0284c7'; el.style.color = '#fff'; }
-    } else if (cur === 'template-3.html') {
-        var el = document.querySelector('.ts-3');
-        if (el) { el.style.background = '#0284c7'; el.style.color = '#fff'; }
-    }
-})();
-</script>
+    <!-- Business Profile & Theme Engine -->
+    <script src="profil-usaha.js"></script>
+    <script src="theme-toggle.js"></script>
 </body>
 
 </html>

@@ -1,284 +1,575 @@
 <!doctype html>
-<html class="no-js" lang="id">
+<html class="no-js" lang="id" data-theme="light">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>evevlaundry | Jasa Laundry Kiloan Express, Cuci Lipat & Setrika Uap Higienis Jakarta Timur</title>
-    <meta name="author" content="Laun">
-    <meta name="description" content="Pusat jasa laundry kiloan express dan cuci setrika uap boiler Jakarta Timur. SOP 1 mesin 1 pelanggan, air filtrasi 3 tahap, wangi tahan 14 hari, gratis antar-jemput.">
-    <meta name="keywords" content="Laun - Laundry Service & Cuci Kering Lipat Express HTML Template">
+    <title>evevlaundry | Laundry Kiloan Express, Cuci Lipat &amp; Setrika Uap Higienis Jakarta Timur</title>
+    <meta name="author" content="evevlaundry">
+    <meta name="description" content="Jasa laundry kiloan express, cuci komplit setrika uap boiler, dan cuci bedcover higienis di Jakarta Timur. SOP 1 mesin 1 pelanggan, air filtrasi 3 tahap, wangi tahan 14 hari, gratis antar-jemput radius 5 km.">
+    <meta name="keywords" content="laundry kiloan jakarta timur, laundry express jatinegara, cuci setrika uap boiler, laundry antar jemput gratis, cuci bedcover jakarta timur, evevlaundry">
     <meta name="robots" content="INDEX,FOLLOW">
+    <!-- Anti-FOUC Script (Aktif Sebelum CSS Dimuat) -->
+    <script>
+        (function () {
+            try {
+                var saved = localStorage.getItem("evev_theme_preference") || localStorage.getItem("evev_theme");
+                var theme = (saved === "dark" || saved === "light")
+                    ? saved
+                    : (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+                document.documentElement.classList.add("theme-preload");
+                document.documentElement.setAttribute("data-theme", theme);
+                document.documentElement.style.colorScheme = theme;
+            } catch (e) {}
+        })();
+    </script>
+
 
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Favicons - Place favicon.ico in the root directory -->
-    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicons/apple-icon-152x152.png">
+    <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicons/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicons/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
     <link rel="manifest" href="assets/img/favicons/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#0284c7">
 
-    <!--==============================
-	  Google Fonts
-	============================== -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800;900&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 
-
-    <!--==============================
-	    All CSS File
-	============================== -->
-    <!-- Bootstrap -->
+    <!-- All CSS Files -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <!-- Fontawesome Icon -->
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-    <!-- Magnific Popup -->
     <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
-    <!-- Swiper Js -->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-    <!-- Theme Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="theme-toggle.css">
+    <link rel="stylesheet" href="responsive.css">
 
+    <!-- Polish & Anti-Clipping Safeguards for Services, Pricing & Images -->
+    <style>
+        /* Brand fallback jika logo SVG lokal belum tersedia */
+        .brand-logo-fallback {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Archivo', sans-serif;
+            font-weight: 800;
+            font-size: 24px;
+            letter-spacing: -0.5px;
+            color: #0284c7;
+            text-decoration: none;
+        }
+        .footer-wrapper .brand-logo-fallback,
+        [data-theme="dark"] .brand-logo-fallback {
+            color: #38bdf8;
+        }
+
+        /* Standar foto rapi object-fit: cover */
+        .evev-cover-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .th-hero-bg {
+            background-size: cover !important;
+            background-position: center !important;
+            position: relative;
+        }
+        .th-hero-bg::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(7, 15, 31, 0.88) 0%, rgba(7, 15, 31, 0.65) 55%, rgba(7, 15, 31, 0.35) 100%);
+            z-index: 1;
+        }
+        .th-hero-bg > img.hero-photo-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+        .hero-1 .hero-style1 {
+            position: relative;
+            z-index: 3;
+        }
+        .hero-1 .hero-title,
+        .hero-1 .hero-text {
+            color: #ffffff !important;
+        }
+
+        /* Status Buka Live Badge */
+        .live-status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: 600;
+            background: rgba(2, 132, 199, 0.12);
+            color: #0369a1;
+        }
+        [data-theme="dark"] .live-status-badge {
+            background: rgba(56, 189, 248, 0.14);
+            color: #7dd3fc;
+        }
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .status-dot.is-open { background: #22c55e; box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25); }
+        .status-dot.is-closed { background: #ef4444; }
+
+        /* Kartu Layanan — 100% Terbaca Jelas Tanpa Terpotong */
+        .evev-service-card {
+            background: #ffffff;
+            border: 1px solid rgba(15, 23, 42, 0.08);
+            border-radius: 18px;
+            overflow: visible;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            box-shadow: 0 8px 28px rgba(15, 23, 42, 0.06);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .evev-service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 36px rgba(2, 132, 199, 0.14);
+        }
+        [data-theme="dark"] .evev-service-card {
+            background: #172235;
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+        .evev-service-thumb {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+            border-radius: 18px 18px 0 0;
+        }
+        .evev-service-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        .evev-service-card:hover .evev-service-thumb img {
+            transform: scale(1.05);
+        }
+        .evev-service-badge {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: rgba(2, 132, 199, 0.94);
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 999px;
+            letter-spacing: 0.3px;
+        }
+        .evev-service-price-pill {
+            position: absolute;
+            bottom: 14px;
+            right: 14px;
+            background: rgba(15, 23, 42, 0.9);
+            color: #38bdf8;
+            font-size: 14px;
+            font-weight: 800;
+            padding: 6px 14px;
+            border-radius: 10px;
+            backdrop-filter: blur(4px);
+        }
+        .evev-service-body {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 auto;
+        }
+        .evev-service-body .box-title {
+            font-size: 20px;
+            line-height: 1.35;
+            margin-bottom: 10px;
+            overflow: visible;
+            white-space: normal;
+        }
+        .evev-service-body .service-desc {
+            font-size: 14.5px;
+            line-height: 1.65;
+            margin-bottom: 18px;
+            overflow: visible;
+            white-space: normal;
+        }
+
+        /* Kartu Harga — 100% Terbaca Jelas Tanpa Terpotong */
+        .evev-price-card {
+            background: #ffffff;
+            border: 1.5px solid rgba(15, 23, 42, 0.09);
+            border-radius: 20px;
+            padding: 28px 24px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            position: relative;
+            overflow: visible !important;
+            box-shadow: 0 8px 28px rgba(15, 23, 42, 0.06);
+            transition: transform 0.25s ease, border-color 0.25s ease;
+        }
+        .evev-price-card:hover {
+            transform: translateY(-5px);
+            border-color: #0284c7;
+        }
+        .evev-price-card.is-popular {
+            border: 2px solid #0284c7;
+            box-shadow: 0 16px 40px rgba(2, 132, 199, 0.16);
+        }
+        [data-theme="dark"] .evev-price-card {
+            background: #172235;
+            border-color: rgba(255, 255, 255, 0.12);
+        }
+        [data-theme="dark"] .evev-price-card.is-popular {
+            border-color: #38bdf8;
+        }
+        .evev-price-badge {
+            display: inline-block;
+            align-self: flex-start;
+            background: #e0f2fe;
+            color: #0369a1;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 999px;
+            margin-bottom: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+        .evev-price-card.is-popular .evev-price-badge {
+            background: #0284c7;
+            color: #ffffff;
+        }
+        [data-theme="dark"] .evev-price-badge {
+            background: rgba(56, 189, 248, 0.18);
+            color: #7dd3fc;
+        }
+        .evev-price-title {
+            font-size: 21px;
+            font-weight: 800;
+            line-height: 1.3;
+            margin-bottom: 10px;
+            white-space: normal;
+            overflow: visible;
+        }
+        .evev-price-amount {
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-bottom: 6px;
+        }
+        .evev-price-amount .nominal {
+            font-size: 32px;
+            font-weight: 900;
+            color: #0284c7;
+            line-height: 1.15;
+        }
+        [data-theme="dark"] .evev-price-amount .nominal {
+            color: #38bdf8;
+        }
+        .evev-price-amount .unit {
+            font-size: 15px;
+            font-weight: 600;
+            color: #64748b;
+        }
+        [data-theme="dark"] .evev-price-amount .unit {
+            color: #cbd5e1;
+        }
+        .evev-price-meta {
+            font-size: 13.5px;
+            font-weight: 600;
+            color: #0f766e;
+            background: rgba(15, 118, 110, 0.08);
+            padding: 6px 12px;
+            border-radius: 8px;
+            margin-bottom: 18px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            align-self: flex-start;
+        }
+        [data-theme="dark"] .evev-price-meta {
+            color: #5eead4;
+            background: rgba(94, 234, 212, 0.12);
+        }
+        .evev-price-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 24px 0;
+            flex: 1 1 auto;
+        }
+        .evev-price-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 14.5px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+            color: #334155;
+            white-space: normal;
+            overflow: visible;
+        }
+        [data-theme="dark"] .evev-price-features li {
+            color: #e2e8f0;
+        }
+        .evev-price-features li i {
+            color: #16a34a;
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+        .evev-price-note {
+            background: linear-gradient(135deg, rgba(2, 132, 199, 0.08), rgba(56, 189, 248, 0.08));
+            border: 1px dashed rgba(2, 132, 199, 0.35);
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin-top: 32px;
+            text-align: center;
+            font-size: 14.5px;
+            line-height: 1.6;
+        }
+        [data-theme="dark"] .evev-price-note {
+            color: #e2e8f0;
+            background: rgba(56, 189, 248, 0.08);
+            border-color: rgba(56, 189, 248, 0.35);
+        }
+
+        /* Team, Blog, About, FAQ Image Aspect Stability */
+        .img-box1 .img1 img { width: 100%; height: 420px; object-fit: cover; border-radius: 16px; }
+        .img-box1 .img2 img { width: 100%; height: 240px; object-fit: cover; border-radius: 14px; }
+        .team-box .team-img img { width: 100%; height: 300px; object-fit: cover; border-radius: 14px; }
+        .blog-card .blog-img img { width: 100%; height: 230px; object-fit: cover; border-radius: 14px 14px 0 0; }
+        .faq-img1 .img1 img { width: 100%; height: 440px; object-fit: cover; border-radius: 20px; }
+        .testi-card_avater img { width: 72px; height: 72px; object-fit: cover; border-radius: 50%; }
+        .about-avater img { width: 56px; height: 56px; object-fit: cover; border-radius: 50%; }
+        .recent-post .media-img img { width: 80px; height: 80px; object-fit: cover; border-radius: 10px; }
+
+        /* Floating Controls Positioning (Anti-Overlap Desktop & Mobile) */
+        .floating-theme-btn {
+            position: fixed;
+            bottom: 92px;
+            right: 28px;
+            z-index: 9998;
+            width: 48px;
+            height: 48px;
+            margin-right: 0 !important;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+        }
+        #evev-template-switcher {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 9997;
+            background: rgba(15, 23, 42, 0.94);
+            backdrop-filter: blur(10px);
+            padding: 8px 16px;
+            border-radius: 999px;
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.16);
+        }
+        #evev-template-switcher .switcher-pill {
+            color: #f8fafc;
+            text-decoration: none;
+            font-size: 12.5px;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 999px;
+            transition: background 0.2s ease;
+            white-space: nowrap;
+        }
+        #evev-template-switcher .switcher-pill.active,
+        #evev-template-switcher .switcher-pill:hover {
+            background: #0284c7;
+            color: #ffffff;
+        }
+
+        @media (max-width: 767px) {
+            .floating-theme-btn {
+                bottom: 84px;
+                right: 18px;
+            }
+            .floating-wa-btn {
+                bottom: 20px !important;
+                right: 18px !important;
+            }
+            #evev-template-switcher {
+                left: 12px;
+                transform: none;
+                bottom: 20px;
+                max-width: calc(100vw - 92px) !important;
+                overflow-x: auto;
+            }
+            .img-box1 .img1 img { height: 280px; }
+            .faq-img1 .img1 img { height: 280px; }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!--[if lte IE 9]>
-    	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  	<![endif]-->
-
-
-    <!--********************************
-   		Code Start From Here 
-	******************************** -->
-
-    <!--==============================
-     Preloader
-  ==============================-->
-    <div class="preloader ">
-        <button class="th-btn style2 preloaderCls">Tutup Preloader </button>
+    <!-- Preloader -->
+    <div class="preloader">
+        <button class="th-btn style2 preloaderCls">Tutup Preloader</button>
         <div class="preloader-inner">
             <div class="loader">
                 <div class="rot"></div>
-                <img src="assets/img/logo-white.svg" alt="Laun">
+                <img src="assets/img/logo-white.svg" alt="Logo evevlaundry" loading="lazy" onerror="this.style.display='none';">
             </div>
         </div>
-    </div> <!--==============================
-    Sidemenu
-============================== -->
-    <div class="sidemenu-wrapper sidemenu-info ">
+    </div>
+
+    <!-- Sidemenu Info -->
+    <div class="sidemenu-wrapper sidemenu-info">
         <div class="sidemenu-content">
-            <button class="closeButton sideMenuCls"><i class="far fa-times"></i></button>
-            <div class="widget  ">
+            <button class="closeButton sideMenuCls" aria-label="Tutup Menu Samping"><i class="far fa-times"></i></button>
+            <div class="widget">
                 <div class="th-widget-about">
-                    <div id="tentang" class="about-logo">
-                        <a href="#layanan"><img src="assets/img/logo.svg" alt="Laun"></a>
+                    <div class="about-logo">
+                        <a href="#hero" class="brand-logo-fallback">
+                            <img src="assets/img/logo.svg" alt="Logo evevlaundry" loading="lazy" onerror="this.outerHTML='<span><i class=\'fas fa-sparkles\'></i> evevlaundry</span>';">
+                        </a>
                     </div>
-                    <p class="about-text">We provide specialized winterization services to safeguard your pool during the off-season, and when spring arrives, we handle the thorough opening process.</p>
+                    <p class="about-text" data-config="deskripsi">Pusat jasa laundry kiloan express dan satuan modern di Jakarta Timur. SOP 1 mesin 1 pelanggan, air filtrasi 3 tahap anti kuning, dan setrika uap boiler anti gosong.</p>
                     <div class="th-social">
-                        <a href="#kontak"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#kontak"><i class="fab fa-twitter"></i></a>
-                        <a href="#kontak"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://wa.me/62895323418658"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://wa.me/62895323418658" data-wa-general="true" aria-label="WhatsApp evevlaundry"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#kontak" aria-label="Instagram evevlaundry"><i class="fab fa-instagram"></i></a>
+                        <a href="#kontak" aria-label="Facebook evevlaundry"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="widget  ">
+            <div class="widget">
                 <h3 class="widget_title">Tips Perawatan Pakaian</h3>
                 <div class="recent-post-wrap">
                     <div class="recent-post">
                         <div class="media-img">
-                            <a href="#tentang"><img src="assets/img/blog/recent-post-1-1.jpg" alt="Blog Image"></a>
+                            <a href="#blog-sec"><img src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?auto=format&fit=crop&w=300&q=80" alt="Tips menjaga baju putih tetap cemerlang" loading="lazy" style="object-fit: cover;"></a>
                         </div>
                         <div class="media-body">
                             <div class="recent-post-meta">
-                                <a href="#tentang"><i class="far fa-calendar"></i>21 October , 2023</a>
+                                <a href="#blog-sec"><i class="far fa-calendar"></i>12 Nov 2026</a>
                             </div>
-                            <h4 class="post-title"><a class="text-inherit" href="#tentang">Tips Menjaga Baju Putih Tetap Bersih Cemerlang</a></h4>
+                            <h4 class="post-title"><a class="text-inherit" href="#blog-sec">Tips Menjaga Baju Putih Tetap Bersih Cemerlang</a></h4>
                         </div>
                     </div>
                     <div class="recent-post">
                         <div class="media-img">
-                            <a href="#tentang"><img src="assets/img/blog/recent-post-1-2.jpg" alt="Blog Image"></a>
+                            <a href="#blog-sec"><img src="https://images.unsplash.com/photo-1489274495757-95c7c837b101?auto=format&fit=crop&w=300&q=80" alt="Manfaat setrika uap boiler untuk pakaian" loading="lazy" style="object-fit: cover;"></a>
                         </div>
                         <div class="media-body">
                             <div class="recent-post-meta">
-                                <a href="#tentang"><i class="far fa-calendar"></i>22 October , 2023</a>
+                                <a href="#blog-sec"><i class="far fa-calendar"></i>18 Nov 2026</a>
                             </div>
-                            <h4 class="post-title"><a class="text-inherit" href="#tentang">Manfaat Setrika Uap Boiler untuk Serat Pakaian</a></h4>
+                            <h4 class="post-title"><a class="text-inherit" href="#blog-sec">Kenapa Setrika Uap Boiler Lebih Aman untuk Serat Kain?</a></h4>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="widget  ">
+            <div class="widget">
                 <h3 class="widget_title">Hubungi Kami</h3>
                 <div class="th-widget-contact">
                     <div class="info-box">
-                        <div class="info-box_icon">
-                            <i class="fas fa-location-dot"></i>
-                        </div>
-                        <p class="info-box_text">Jl. Otista Raya No. 88, Jatinegara, Jakarta Timur</p>
+                        <div class="info-box_icon"><i class="fas fa-location-dot"></i></div>
+                        <p class="info-box_text" data-config="alamat">Jl. Otista Raya No. 88, Kel. Bidara Cina, Kec. Jatinegara, Jakarta Timur 13330</p>
                     </div>
                     <div class="info-box">
-                        <div class="info-box_icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
+                        <div class="info-box_icon"><i class="fab fa-whatsapp"></i></div>
                         <p class="info-box_text">
-                            <a href="https://wa.me/62895323418658?text=Halo%20evevlaundry,%20mau%20order%20laundry" class="info-box_link">0895-3234-18658</a>
-                            <a href="https://wa.me/62895323418658?text=Halo%20evevlaundry,%20mau%20order%20laundry" class="info-box_link">0895-3234-18658</a>
+                            <a href="https://wa.me/62895323418658?text=Halo%20evevlaundry%2C%20saya%20ingin%20pesan%20layanan%20antar-jemput%20laundry." data-wa-general="true" class="info-box_link" data-config="whatsappDisplay">+62 895-3234-18658</a>
                         </p>
                     </div>
                     <div class="info-box">
-                        <div class="info-box_icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
+                        <div class="info-box_icon"><i class="fas fa-envelope"></i></div>
                         <p class="info-box_text">
-                            <a href="mailto:evevdigital@gmail.com" class="info-box_link">evevdigital@gmail.com</a>
+                            <a href="mailto:evevdigital@gmail.com" class="info-box_link" data-config="email">evevdigital@gmail.com</a>
                         </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Popup Search -->
     <div class="popup-search-box">
-        <button class="searchClose"><i class="fas fa-times"></i></button>
-        <form action="#">
-            <input type="text" placeholder="What are you looking for?">
-            <button type="submit"><i class="fas fa-search"></i></button>
+        <button class="searchClose" aria-label="Tutup Pencarian"><i class="fas fa-times"></i></button>
+        <form action="#layanan">
+            <input type="text" placeholder="Cari layanan laundry (mis. kiloan, express, bedcover)...">
+            <button type="submit" aria-label="Cari"><i class="fas fa-search"></i></button>
         </form>
-    </div><!--==============================
-    Mobile Menu
-  ============================== -->
+    </div>
+
+    <!-- Mobile Menu -->
     <div class="th-menu-wrapper">
         <div class="th-menu-area text-center">
-            <button class="th-menu-toggle"><i class="fas fa-times"></i></button>
+            <button class="th-menu-toggle" aria-label="Tutup Menu Mobile"><i class="fas fa-times"></i></button>
             <div class="mobile-logo">
-                <a href="#layanan"><img src="assets/img/logo.svg" alt="Laun"></a>
+                <a href="#hero" class="brand-logo-fallback">
+                    <img src="assets/img/logo.svg" alt="Logo evevlaundry" loading="lazy" onerror="this.outerHTML='<span><i class=\'fas fa-sparkles\'></i> evevlaundry</span>';">
+                </a>
             </div>
             <div class="th-mobile-menu">
                 <ul>
-                    <li class="menu-item-has-children">
-                        <a href="#layanan">Home</a>
-                        <ul class="sub-menu">
-                            <li><a href="#layanan">Laundry Services</a></li>
-                            <li><a href="#layanan">Home Cuci Kering Lipat Express</a></li>
-                            <li><a href="#layanan">Laundry & Dry Services</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="template-1.html">Beranda</a></li>
                     <li><a href="#tentang">Tentang Kami</a></li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Service</a>
-                        <ul class="sub-menu">
-                            <li><a href="#layanan">Service</a></li>
-                            <li><a href="#layanan">Service Details</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Pages</a>
-                        <ul class="sub-menu">
-                            <li class="menu-item-has-children">
-                                <a href="#">Shop</a>
-                                <ul class="sub-menu">
-                                    <li><a href="#layanan">Shop</a></li>
-                                    <li><a href="#layanan">Shop Details</a></li>
-                                    <li><a href="#layanan">Cart Page</a></li>
-                                    <li><a href="#layanan">Selesaikan Pesanan</a></li>
-                                    <li><a href="#layanan">Wishlist</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#tentang">Team</a></li>
-                            <li><a href="#tentang">Team Details</a></li>
-                            <li><a href="#layanan">Proto Gallery</a></li>
-                            <li><a href="#faq">Faq Page</a></li>
-                            <li><a href="#harga">Price Package</a></li>
-                            <li><a href="#">Error Page</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Blogs</a>
-                        <ul class="sub-menu">
-                            <li>
-                                <a href="#">Blog Layout</a>
-                                <ul class="sub-menu">
-                                    <li><a href="#tentang">Blog Grid 02 Columns</a></li>
-                                    <li><a href="#tentang">Blog Grid 03 Columns</a></li>
-                                    <li><a href="#tentang">Blog List</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#tentang">Blog Sidebar</a>
-                                <ul class="sub-menu">
-                                    <li><a href="#tentang">Blog Left Sidebar</a></li>
-                                    <li><a href="#tentang">Blog Right Sidebar</a></li>
-                                    <li><a href="#tentang">Blog No Sidebar</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#tentang">Blog Details</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#kontak">Contact</a>
-                    </li>
+                    <li><a href="#layanan">Layanan</a></li>
+                    <li><a href="#alur">Alur Cuci</a></li>
+                    <li><a href="#harga">Daftar Harga</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#booking">Booking Jemput</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
                 </ul>
             </div>
         </div>
-    </div><!--==============================
-	Header Area
-==============================-->
+    </div>
+
+    <!-- Header Area -->
     <header class="th-header header-layout1">
         <div class="header-top">
             <div class="container th-container">
                 <div class="row justify-content-center justify-content-lg-between align-items-center">
                     <div class="col-auto d-none d-md-block">
                         <div class="header-links style2">
-                            <p class="header-notice text-theme">Pusat Laundry Kiloan Express &amp; Cuci Setrika Uap Higienis Jakarta Timur</p>
+                            <p class="header-notice text-theme">Pusat Laundry Kiloan Express &amp; Setrika Uap Higienis Jakarta Timur</p>
                             <ul>
-                                <li><i class="fa-solid fa-phone"></i>WhatsApp:<a href="https://wa.me/62895323418658?text=Halo%20evevlaundry,%20mau%20order%20laundry">0895-3234-18658</a></li>
-                                <li><i class="fa-solid fa-envelope"></i>Email:<a href="mailto:evevdigital@gmail.com">evevdigital@gmail.com</a>
-                                </li>
-                                <li class="d-none d-xl-inline-block"><i class="fa-solid fa-clock"></i>Jam Buka:
-                                    <span>Buka Setiap Hari: 07:00 - 21:00 WIB</span>
-                                </li>
-
+                                <li><i class="fab fa-whatsapp"></i>WhatsApp: <a href="https://wa.me/62895323418658?text=Halo%20evevlaundry%2C%20saya%20ingin%20pesan%20layanan%20antar-jemput%20laundry." data-wa-general="true" data-config="whatsappDisplay">+62 895-3234-18658</a></li>
+                                <li><i class="fa-solid fa-envelope"></i>Email: <a href="mailto:evevdigital@gmail.com" data-config="email">evevdigital@gmail.com</a></li>
+                                <li class="d-none d-xl-inline-block"><i class="fa-solid fa-clock"></i>Jam Buka: <span data-config="jamBukaText">Setiap Hari: 07:00 - 21:00 WIB</span></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-auto">
-                        <div class="social-links">
-                            <span class="social-title">Ikuti Kami:</span>
-                            <a href="#kontak"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#kontak"><i class="fab fa-twitter"></i></a>
-                            <a href="#kontak"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#kontak"><i class="fab fa-instagram"></i></a>
-                            <a href="#kontak"><i class="fab fa-youtube"></i></a>
-                        </div>
+                        <span class="live-status-badge"><span class="status-dot is-open"></span> Buka Setiap Hari 07:00 - 21:00 WIB</span>
                     </div>
                 </div>
             </div>
         </div>
         <div class="sticky-wrapper">
-            <!-- Main Menu Area -->
             <div class="container th-container">
                 <div class="menu-area">
                     <div class="row align-items-center justify-content-between">
                         <div class="col-auto">
                             <div class="header-logo">
-                                <a href="#layanan"><img src="assets/img/logo.svg" alt="Laun"></a>
+                                <a href="template-1.html" class="brand-logo-fallback">
+                                    <img src="assets/img/logo.svg" alt="Logo evevlaundry" loading="lazy" onerror="this.outerHTML='<span><i class=\'fas fa-sparkles\'></i> evevlaundry</span>';">
+                                </a>
                             </div>
                         </div>
                         <div class="col-auto me-lg-auto">
@@ -286,346 +577,306 @@
                                 <ul>
                                     <li><a href="template-1.html">BERANDA</a></li>
                                     <li><a href="#tentang">TENTANG</a></li>
-                                    <li><a href="#layanan">LAYANAN KILOAN</a></li>
+                                    <li><a href="#layanan">LAYANAN</a></li>
                                     <li><a href="#alur">ALUR CUCI</a></li>
-                                    <li><a href="#harga">HARGA PAKET</a></li>
+                                    <li><a href="#harga">DAFTAR HARGA</a></li>
                                     <li><a href="#faq">FAQ</a></li>
                                     <li><a href="#kontak">KONTAK</a></li>
                                 </ul>
                             </nav>
-                            <button type="button" class="th-menu-toggle d-block d-lg-none"><i class="far fa-bars"></i></button>
+                            <button type="button" class="th-menu-toggle d-block d-lg-none" aria-label="Buka Menu Navigasi"><i class="far fa-bars"></i></button>
                         </div>
                         <div class="col-auto d-none d-xl-block">
                             <div class="header-button">
-                                <button type="button" class="icon-btn searchBoxToggler"><i class="far fa-search"></i></button>
-                                <a href="#" class="icon-btn sideMenuToggler d-none d-lg-block"><i class="far fa-bars"></i></a>
-                                <a href="#kontak" class="th-btn style4 th-radius">Pesan Antar-Jemput WA</a>
+                                <button type="button" class="icon-btn searchBoxToggler" aria-label="Cari Layanan"><i class="far fa-search"></i></button>
+                                <a href="#" class="icon-btn sideMenuToggler d-none d-lg-block" aria-label="Info Outlet"><i class="far fa-bars"></i></a>
+                                <a href="https://wa.me/62895323418658?text=Halo%20evevlaundry%2C%20saya%20ingin%20pesan%20layanan%20antar-jemput%20laundry." data-wa-general="true" class="th-btn style4 th-radius btn-wa-booking"><i class="fab fa-whatsapp me-2"></i>Pesan Antar-Jemput WA</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </header><!--==============================
-Hero Area
-==============================-->
+    </header>
+
+    <!-- Hero Area -->
     <div class="th-hero-wrapper hero-1" id="hero">
-        <div class="swiper th-slider hero-slider-1" id="heroSlide1" data-slider-options='{"effect":"slide"}'>
+        <div class="swiper th-slider hero-slider-1" id="heroSlide1" data-slider-options='{"effect":"slide","autoplay":{"delay":5500}}'>
             <div class="swiper-wrapper">
+                <!-- Slide 1 -->
                 <div class="swiper-slide">
                     <div class="hero-inner">
-                        <div class="th-hero-bg" data-bg-src="assets/img/evevlaundry/hero_modern_laundromat.webp">
-                            <img src="assets/img/hero/hero_overlay_1.png" alt="Hero Image">
+                        <div class="th-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1545173168-9f1947eebb7f?auto=format&fit=crop&w=1600&q=80');">
+                            <img class="hero-photo-bg" src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?auto=format&fit=crop&w=1600&q=80" alt="Deretan mesin cuci modern evevlaundry Jakarta Timur" loading="lazy" style="object-fit: cover;">
                             <div class="bubble"></div>
                         </div>
                         <div class="container">
                             <div class="hero-style1">
-                                <span class="sub-title style1" data-ani="slideinup" data-ani-delay="0.5s">We Clean, You Shine</span>
-                                <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.6s"> Pakaian Bersih Higienis, Rapi &amp; Wangi Tahan 14 Hari </h1>
-                                <p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.7s">SOP 1 mesin 1 pelanggan, air filtrasi 3 tahap, deterjen ramah serat, dan setrika uap boiler presisi. Gratis jemput-antar radius 3 km.n your specific brand, target audience, and the
-                                    unique qualities of your service.</p>
-                                <div class="btn-group" data-ani="slideinup" data-ani-delay="0.9s">
-                                    <a href="#tentang" class="th-btn style2" data-ani="slideinup" data-ani-delay="0.9s">Discover
-                                        More</a>
-                                    <a href="#kontak" class="th-btn style5" data-ani="slideinup" data-ani-delay="0.9s">Contact
-                                        Us</a>
+                                <span class="sub-title style1" data-ani="slideinup" data-ani-delay="0.3s">SOP 1 Mesin 1 Pelanggan • Anti Campur</span>
+                                <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.5s">Pakaian Bersih Higienis, Rapi &amp; Wangi Tahan 14 Hari</h1>
+                                <p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.6s">Cucian diproses terpisah dengan air filtrasi 3 tahap, deterjen ramah serat, dan pengeringan 100% mesin dryer. Gratis antar-jemput radius 5 km area Jatinegara &amp; sekitarnya.</p>
+                                <div class="btn-group" data-ani="slideinup" data-ani-delay="0.8s">
+                                    <a href="https://wa.me/62895323418658?text=Halo%20evevlaundry%2C%20saya%20ingin%20pesan%20layanan%20antar-jemput%20laundry." data-wa-general="true" class="th-btn style2 btn-wa-booking"><i class="fab fa-whatsapp me-2"></i>Pesan Jemput Sekarang</a>
+                                    <a href="#harga" class="th-btn style5">Lihat Daftar Harga</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Slide 2 -->
                 <div class="swiper-slide">
                     <div class="hero-inner">
-                        <div class="th-hero-bg" data-bg-src="assets/img/evevlaundry/hero_steam_iron.webp">
-                            <img src="assets/img/hero/hero_overlay_1.png" alt="Hero Image">
+                        <div class="th-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1489274495757-95c7c837b101?auto=format&fit=crop&w=1600&q=80');">
+                            <img class="hero-photo-bg" src="https://images.unsplash.com/photo-1489274495757-95c7c837b101?auto=format&fit=crop&w=1600&q=80" alt="Kemeja rapi hasil setrika uap boiler evevlaundry" loading="lazy" style="object-fit: cover;">
                             <div class="bubble"></div>
                         </div>
                         <div class="container">
                             <div class="hero-style1">
-                                <span class="sub-title style1" data-ani="slideinup" data-ani-delay="0.5s">We Clean, You Shine</span>
-                                <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.6s"> Pakaian Bersih Higienis, Rapi &amp; Wangi Tahan 14 Hari </h1>
-                                <p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.7s">SOP 1 mesin 1 pelanggan, air filtrasi 3 tahap, deterjen ramah serat, dan setrika uap boiler presisi. Gratis jemput-antar radius 3 km.n your specific brand, target audience, and the
-                                    unique qualities of your service.</p>
-                                <div class="btn-group" data-ani="slideinup" data-ani-delay="0.9s">
-                                    <a href="#tentang" class="th-btn style2" data-ani="slideinup" data-ani-delay="0.9s">Discover
-                                        More</a>
-                                    <a href="#kontak" class="th-btn style5" data-ani="slideinup" data-ani-delay="0.9s">Contact
-                                        Us</a>
+                                <span class="sub-title style1" data-ani="slideinup" data-ani-delay="0.3s">Setrika Uap Boiler Bertekanan Tinggi</span>
+                                <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.5s">Kemeja Kerja Licin Sempurna, Anti Gosong &amp; Anti Kilap</h1>
+                                <p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.6s">Hemat waktu akhir pekan Anda. Mulai Rp 10.000/kg sudah dapat cuci bersih, setrika uap boiler presisi, gratis hanger kemeja, dan parfum premium pilihan.</p>
+                                <div class="btn-group" data-ani="slideinup" data-ani-delay="0.8s">
+                                    <a href="#harga" class="th-btn style2">Pilih Paket Hemat</a>
+                                    <a href="#booking" class="th-btn style5">Jadwalkan Kurir</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Slide 3 -->
                 <div class="swiper-slide">
                     <div class="hero-inner">
-                        <div class="th-hero-bg" data-bg-src="assets/img/evevlaundry/hero_dry_cleaning.webp">
-                            <img src="assets/img/hero/hero_overlay_1.png" alt="Hero Image">
+                        <div class="th-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&w=1600&q=80');">
+                            <img class="hero-photo-bg" src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&w=1600&q=80" alt="Layanan laundry express 6 jam jadi evevlaundry" loading="lazy" style="object-fit: cover;">
                             <div class="bubble"></div>
                         </div>
                         <div class="container">
                             <div class="hero-style1">
-                                <span class="sub-title style1" data-ani="slideinup" data-ani-delay="0.5s">We Clean, You Shine</span>
-                                <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.6s"> Pakaian Bersih Higienis, Rapi &amp; Wangi Tahan 14 Hari </h1>
-                                <p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.7s">SOP 1 mesin 1 pelanggan, air filtrasi 3 tahap, deterjen ramah serat, dan setrika uap boiler presisi. Gratis jemput-antar radius 3 km.n your specific brand, target audience, and the
-                                    unique qualities of your service.</p>
-                                <div class="btn-group" data-ani="slideinup" data-ani-delay="0.9s">
-                                    <a href="#tentang" class="th-btn style2" data-ani="slideinup" data-ani-delay="0.9s">Discover
-                                        More</a>
-                                    <a href="#kontak" class="th-btn style5" data-ani="slideinup" data-ani-delay="0.9s">Contact
-                                        Us</a>
+                                <span class="sub-title style1" data-ani="slideinup" data-ani-delay="0.3s">Paket Express Same-Day 6 Jam Jadi</span>
+                                <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.5s">Cucian Menumpuk? Kurir Kami Jemput dalam 30 Menit</h1>
+                                <p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.6s">Cocok untuk jadwal mendadak, seragam dinas, atau sepulang traveling. Timbangan digital transparan langsung di depan Anda tanpa biaya tersembunyi.</p>
+                                <div class="btn-group" data-ani="slideinup" data-ani-delay="0.8s">
+                                    <a href="https://wa.me/62895323418658?text=Halo%20evevlaundry%2C%20saya%20mau%20pesan%20Paket%20Express%20Kilat%206%20Jam." data-wa-paket="Paket Express Kilat 6 Jam" data-wa-harga="Rp 15.000/kg" class="th-btn style2">Order Express 6 Jam</a>
+                                    <a href="#layanan" class="th-btn style5">Lihat Semua Layanan</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="hero-animated-bubble">
-            <img src="assets/img/shape/bubble_1.png" alt="Laun">
-            <img src="assets/img/shape/bubble_2.png" alt="Laun">
-            <img src="assets/img/shape/bubble_3.png" alt="Laun">
-            <img src="assets/img/shape/bubble_4.png" alt="Laun">
-            <img src="assets/img/shape/bubble_5.png" alt="Laun">
-            <img src="assets/img/shape/bubble_6.png" alt="Laun">
-            <img src="assets/img/shape/bubble_7.png" alt="Laun">
-            <img src="assets/img/shape/bubble_8.png" alt="Laun">
         </div>
         <div class="icon-box">
-            <button data-slider-prev="#heroSlide1" class="slider-arrow default"><i class="far fa-arrow-left"></i></button>
-            <button data-slider-next="#heroSlide1" class="slider-arrow default"><i class="far fa-arrow-right"></i></button>
+            <button data-slider-prev="#heroSlide1" class="slider-arrow default" aria-label="Slide Sebelumnya"><i class="far fa-arrow-left"></i></button>
+            <button data-slider-next="#heroSlide1" class="slider-arrow default" aria-label="Slide Berikutnya"><i class="far fa-arrow-right"></i></button>
         </div>
-
     </div>
-    <!--======== / Hero Section ========--><!--==============================
-About Area  
-==============================-->
-    <div class="about-sec overflow-hidden space-top" id="about-sec">
+
+    <!-- About Area -->
+    <section class="about-sec overflow-hidden space-top" id="tentang">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-center gy-4">
                 <div class="col-xl-6 wow fadeInLeft">
                     <div class="img-box1">
                         <div class="img1">
-                            <img src="assets/img/evevlaundry/portfolio_pakaian_tersegel.webp" alt="About">
+                            <img src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?auto=format&fit=crop&w=900&q=80" alt="Tumpukan pakaian dan handuk bersih terlipat rapi di evevlaundry" loading="lazy" style="object-fit: cover;">
                         </div>
                         <div class="img2">
-                            <img src="assets/img/evevlaundry/portfolio_antar_jemput.webp" alt="About">
+                            <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=700&q=80" alt="Pakaian bersih siap kirim dengan kemasan rapi evevlaundry" loading="lazy" style="object-fit: cover;">
                         </div>
                         <div class="th-experience jump">
-                            <h3 class="experience-year"><span class="counter-number">24</span>+</h3>
-                            <p class="experience-text">Years</p>
+                            <h3 class="experience-year"><span class="counter-number">8</span>+</h3>
+                            <p class="experience-text">Tahun Dipercaya</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-6">
                     <div class="ps-xl-4 wow fadeInRight">
                         <div class="title-area mb-25">
-                            <span class="sub-title style1">Tentang Kami</span>
+                            <span class="sub-title style1">Tentang evevlaundry</span>
                             <h2 class="sec-title mb-20">Standar Laundry Kiloan Modern &amp; Higienis Tanpa Kompromi</h2>
-                            <p class="about-desc">Pakaian Anda dijamin tidak pernah dicampur dengan cucian orang lain demi menjaga kebersihan mutlak.
-                                fold, dry cleaning, ironing, stain removal, and any specialized treatments for delicate
-                                fabrics or special garments.</p>
+                            <p class="about-desc">Berlokasi strategis di Jl. Otista Raya, Jatinegara, <strong>evevlaundry</strong> hadir membantu keluarga, pekerja kantoran, dan penghuni kost menikmati pakaian yang selalu bersih, rapi, dan harum tanpa repot mencuci sendiri. Setiap order dicuci terpisah menggunakan mesin komersial berkapasitas optimal.</p>
                         </div>
                         <div class="checklist list-two-column">
                             <ul>
-                                <li>Pickup and Delivery Service</li>
-                                <li>Energy-Efficient Machines</li>
-                                <li>Same-Day or Express Service</li>
-                                <li>Folding Preferences</li>
-                                <li>Hanging or Bagging Options</li>
-                                <li>Satisfaction Guarantee</li>
+                                <li>SOP 1 Mesin Khusus 1 Pelanggan</li>
+                                <li>Gratis Antar-Jemput Radius 5 KM</li>
+                                <li>Air Filtrasi 3 Tahap Anti Kuning</li>
+                                <li>Timbangan Digital Transparan</li>
+                                <li>Setrika Uap Boiler Anti Gosong</li>
+                                <li>Garansi Cuci Ulang 100% Puas</li>
                             </ul>
                         </div>
                         <div class="btn-group mt-30 justify-content-start">
-                            <a href="#tentang" class="th-btn">More Tentang Kami</a>
+                            <a href="https://wa.me/62895323418658?text=Halo%20evevlaundry%2C%20saya%20ingin%20konsultasi%20layanan%20laundry." data-wa-general="true" class="th-btn btn-wa-booking"><i class="fab fa-whatsapp me-2"></i>Konsultasi Gratis via WA</a>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-    </div><!--==============================
-feature Area  
-==============================-->
-    <div class="overflow-hidden space" id="feature-area">
-        <div class="container">
-            <div class="row gy-4  justify-content-center">
-                <div class="col-md-6 col-lg-4">
-                    <div class="feature-item wow fadeInUp">
-                        <div class="feature-item_icon">
-                            <img src="assets/img/icon/feature_1_1.svg" alt="icon">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="box-title">SOP 1 Mesin 1 Pelanggan</h3>
-                            <p class="feature-item_text">Layanan kurir siap menjemput dan mengantar pakaian rapi Anda langsung ke pintu rumah atau kost.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="feature-item wow fadeInDown">
-                        <div class="feature-item_icon">
-                            <img src="assets/img/icon/feature_1_2.svg" alt="icon">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="box-title">Gratis Jemput &amp; Antar Cucian</h3>
-                            <p class="feature-item_text">Layanan kurir siap menjemput dan mengantar pakaian rapi Anda langsung ke pintu rumah atau kost.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="feature-item wow fadeInUp">
-                        <div class="feature-item_icon">
-                            <img src="assets/img/icon/feature_1_3.svg" alt="icon">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="box-title">Air Filtrasi &amp; Wangi 14 Hari</h3>
-                            <p class="feature-item_text">Layanan kurir siap menjemput dan mengantar pakaian rapi Anda langsung ke pintu rumah atau kost.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div><!--==============================
-Service Area  
-==============================-->
-    <section class="bg-top-center space" id="layanan" data-bg-src="assets/img/bg/service_bg_1.jpg">
-        <div class="container">
-            <div class="title-area text-center">
-                <span class="sub-title">Our Best Services</span>
-                <h2 class="sec-title">Pilihan Layanan Laundry Kiloan &amp; Rumah Tangga</h2>
-            </div>
-            <div class="slider-area">
-                <div class="swiper th-slider has-shadow" id="serviceSlider1" data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"2"},"1200":{"slidesPerView":"3"}}}'>
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="service-box">
-                                <div class="service-box_wrapper">
-                                    <div class="service-box_img">
-                                        <img src="assets/img/evevlaundry/service_laundry_kiloan.webp" alt="img">
-                                    </div>
-                                    <div class="service-box_icon">
-                                        <img src="assets/img/icon/service_box_1.svg" alt="Icon">
-                                    </div>
-                                </div>
-                                <div class="box-content" data-bg-src="assets/img/shape/service_shape_1.png">
-                                    <h3 class="box-title"><a href="#layanan">Cuci Kering Lipat Express</a></h3>
-                                    <p class="service-box_text">Pakaian dicuci higienis 1 mesin 1 pelanggan, dikeringkan mesin 100%, dan dilipat rapi bersegel. Siap pakai mulai Rp 7.000/kg.</p>
-                                    <a href="#layanan" class="th-btn border">Baca Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="service-box">
-                                <div class="service-box_wrapper">
-                                    <div class="service-box_img">
-                                        <img src="assets/img/evevlaundry/service_dry_cleaning_jas.webp" alt="img">
-                                    </div>
-                                    <div class="service-box_icon">
-                                        <img src="assets/img/icon/service_box_2.svg" alt="Icon">
-                                    </div>
-                                </div>
-                                <div class="box-content" data-bg-src="assets/img/shape/service_shape_1.png">
-                                    <h3 class="box-title"><a href="#layanan">Cuci + Setrika Uap Boiler</a></h3>
-                                    <p class="service-box_text">Paket favorit cuci bersih menyeluruh plus disetrika uap boiler presisi. Licin, higienis bebas kusut mulai Rp 10.000/kg.</p>
-                                    <a href="#layanan" class="th-btn border">Baca Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="service-box">
-                                <div class="service-box_wrapper">
-                                    <div class="service-box_img">
-                                        <img src="assets/img/evevlaundry/service_bedcover_selimut.webp" alt="img">
-                                    </div>
-                                    <div class="service-box_icon">
-                                        <img src="assets/img/icon/service_box_3.svg" alt="Icon">
-                                    </div>
-                                </div>
-                                <div class="box-content" data-bg-src="assets/img/shape/service_shape_1.png">
-                                    <h3 class="box-title"><a href="#layanan">Setrika Uap Presisi Saja</a></h3>
-                                    <p class="service-box_text">Khusus pakaian yang sudah Anda cuci sendiri di rumah. Dihaluskan dengan uap bertekanan tinggi mulai Rp 6.000/kg.</p>
-                                    <a href="#layanan" class="th-btn border">Baca Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="service-box">
-                                <div class="service-box_wrapper">
-                                    <div class="service-box_img">
-                                        <img src="assets/img/evevlaundry/service_sneaker_bag_spa.webp" alt="img">
-                                    </div>
-                                    <div class="service-box_icon">
-                                        <img src="assets/img/icon/service_box_4.svg" alt="Icon">
-                                    </div>
-                                </div>
-                                <div class="box-content" data-bg-src="assets/img/shape/service_shape_1.png">
-                                    <h3 class="box-title"><a href="#layanan">Cuci Bedcover &amp; Selimut King</a></h3>
-                                    <p class="service-box_text">Cuci Bedcover &amp; Selimut King" is a term that can refer to various aspects of clothing and fashion. It may be used in different.</p>
-                                    <a href="#layanan" class="th-btn border">Baca Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="service-box">
-                                <div class="service-box_wrapper">
-                                    <div class="service-box_img">
-                                        <img src="assets/img/evevlaundry/service_karpet_gorden.webp" alt="img">
-                                    </div>
-                                    <div class="service-box_icon">
-                                        <img src="assets/img/icon/service_box_5.svg" alt="Icon">
-                                    </div>
-                                </div>
-                                <div class="box-content" data-bg-src="assets/img/shape/service_shape_1.png">
-                                    <h3 class="box-title"><a href="#layanan">Laundry Karpet &amp; Gorden</a></h3>
-                                    <p class="service-box_text">Ekstraksi debu mendalam dan pencucian basah higienis untuk gorden jendela dan karpet ruang tamu Anda.</p>
-                                    <a href="#layanan" class="th-btn border">Baca Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="service-box">
-                                <div class="service-box_wrapper">
-                                    <div class="service-box_img">
-                                        <img src="assets/img/evevlaundry/service_laundry_kiloan.webp" alt="img">
-                                    </div>
-                                    <div class="service-box_icon">
-                                        <img src="assets/img/icon/service_box_6.svg" alt="Icon">
-                                    </div>
-                                </div>
-                                <div class="box-content" data-bg-src="assets/img/shape/service_shape_1.png">
-                                    <h3 class="box-title"><a href="#layanan">Sanitasi Stroller &amp; Baby Box</a></h3>
-                                    <p class="service-box_text">Pembersihan khusus perlengkapan bayi menggunakan deterjen hypoallergenic aman untuk kulit sensitif si kecil.</p>
-                                    <a href="#layanan" class="th-btn border">Baca Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <button data-slider-prev="#serviceSlider1" class="slider-arrow slider-prev"><i class="far fa-arrow-left"></i></button>
-                <button data-slider-next="#serviceSlider1" class="slider-arrow slider-next"><i class="far fa-arrow-right"></i></button>
             </div>
         </div>
     </section>
-    <!--==============================
-Contact Info Area  
-==============================-->
+
+    <!-- 3 Feature Highlights -->
+    <div class="overflow-hidden space" id="feature-area">
+        <div class="container">
+            <div class="row gy-4 justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-item wow fadeInUp h-100">
+                        <div class="feature-item_icon">
+                            <img src="assets/img/icon/feature_1_1.svg" alt="Ikon 1 Mesin 1 Pelanggan" loading="lazy" onerror="this.outerHTML='<i class=\'fas fa-shield-virus fa-2x text-primary\'></i>';">
+                        </div>
+                        <div class="media-body">
+                            <h3 class="box-title">SOP 1 Mesin 1 Pelanggan</h3>
+                            <p class="feature-item_text">Pakaian Anda tidak pernah digabung dengan cucian orang lain. Lebih higienis, bebas risiko tertukar, dan aman untuk kulit sensitif.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-item wow fadeInDown h-100">
+                        <div class="feature-item_icon">
+                            <img src="assets/img/icon/feature_1_2.svg" alt="Ikon Gratis Antar Jemput" loading="lazy" onerror="this.outerHTML='<i class=\'fas fa-truck-fast fa-2x text-primary\'></i>';">
+                        </div>
+                        <div class="media-body">
+                            <h3 class="box-title">Gratis Jemput &amp; Antar Cucian</h3>
+                            <p class="feature-item_text">Cukup chat WhatsApp, kurir ramah kami jemput ke rumah, apartemen, atau kost Anda (radius 5 km) dan antar kembali tepat waktu.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-item wow fadeInUp h-100">
+                        <div class="feature-item_icon">
+                            <img src="assets/img/icon/feature_1_3.svg" alt="Ikon Air Filtrasi dan Wangi 14 Hari" loading="lazy" onerror="this.outerHTML='<i class=\'fas fa-droplet fa-2x text-primary\'></i>';">
+                        </div>
+                        <div class="media-body">
+                            <h3 class="box-title">Air Filtrasi &amp; Wangi 14 Hari</h3>
+                            <p class="feature-item_text">Air bersih tersaring 3 tahap menjaga baju putih tetap cerah anti kusam, ditambah 5 pilihan parfum micro-capsule yang harum tahan lama.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Service Area (Clean 6-Card Grid — 100% Terbaca Jelas Tanpa Terpotong) -->
+    <section class="bg-top-center space" id="layanan">
+        <div class="container">
+            <div class="title-area text-center">
+                <span class="sub-title">Layanan Unggulan Kami</span>
+                <h2 class="sec-title">Pilihan Layanan Laundry Kiloan &amp; Rumah Tangga</h2>
+                <p class="mx-auto mt-2" style="max-width: 680px;">Semua layanan diproses dengan standar kebersihan tinggi, deterjen konsentrat ramah serat, dan harga transparan sejak awal.</p>
+            </div>
+            <div class="row gy-4">
+                <!-- Layanan 1 -->
+                <div class="col-md-6 col-xl-4">
+                    <div class="evev-service-card">
+                        <div class="evev-service-thumb">
+                            <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=800&q=80" alt="Layanan Cuci Kering Lipat Reguler evevlaundry" loading="lazy" style="object-fit: cover;">
+                            <span class="evev-service-badge">Paling Hemat</span>
+                            <span class="evev-service-price-pill">Rp 7.000 / kg</span>
+                        </div>
+                        <div class="evev-service-body">
+                            <h3 class="box-title">Cuci Kering Lipat Reguler</h3>
+                            <p class="service-desc">Pakaian dicuci higienis 1 mesin 1 pelanggan, dikeringkan 100% mesin dryer bebas debu, disemprot parfum tahan 14 hari, lalu dilipat rapi bersegel.</p>
+                            <a href="https://wa.me/62895323418658" data-wa-paket="Cuci Kering Lipat Reguler" data-wa-harga="Rp 7.000/kg" class="th-btn border mt-auto text-center">Pesan via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layanan 2 -->
+                <div class="col-md-6 col-xl-4">
+                    <div class="evev-service-card">
+                        <div class="evev-service-thumb">
+                            <img src="https://images.unsplash.com/photo-1489274495757-95c7c837b101?auto=format&fit=crop&w=800&q=80" alt="Layanan Cuci Komplit Setrika Uap Boiler evevlaundry" loading="lazy" style="object-fit: cover;">
+                            <span class="evev-service-badge">Paling Laris</span>
+                            <span class="evev-service-price-pill">Rp 10.000 / kg</span>
+                        </div>
+                        <div class="evev-service-body">
+                            <h3 class="box-title">Cuci Komplit + Setrika Uap</h3>
+                            <p class="service-desc">Paket andalan keluarga &amp; pekerja kantoran. Cuci bersih menyeluruh dilengkapi setrika uap boiler presisi sehingga bebas kusut, bebas kilap, dan anti gosong.</p>
+                            <a href="https://wa.me/62895323418658" data-wa-paket="Cuci Komplit + Setrika Uap" data-wa-harga="Rp 10.000/kg" class="th-btn mt-auto text-center">Pesan via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layanan 3 -->
+                <div class="col-md-6 col-xl-4">
+                    <div class="evev-service-card">
+                        <div class="evev-service-thumb">
+                            <img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&w=800&q=80" alt="Layanan Paket Express Kilat 6 Jam Jadi" loading="lazy" style="object-fit: cover;">
+                            <span class="evev-service-badge">Super Kilat</span>
+                            <span class="evev-service-price-pill">Rp 15.000 / kg</span>
+                        </div>
+                        <div class="evev-service-body">
+                            <h3 class="box-title">Paket Express Kilat 6 Jam</h3>
+                            <p class="service-desc">Butuh baju rapi hari ini juga? Kami prioritaskan di mesin utama — selesai cuci komplit, setrika uap, dan wangi siap pakai hanya dalam 6 jam.</p>
+                            <a href="https://wa.me/62895323418658" data-wa-paket="Paket Express Kilat 6 Jam" data-wa-harga="Rp 15.000/kg" class="th-btn border mt-auto text-center">Pesan via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layanan 4 -->
+                <div class="col-md-6 col-xl-4">
+                    <div class="evev-service-card">
+                        <div class="evev-service-thumb">
+                            <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=800&q=80" alt="Layanan Setrika Uap Boiler Saja" loading="lazy" style="object-fit: cover;">
+                            <span class="evev-service-badge">Praktis</span>
+                            <span class="evev-service-price-pill">Rp 6.000 / kg</span>
+                        </div>
+                        <div class="evev-service-body">
+                            <h3 class="box-title">Setrika Uap Boiler Saja</h3>
+                            <p class="service-desc">Khusus pakaian yang sudah Anda cuci sendiri di rumah. Dihaluskan dengan uap bertekanan tinggi yang aman untuk batik, kemeja, gamis, hingga kaos sablon.</p>
+                            <a href="https://wa.me/62895323418658" data-wa-paket="Setrika Uap Boiler Saja" data-wa-harga="Rp 6.000/kg" class="th-btn border mt-auto text-center">Pesan via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layanan 5 -->
+                <div class="col-md-6 col-xl-4">
+                    <div class="evev-service-card">
+                        <div class="evev-service-thumb">
+                            <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=80" alt="Layanan Cuci Bedcover dan Selimut King Size" loading="lazy" style="object-fit: cover;">
+                            <span class="evev-service-badge">Anti Tungau</span>
+                            <span class="evev-service-price-pill">Rp 25.000 / pcs</span>
+                        </div>
+                        <div class="evev-service-body">
+                            <h3 class="box-title">Cuci Bedcover &amp; Selimut King</h3>
+                            <p class="service-desc">Dicuci dengan mesin heavy-duty kapasitas besar hingga dakron terdalam bersih dari debu, tungau, dan bau apek. Kering sempurna dan lembut kembali.</p>
+                            <a href="https://wa.me/62895323418658" data-wa-paket="Cuci Bedcover & Selimut King" data-wa-harga="Rp 25.000/pcs" class="th-btn border mt-auto text-center">Pesan via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layanan 6 -->
+                <div class="col-md-6 col-xl-4">
+                    <div class="evev-service-card">
+                        <div class="evev-service-thumb">
+                            <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=800&q=80" alt="Layanan Laundry Karpet Gorden dan Baby Care" loading="lazy" style="object-fit: cover;">
+                            <span class="evev-service-badge">Deep Clean</span>
+                            <span class="evev-service-price-pill">Rp 18.000 / m²</span>
+                        </div>
+                        <div class="evev-service-body">
+                            <h3 class="box-title">Karpet, Gorden &amp; Baby Care</h3>
+                            <p class="service-desc">Ekstraksi debu mendalam untuk karpet ruang tamu, gorden rumah/kantor, hingga sanitasi stroller bayi memakai deterjen hypoallergenic yang aman untuk si kecil.</p>
+                            <a href="https://wa.me/62895323418658" data-wa-paket="Karpet, Gorden & Baby Care" data-wa-harga="Rp 18.000/m²" class="th-btn border mt-auto text-center">Pesan via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info Quick Cards -->
     <div class="space-bottom">
         <div class="container">
             <div class="row gy-4 justify-content-center">
                 <div class="col-lg-6">
                     <div class="contact-feature" data-bg-src="assets/img/bg/contact_info_bg_1.jpg">
                         <div class="box-icon">
-                            <i class="fa-light fa-phone"></i>
+                            <i class="fab fa-whatsapp"></i>
                         </div>
                         <div class="media-body">
-                            <span class="contact-feature_subtitle">Call Us For Service</span>
-                            <h3 class="box-title"><a href="https://wa.me/62895323418658?text=Halo%20evevlaundry,%20mau%20order%20laundry">+(163)-654-3569</a></h3>
-                            <p class="box-text">Call 24/7 Anytime For Our Laundry Servicing.</p>
+                            <span class="contact-feature_subtitle">WhatsApp Order &amp; Antar-Jemput</span>
+                            <h3 class="box-title"><a href="https://wa.me/62895323418658?text=Halo%20evevlaundry%2C%20saya%20ingin%20pesan%20layanan%20antar-jemput%20laundry." data-wa-general="true" data-config="whatsappDisplay">+62 895-3234-18658</a></h3>
+                            <p class="box-text">Respon cepat admin setiap hari pukul 07:00 – 21:00 WIB.</p>
                         </div>
                     </div>
                 </div>
@@ -635,327 +886,405 @@ Contact Info Area
                             <i class="fa-light fa-envelope"></i>
                         </div>
                         <div class="media-body">
-                            <span class="contact-feature_subtitle">Email Us Anytime For Service</span>
-                            <h3 class="box-title"><a href="mailto:evevdigital@gmail.com">evevdigital@gmail.com</a>s</h3>
-                            <p class="box-text">Email 24/7 Anytime For Our Laundry Servicing. </p>
+                            <span class="contact-feature_subtitle">Email Layanan &amp; Kerja Sama Kost/Kantor</span>
+                            <h3 class="box-title"><a href="mailto:evevdigital@gmail.com" data-config="email">evevdigital@gmail.com</a></h3>
+                            <p class="box-text">Melayani paket member bulanan kost, apartemen, dan kemitraan B2B.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div> <!--==============================
-Feature Area  
-==============================-->
+    </div>
+
+    <!-- Why Choose Us -->
     <div class="features-area position-relative overflow-hidden bg-top-center space" data-bg-src="assets/img/bg/why_bg_1.png">
         <div class="container">
-            <div class="row">
-                <div class="col-xl-9">
+            <div class="row align-items-center">
+                <div class="col-xl-8">
                     <div class="choose-feature-area">
                         <div class="title-area mb-25">
-                            <span class="sub-title style1">Why Choose Us</span>
+                            <span class="sub-title style1">Mengapa Memilih evevlaundry?</span>
                             <h2 class="sec-title">Komitmen Kami Menjaga Kualitas &amp; Kesegaran Setiap Helai Pakaian</h2>
-                            <p class="sec-text">We prioritize the highest standards of cleanliness and garment care. Our
-                                experienced team uses top-quality detergents and equipment to ensure your clothes are
-                                returned
-                                fresh and spotless. We offer hassle-free pickup and delivery services, saving you time and
-                                effort.</p>
+                            <p class="sec-text">Kami memahami setiap pakaian punya nilai dan kenyamanan tersendiri. Karena itu, tim terlatih kami memisahkan warna, memeriksa noda membandel sebelum dicuci, serta menggunakan suhu pengering yang aman agar pakaian tetap awet seperti baru.</p>
                         </div>
                         <div class="checklist list-two-column why-checklist">
                             <ul>
-                                <li><span class="check-img"><img src="assets/img/icon/check.svg" alt=""></span> Quality
-                                    Assurance</li>
-                                <li><span class="check-img"><img src="assets/img/icon/check.svg" alt=""></span>Expert
-                                    Handling</li>
-                                <li><span class="check-img"><img src="assets/img/icon/check.svg" alt=""></span>Transparent
-                                    Pricing</li>
-                                <li><span class="check-img"><img src="assets/img/icon/check.svg" alt=""></span>Folding
-                                    Preferences</li>
+                                <li><span class="check-img"><img src="assets/img/icon/check.svg" alt="Centang" loading="lazy" onerror="this.outerHTML='<i class=\'fas fa-check-circle text-primary\'></i>';"></span> Pemisahan Warna &amp; Jenis Kain</li>
+                                <li><span class="check-img"><img src="assets/img/icon/check.svg" alt="Centang" loading="lazy" onerror="this.outerHTML='<i class=\'fas fa-check-circle text-primary\'></i>';"></span> Spotting Noda Keringat &amp; Kerah</li>
+                                <li><span class="check-img"><img src="assets/img/icon/check.svg" alt="Centang" loading="lazy" onerror="this.outerHTML='<i class=\'fas fa-check-circle text-primary\'></i>';"></span> Nota Digital &amp; Timbangan Transparan</li>
+                                <li><span class="check-img"><img src="assets/img/icon/check.svg" alt="Centang" loading="lazy" onerror="this.outerHTML='<i class=\'fas fa-check-circle text-primary\'></i>';"></span> Bebas Pilih 5 Aroma Parfum Premium</li>
                             </ul>
                         </div>
                         <div class="btn-group mt-40">
-                            <a href="#kontak" class="th-btn style3">Make An Appointment</a>
+                            <a href="#booking" class="th-btn style3">Jadwalkan Penjemputan</a>
                             <div class="about-profile">
                                 <div class="about-avater">
-                                    <img src="assets/img/shape/about-thumb_1.png" alt="about">
+                                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&q=80" alt="Hendra Saputra Founder evevlaundry" loading="lazy" style="object-fit: cover;">
                                 </div>
                                 <div class="media-body">
-                                    <h5 class="box-title mb-0">Alex Hamilton</h5>
-                                    <p class="desig mb-0">Company Director by Laundry Service</p>
+                                    <h5 class="box-title mb-0">Hendra Saputra</h5>
+                                    <p class="desig mb-0">Founder &amp; Kepala Operasional evevlaundry</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3">
-                    <div class="video-box1">
-                        <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="play-btn popup-video"><i class="fa-sharp fa-solid fa-play"></i></a>
-                    </div>
+                <div class="col-xl-4 mt-4 mt-xl-0">
+                    <img src="https://images.unsplash.com/photo-1567113463300-102a7eb3cb26?auto=format&fit=crop&w=700&q=80" alt="Standar lipatan rapi pakaian di outlet evevlaundry" loading="lazy" class="rounded-4 shadow-lg w-100" style="height: 360px; object-fit: cover;">
                 </div>
             </div>
         </div>
-        <div class="shape-mockup jump d-none d-xl-block" data-bottom="8%" data-right="0%"><img src="assets/img/shape/like.png" alt="shape">
-        </div>
-    </div><!-- Process Area -->
+    </div>
+
+    <!-- Process Area (4 Langkah Mudah) -->
     <section class="position-relative overflow-hidden space-bottom" id="alur">
         <div class="container">
             <div class="title-area text-center">
-                <span class="sub-title">Work Process</span>
+                <span class="sub-title">Cara Order Praktis</span>
                 <h2 class="sec-title">Alur Kerja 4 Langkah Mudah evevlaundry</h2>
             </div>
             <div class="step-wrap">
-                <div class="process-line"></div>
                 <div class="row gy-4 justify-content-center">
-                    <div class="col-xl-4 col-md-6">
-                        <div class="process-card ">
+                    <div class="col-xl-3 col-md-6">
+                        <div class="process-card h-100">
                             <div class="box-icon">
-                                <img src="assets/img/icon/process_card_1.svg" alt="icon">
+                                <img src="assets/img/icon/process_card_1.svg" alt="Langkah 1 Pesan via WhatsApp" loading="lazy" onerror="this.outerHTML='<i class=\'fab fa-whatsapp fa-2x text-primary\'></i>';">
                             </div>
                             <div class="box-content">
                                 <div class="box-top">
-                                    <p class="box-number">Step - 01</p>
-                                    <h3 class="box-title">1. Jadwalkan Antar-Jemput</h3>
+                                    <p class="box-number">Langkah 01</p>
+                                    <h3 class="box-title">Pesan via WhatsApp</h3>
                                 </div>
-                                <p class="box-text">Begin by scheduling your laundry service. You can choose from our convenient options</p>
+                                <p class="box-text">Kirim lokasi dan pilih paket layanan lewat WhatsApp. Admin langsung jadwalkan kurir jemput terdekat.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-md-6">
-                        <div class="process-card active">
+                    <div class="col-xl-3 col-md-6">
+                        <div class="process-card active h-100">
                             <div class="box-icon">
-                                <img src="assets/img/icon/process_card_2.svg" alt="icon">
+                                <img src="assets/img/icon/process_card_2.svg" alt="Langkah 2 Jemput dan Timbang Digital" loading="lazy" onerror="this.outerHTML='<i class=\'fas fa-scale-balanced fa-2x text-primary\'></i>';">
                             </div>
                             <div class="box-content">
                                 <div class="box-top">
-                                    <p class="box-number">Step - 02</p>
-                                    <h3 class="box-title">2. Timbang &amp; Cuci 1 Mesin</h3>
+                                    <p class="box-number">Langkah 02</p>
+                                    <h3 class="box-title">Timbang Digital</h3>
                                 </div>
-                                <p class="box-text">Once we receive your laundry, our skilled team takes over. Your cloth are sorted based.</p>
+                                <p class="box-text">Kurir menimbang cucian langsung di depan Anda dengan timbangan digital akurat dan nota transparan.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-md-6">
-                        <div class="process-card ">
+                    <div class="col-xl-3 col-md-6">
+                        <div class="process-card h-100">
                             <div class="box-icon">
-                                <img src="assets/img/icon/process_card_3.svg" alt="icon">
+                                <img src="assets/img/icon/process_card_3.svg" alt="Langkah 3 Cuci 1 Mesin dan Setrika Uap" loading="lazy" onerror="this.outerHTML='<i class=\'fas fa-soap fa-2x text-primary\'></i>';">
                             </div>
                             <div class="box-content">
                                 <div class="box-top">
-                                    <p class="box-number">Step - 03</p>
-                                    <h3 class="box-title">3. Setrika Uap &amp; Packing Segel</h3>
+                                    <p class="box-number">Langkah 03</p>
+                                    <h3 class="box-title">Cuci &amp; Setrika Uap</h3>
                                 </div>
-                                <p class="box-text">We take pride in using eco-friendly packaging materials. If you've opted for our pickup.</p>
+                                <p class="box-text">Diproses 1 mesin 1 pelanggan, dikeringkan 100% dryer, lalu disetrika uap boiler agar licin dan higienis.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="process-card h-100">
+                            <div class="box-icon">
+                                <i class="fas fa-box-open fa-2x" style="color: #0284c7;"></i>
+                            </div>
+                            <div class="box-content">
+                                <div class="box-top">
+                                    <p class="box-number">Langkah 04</p>
+                                    <h3 class="box-title">Packing &amp; Antar Rapi</h3>
+                                </div>
+                                <p class="box-text">Disemprot parfum pilihan, dikemas plastik segel anti debu, dan diantar kembali ke depan pintu Anda.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section><!--==============================
-Cta Area  
-==============================-->
+    </section>
+
+    <!-- Daftar Harga Lengkap & Transparan (6 Paket Realistis UMKM Indonesia — 100% Terbaca Jelas) -->
+    <section class="space" id="harga">
+        <div class="container">
+            <div class="title-area text-center">
+                <span class="sub-title">Harga Transparan &amp; Jujur</span>
+                <h2 class="sec-title">Daftar Harga Paket Laundry Kiloan &amp; Satuan</h2>
+                <p class="mx-auto mt-2" style="max-width: 680px;">Tanpa biaya tersembunyi. Pilih paket sesuai kebutuhan harian Anda, lalu klik pesan untuk langsung terhubung ke WhatsApp kurir kami.</p>
+            </div>
+            <div class="row gy-4">
+                <!-- Paket 1 -->
+                <div class="col-xl-4 col-md-6">
+                    <div class="evev-price-card">
+                        <span class="evev-price-badge">Paling Hemat</span>
+                        <h3 class="evev-price-title">Cuci Kering Lipat Reguler</h3>
+                        <div class="evev-price-amount">
+                            <span class="nominal">Rp 7.000</span>
+                            <span class="unit">/ kg</span>
+                        </div>
+                        <div class="evev-price-meta"><i class="far fa-clock"></i> Estimasi 2 Hari • Min. 3 kg</div>
+                        <ul class="evev-price-features">
+                            <li><i class="fas fa-check-circle"></i><span>SOP 1 mesin 1 pelanggan (tidak dicampur)</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Air filtrasi 3 tahap &amp; deterjen ramah serat</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Pengeringan 100% mesin dryer bebas debu</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Parfum micro-capsule wangi tahan 14 hari</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Lipat rapi &amp; packing plastik segel</span></li>
+                        </ul>
+                        <a href="https://wa.me/62895323418658" data-wa-paket="Cuci Kering Lipat Reguler" data-wa-harga="Rp 7.000/kg" class="th-btn style3 w-100 text-center mt-auto"><i class="fab fa-whatsapp me-2"></i>Pilih Paket Ini</a>
+                    </div>
+                </div>
+
+                <!-- Paket 2 (Popular) -->
+                <div class="col-xl-4 col-md-6">
+                    <div class="evev-price-card is-popular">
+                        <span class="evev-price-badge">★ Paling Laris</span>
+                        <h3 class="evev-price-title">Cuci Komplit + Setrika Uap</h3>
+                        <div class="evev-price-amount">
+                            <span class="nominal">Rp 10.000</span>
+                            <span class="unit">/ kg</span>
+                        </div>
+                        <div class="evev-price-meta"><i class="far fa-clock"></i> Estimasi 2 Hari • Min. 3 kg</div>
+                        <ul class="evev-price-features">
+                            <li><i class="fas fa-check-circle"></i><span>SOP 1 mesin 1 pelanggan + spotting noda kerah</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Setrika uap boiler presisi anti gosong &amp; kilap</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Gratis hanger khusus kemeja kerja &amp; blazer</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Bebas pilih 5 aroma parfum laundry premium</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Garansi cuci ulang gratis jika kurang bersih</span></li>
+                        </ul>
+                        <a href="https://wa.me/62895323418658" data-wa-paket="Cuci Komplit + Setrika Uap" data-wa-harga="Rp 10.000/kg" class="th-btn w-100 text-center mt-auto"><i class="fab fa-whatsapp me-2"></i>Pesan Paket Favorit</a>
+                    </div>
+                </div>
+
+                <!-- Paket 3 -->
+                <div class="col-xl-4 col-md-6">
+                    <div class="evev-price-card">
+                        <span class="evev-price-badge">Super Kilat</span>
+                        <h3 class="evev-price-title">Paket Express Kilat 6 Jam</h3>
+                        <div class="evev-price-amount">
+                            <span class="nominal">Rp 15.000</span>
+                            <span class="unit">/ kg</span>
+                        </div>
+                        <div class="evev-price-meta"><i class="fas fa-bolt"></i> Selesai 6 Jam • Min. 3 kg</div>
+                        <ul class="evev-price-features">
+                            <li><i class="fas fa-check-circle"></i><span>Prioritas mesin utama — selesai hari ini juga</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Sudah termasuk cuci komplit &amp; setrika uap</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Kurir prioritas jemput cepat dalam 30 menit</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Pengeringan suhu terkontrol aman bagi kain</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Langsung siap pakai atau masuk koper dinas</span></li>
+                        </ul>
+                        <a href="https://wa.me/62895323418658" data-wa-paket="Paket Express Kilat 6 Jam" data-wa-harga="Rp 15.000/kg" class="th-btn style3 w-100 text-center mt-auto"><i class="fab fa-whatsapp me-2"></i>Order Express 6 Jam</a>
+                    </div>
+                </div>
+
+                <!-- Paket 4 -->
+                <div class="col-xl-4 col-md-6">
+                    <div class="evev-price-card">
+                        <span class="evev-price-badge">Praktis</span>
+                        <h3 class="evev-price-title">Setrika Uap Boiler Saja</h3>
+                        <div class="evev-price-amount">
+                            <span class="nominal">Rp 6.000</span>
+                            <span class="unit">/ kg</span>
+                        </div>
+                        <div class="evev-price-meta"><i class="far fa-clock"></i> Estimasi 1-2 Hari • Min. 3 kg</div>
+                        <ul class="evev-price-features">
+                            <li><i class="fas fa-check-circle"></i><span>Khusus pakaian bersih hasil cuci sendiri di rumah</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Uap boiler lembut, aman untuk batik &amp; sablon</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Termasuk semprot parfum premium pilihan Anda</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Bisa request lipat rapi atau gantung hanger</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Packing segel rapat agar bebas debu</span></li>
+                        </ul>
+                        <a href="https://wa.me/62895323418658" data-wa-paket="Setrika Uap Boiler Saja" data-wa-harga="Rp 6.000/kg" class="th-btn style3 w-100 text-center mt-auto"><i class="fab fa-whatsapp me-2"></i>Pilih Paket Ini</a>
+                    </div>
+                </div>
+
+                <!-- Paket 5 -->
+                <div class="col-xl-4 col-md-6">
+                    <div class="evev-price-card">
+                        <span class="evev-price-badge">Anti Tungau</span>
+                        <h3 class="evev-price-title">Bedcover &amp; Selimut King</h3>
+                        <div class="evev-price-amount">
+                            <span class="nominal">Rp 25.000</span>
+                            <span class="unit">/ pcs</span>
+                        </div>
+                        <div class="evev-price-meta"><i class="far fa-clock"></i> Estimasi 2-3 Hari • All Size</div>
+                        <ul class="evev-price-features">
+                            <li><i class="fas fa-check-circle"></i><span>Mesin heavy-duty kapasitas besar anti menggumpal</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Formula anti tungau, bakteri &amp; penghilang bau apek</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Kering sempurna sampai lapisan dakron terdalam</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Parfum lembut ramah kulit dewasa &amp; anak</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Kemasan tas plastik tebal siap simpan</span></li>
+                        </ul>
+                        <a href="https://wa.me/62895323418658" data-wa-paket="Bedcover & Selimut King" data-wa-harga="Rp 25.000/pcs" class="th-btn style3 w-100 text-center mt-auto"><i class="fab fa-whatsapp me-2"></i>Pilih Paket Ini</a>
+                    </div>
+                </div>
+
+                <!-- Paket 6 -->
+                <div class="col-xl-4 col-md-6">
+                    <div class="evev-price-card">
+                        <span class="evev-price-badge">Deep Clean</span>
+                        <h3 class="evev-price-title">Karpet, Gorden &amp; Baby Care</h3>
+                        <div class="evev-price-amount">
+                            <span class="nominal">Rp 18.000</span>
+                            <span class="unit">/ m²</span>
+                        </div>
+                        <div class="evev-price-meta"><i class="far fa-clock"></i> Estimasi 3 Hari • Deep Wash</div>
+                        <ul class="evev-price-features">
+                            <li><i class="fas fa-check-circle"></i><span>Ekstraksi debu mendalam untuk karpet &amp; gorden</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Tersedia sanitasi stroller, bouncer &amp; car seat bayi</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Deterjen hypoallergenic bebas residu iritasi</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Pengeringan maksimal anti bau lembap &amp; jamur</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Gratis jemput &amp; antar area Jakarta Timur</span></li>
+                        </ul>
+                        <a href="https://wa.me/62895323418658" data-wa-paket="Karpet, Gorden & Baby Care" data-wa-harga="Rp 18.000/m²" class="th-btn style3 w-100 text-center mt-auto"><i class="fab fa-whatsapp me-2"></i>Tanya &amp; Pesan WA</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="evev-price-note">
+                <strong><i class="fas fa-gift text-primary me-1"></i> Info Penting &amp; Promo:</strong>
+                Minimal order laundry kiloan 3 kg • <strong>Gratis antar-jemput radius 5 km</strong> dari Jl. Otista Raya, Jatinegara • Pilihan parfum gratis: <em>Sakura Blossom, Downy Mystique, Snappy Fresh, Ocean Breeze, dan Soft Lavender</em> • Tersedia paket langganan bulanan kost lebih hemat hingga 15%!
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
     <section class="cta-sec" data-pos-for=".team-area" data-sec-pos="bottom-half">
         <div class="container th-container">
-            <div class="cta-area" data-overlay="title" data-opacity="9" data-bg-src="assets/img/bg/cta_bg_1.jpg">
+            <div class="cta-area" data-overlay="title" data-opacity="9" style="background-image:url('https://images.unsplash.com/photo-1545173168-9f1947eebb7f?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;">
                 <div class="row align-items-center">
-                    <div class="col-xl-7 col-lg-6 mb-5 mb-lg-0">
+                    <div class="col-xl-7 col-lg-6 mb-4 mb-lg-0">
                         <div class="title-area mb-0 text-center text-lg-start">
-                            <span class="sub-title style1">Get Free Contact For Services</span>
-                            <h2 class="sec-title text-white">You Get Premium Laundry Service From Us!</h2>
+                            <span class="sub-title style1">Gratis Antar-Jemput Radius 5 KM</span>
+                            <h2 class="sec-title text-white">Cucian Menumpuk di Rumah? Biar evevlaundry yang Bereskan!</h2>
                         </div>
                     </div>
                     <div class="col-xl-5 col-lg-6">
                         <div class="cta-group justify-content-lg-end justify-content-center">
-                            <a href="#layanan" class="th-btn style2">Get Layanan Pilihan</a>
-                            <a href="#kontak" class="th-btn style3">Hubungi Kami Now</a>
+                            <a href="https://wa.me/62895323418658?text=Halo%20evevlaundry%2C%20saya%20ingin%20pesan%20antar-jemput%20laundry%20sekarang." data-wa-general="true" class="th-btn style2 btn-wa-booking"><i class="fab fa-whatsapp me-2"></i>Chat WhatsApp Sekarang</a>
+                            <a href="#booking" class="th-btn style3">Isi Form Booking</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section><!--==============================
-Team Area  
-==============================-->
+    </section>
+
+    <!-- Team Area -->
     <section class="team-area space" data-bg-src="assets/img/bg/team_bg_1.jpg">
         <div class="container z-index-common">
             <div class="title-area text-center">
-                <span class="sub-title">Expert Team</span>
-                <h2 class="sec-title">Our Expert Workers</h2>
+                <span class="sub-title">Tim Terlatih &amp; Ramah</span>
+                <h2 class="sec-title">Kru Profesional di Balik Kerapian Pakaian Anda</h2>
             </div>
-            <div class="slider-area">
-                <div class="swiper th-slider has-shadow" id="teamSlider1" data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"3"},"1200":{"slidesPerView":"4"}}}'>
-                    <div class="swiper-wrapper">
-                        <!-- Single Item -->
-                        <div class="swiper-slide">
-                            <div class="th-team team-box">
-                                <div class="team-img">
-                                    <img src="assets/img/team/team_1_1.jpg" alt="Team">
-                                    <div class="th-social">
-                                        <a target="_blank" href="https://facebook.com/" tabindex="0"><i class="fab fa-facebook-f"></i></a>
-                                        <a target="_blank" href="https://twitter.com/" tabindex="0"><i class="fab fa-twitter"></i></a>
-                                        <a target="_blank" href="https://instagram.com/" tabindex="0"><i class="fab fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                                <div class="team-content">
-                                    <!-- <div class="plus-btn"> <i class="fa-solid fa-plus"></i></div> -->
-                                    <div class="media-body">
-                                        <h3 class="box-title"><a href="#tentang">Siti Rahmawati</a></h3>
-                                        <span class="team-desig">Dry Cleaner</span>
-                                    </div>
-                                </div>
+            <div class="row gy-4">
+                <div class="col-xl-3 col-md-6">
+                    <div class="th-team team-box">
+                        <div class="team-img">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Siti Rahmawati Kepala Operasional dan QC evevlaundry" loading="lazy" style="object-fit: cover;">
+                        </div>
+                        <div class="team-content">
+                            <div class="media-body">
+                                <h3 class="box-title">Siti Rahmawati</h3>
+                                <span class="team-desig">Kepala Operasional &amp; QC</span>
                             </div>
                         </div>
-
-                        <!-- Single Item -->
-                        <div class="swiper-slide">
-                            <div class="th-team team-box">
-                                <div class="team-img">
-                                    <img src="assets/img/team/team_1_2.jpg" alt="Team">
-                                    <div class="th-social">
-                                        <a target="_blank" href="https://facebook.com/" tabindex="0"><i class="fab fa-facebook-f"></i></a>
-                                        <a target="_blank" href="https://twitter.com/" tabindex="0"><i class="fab fa-twitter"></i></a>
-                                        <a target="_blank" href="https://instagram.com/" tabindex="0"><i class="fab fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                                <div class="team-content">
-                                    <!-- <div class="plus-btn"> <i class="fa-solid fa-plus"></i></div> -->
-                                    <div class="media-body">
-                                        <h3 class="box-title"><a href="#tentang">Budi Santoso</a></h3>
-                                        <span class="team-desig">Dry Cleaner</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Item -->
-                        <div class="swiper-slide">
-                            <div class="th-team team-box">
-                                <div class="team-img">
-                                    <img src="assets/img/team/team_1_3.jpg" alt="Team">
-                                    <div class="th-social">
-                                        <a target="_blank" href="https://facebook.com/" tabindex="0"><i class="fab fa-facebook-f"></i></a>
-                                        <a target="_blank" href="https://twitter.com/" tabindex="0"><i class="fab fa-twitter"></i></a>
-                                        <a target="_blank" href="https://instagram.com/" tabindex="0"><i class="fab fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                                <div class="team-content">
-                                    <!-- <div class="plus-btn"> <i class="fa-solid fa-plus"></i></div> -->
-                                    <div class="media-body">
-                                        <h3 class="box-title"><a href="#tentang">Agus Pratama</a></h3>
-                                        <span class="team-desig">Dry Cleaner</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Item -->
-                        <div class="swiper-slide">
-                            <div class="th-team team-box">
-                                <div class="team-img">
-                                    <img src="assets/img/team/team_1_4.jpg" alt="Team">
-                                    <div class="th-social">
-                                        <a target="_blank" href="https://facebook.com/" tabindex="0"><i class="fab fa-facebook-f"></i></a>
-                                        <a target="_blank" href="https://twitter.com/" tabindex="0"><i class="fab fa-twitter"></i></a>
-                                        <a target="_blank" href="https://instagram.com/" tabindex="0"><i class="fab fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                                <div class="team-content">
-                                    <!-- <div class="plus-btn"> <i class="fa-solid fa-plus"></i></div> -->
-                                    <div class="media-body">
-                                        <h3 class="box-title"><a href="#tentang">Rina Marlina</a></h3>
-                                        <span class="team-desig">Dry Cleaner</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Item -->
-                        <div class="swiper-slide">
-                            <div class="th-team team-box">
-                                <div class="team-img">
-                                    <img src="assets/img/team/team_1_1.jpg" alt="Team">
-                                    <div class="th-social">
-                                        <a target="_blank" href="https://facebook.com/" tabindex="0"><i class="fab fa-facebook-f"></i></a>
-                                        <a target="_blank" href="https://twitter.com/" tabindex="0"><i class="fab fa-twitter"></i></a>
-                                        <a target="_blank" href="https://instagram.com/" tabindex="0"><i class="fab fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                                <div class="team-content">
-                                    <!-- <div class="plus-btn"> <i class="fa-solid fa-plus"></i></div> -->
-                                    <div class="media-body">
-                                        <h3 class="box-title"><a href="#tentang">Dimas Prasetyo</a></h3>
-                                        <span class="team-desig">Dry Cleaner</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
                     </div>
                 </div>
-                <button data-slider-prev="#teamSlider1" class="slider-arrow slider-prev"><i class="far fa-arrow-left"></i></button>
-                <button data-slider-next="#teamSlider1" class="slider-arrow slider-next"><i class="far fa-arrow-right"></i></button>
-            </div>
-
-        </div>
-    </section><!--==============================
-Faq Area
-==============================-->
-    <div class="  space overflow-hidden" id="faq-sec">
-        <div class="container">
-            <div class="row align-items-end">
-                <div class="col-xl-6 text-center text-xl-start align-self-center">
-                    <div class="">
-                        <div class="title-area text-center text-xl-start">
-                            <span class="sub-title style1">FAQ</span>
-                            <h2 class="sec-title">Pertanyaan Umum (FAQ) Laundry Kiloan</h2>
+                <div class="col-xl-3 col-md-6">
+                    <div class="th-team team-box">
+                        <div class="team-img">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Budi Santoso Spesialis Setrika Uap Boiler evevlaundry" loading="lazy" style="object-fit: cover;">
                         </div>
-                        <div class="accordion" id="faqAccordion">
+                        <div class="team-content">
+                            <div class="media-body">
+                                <h3 class="box-title">Budi Santoso</h3>
+                                <span class="team-desig">Spesialis Setrika Uap Boiler</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                    <div class="th-team team-box">
+                        <div class="team-img">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80" alt="Rina Marlina Ahli Treatment Noda dan Kain evevlaundry" loading="lazy" style="object-fit: cover;">
+                        </div>
+                        <div class="team-content">
+                            <div class="media-body">
+                                <h3 class="box-title">Rina Marlina</h3>
+                                <span class="team-desig">Ahli Treatment Noda &amp; Kain</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                    <div class="th-team team-box">
+                        <div class="team-img">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80" alt="Agus Pratama Koordinator Kurir Antar-Jemput evevlaundry" loading="lazy" style="object-fit: cover;">
+                        </div>
+                        <div class="team-content">
+                            <div class="media-body">
+                                <h3 class="box-title">Agus Pratama</h3>
+                                <span class="team-desig">Koordinator Kurir Antar-Jemput</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-
-                            <div class="accordion-card">
-                                <div class="accordion-header" id="collapse-item-1">
-                                    <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">What Services Do You Offer?</button>
-                                </div>
-                                <div id="collapse-1" class="accordion-collapse collapse show" aria-labelledby="collapse-item-1" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        <p id="faq" class="faq-text">We value your feedback! Let us know about your experience and if there's anything else we can do to make your laundry service even better. We're always here to assist you.</p>
-                                    </div>
+    <!-- FAQ Area -->
+    <div class="space overflow-hidden" id="faq">
+        <div class="container">
+            <div class="row align-items-center gy-4">
+                <div class="col-xl-6 text-center text-xl-start">
+                    <div class="title-area text-center text-xl-start">
+                        <span class="sub-title style1">Pertanyaan Umum</span>
+                        <h2 class="sec-title">FAQ Layanan Laundry Kiloan evevlaundry</h2>
+                    </div>
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-card">
+                            <div class="accordion-header" id="collapse-item-1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">Apakah cucian saya benar-benar tidak dicampur dengan pelanggan lain?</button>
+                            </div>
+                            <div id="collapse-1" class="accordion-collapse collapse show" aria-labelledby="collapse-item-1" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p class="faq-text">Benar. Kami menerapkan SOP ketat <strong>1 Mesin 1 Pelanggan</strong>. Setiap nota pelanggan diproses dalam mesin cuci dan pengering terpisah agar higienitas terjaga dan tidak ada pakaian yang tertukar.</p>
                                 </div>
                             </div>
+                        </div>
 
-
-                            <div class="accordion-card">
-                                <div class="accordion-header" id="collapse-item-2">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">Do You Have Certified Technicians?</button>
-                                </div>
-                                <div id="collapse-2" class="accordion-collapse collapse " aria-labelledby="collapse-item-2" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        <p class="faq-text">We value your feedback! Let us know about your experience and if there's anything else we can do to make your laundry service even better. We're always here to assist you.</p>
-                                    </div>
+                        <div class="accordion-card">
+                            <div class="accordion-header" id="collapse-item-2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">Apakah layanan antar-jemput benar-benar gratis?</button>
+                            </div>
+                            <div id="collapse-2" class="accordion-collapse collapse" aria-labelledby="collapse-item-2" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p class="faq-text">Ya, gratis antar-jemput untuk radius hingga 5 km dari outlet Jl. Otista Raya, Jatinegara (mencakup Cawang, Cipinang, Kampung Melayu, Matraman, dan Tebet) dengan minimal order 3 kg.</p>
                                 </div>
                             </div>
+                        </div>
 
-
-                            <div class="accordion-card">
-                                <div class="accordion-header" id="collapse-item-3">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3">Can You Provide a Customized Service Plan?</button>
-                                </div>
-                                <div id="collapse-3" class="accordion-collapse collapse " aria-labelledby="collapse-item-3" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        <p class="faq-text">We value your feedback! Let us know about your experience and if there's anything else we can do to make your laundry service even better. We're always here to assist you.</p>
-                                    </div>
+                        <div class="accordion-card">
+                            <div class="accordion-header" id="collapse-item-3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3">Berapa lama proses cuci reguler dan paket express?</button>
+                            </div>
+                            <div id="collapse-3" class="accordion-collapse collapse" aria-labelledby="collapse-item-3" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p class="faq-text">Paket Reguler (Cuci Lipat / Cuci Komplit Setrika Uap) selesai dalam 2 hari. Jika mendesak, tersedia <strong>Paket Express Kilat 6 Jam Jadi</strong> dengan prioritas mesin utama.</p>
                                 </div>
                             </div>
+                        </div>
 
-
-                            <div class="accordion-card">
-                                <div class="accordion-header" id="collapse-item-4">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-4" aria-expanded="false" aria-controls="collapse-4">What is Your Pricing Structure?</button>
-                                </div>
-                                <div id="collapse-4" class="accordion-collapse collapse " aria-labelledby="collapse-item-4" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        <p class="faq-text">We value your feedback! Let us know about your experience and if there's anything else we can do to make your laundry service even better. We're always here to assist you.</p>
-                                    </div>
+                        <div class="accordion-card">
+                            <div class="accordion-header" id="collapse-item-4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-4" aria-expanded="false" aria-controls="collapse-4">Bagaimana cara pembayaran dan garansi jika kurang bersih?</button>
+                            </div>
+                            <div id="collapse-4" class="accordion-collapse collapse" aria-labelledby="collapse-item-4" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p class="faq-text">Pembayaran sangat fleksibel: bisa tunai saat antar (COD), QRIS, atau transfer bank. Kami juga memberikan <strong>garansi cuci ulang gratis</strong> jika ada pakaian yang dirasa kurang wangi atau kurang rapi (klaim maksimal 1x24 jam setelah diterima).</p>
                                 </div>
                             </div>
                         </div>
@@ -964,82 +1293,75 @@ Faq Area
                 <div class="col-xl-6">
                     <div class="faq-img1 ps-xl-4">
                         <div class="img1">
-                            <img src="assets/img/normal/faq_1_1.png" alt="faq">
+                            <img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&w=900&q=80" alt="Proses perawatan pakaian higienis di evevlaundry" loading="lazy" style="object-fit: cover;">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!--==============================
-Counter Area  
-==============================-->
+
+    <!-- Counter Statistik UMKM -->
     <div class="overflow-hidden space-bottom">
         <div class="container">
             <div class="counter-card-wrap">
                 <div class="counter-card">
                     <div class="media-body">
-                        <h2 class="box-number"><span class="counter-number">16</span>M+</h2>
-                        <p class="box-text">Laundry & Dry Complete</p>
+                        <h2 class="box-number"><span class="counter-number">18.500</span>+</h2>
+                        <p class="box-text">Kg Cucian Selesai Higienis</p>
                     </div>
                 </div>
                 <div class="divider"></div>
                 <div class="counter-card">
                     <div class="media-body">
-                        <h2 class="box-number"><span class="counter-number">18</span>k+</h2>
-                        <p class="box-text">Garments in Circulation</p>
+                        <h2 class="box-number"><span class="counter-number">3.200</span>+</h2>
+                        <p class="box-text">Pelanggan Aktif Jakarta Timur</p>
                     </div>
                 </div>
                 <div class="divider"></div>
                 <div class="counter-card">
                     <div class="media-body">
-                        <h2 class="box-number"><span class="counter-number">12</span>M+</h2>
-                        <p class="box-text">Satisfied Our Customer</p>
+                        <h2 class="box-number"><span class="counter-number">99</span>%</h2>
+                        <p class="box-text">Kepuasan &amp; Tepat Waktu</p>
                     </div>
                 </div>
-                <div class="divider"></div>
             </div>
         </div>
-    </div><!--==============================
-Testimonial Area  
-==============================-->
-    <section class="testi-area " id="testi-sec" data-bg-src="assets/img/bg/testi_bg_1.jpg">
-        <div class="shape-mockup" data-bottom="0" data-right="0"><img src="assets/img/shape/testi_img_1.png" alt="shape">
-        </div>
+    </div>
+
+    <!-- Testimonial & Form Booking WhatsApp Area -->
+    <section class="testi-area" id="booking" data-bg-src="assets/img/bg/testi_bg_1.jpg">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center gy-5">
                 <div class="col-xl-6">
                     <div class="testi-card-slide">
                         <div class="title-area">
-                            <span class="sub-title style1">Testimonials</span>
-                            <h2 class="sec-title text-white">Apa Kata Pelanggan Setia Kami</h2>
+                            <span class="sub-title style1">Testimoni Pelanggan</span>
+                            <h2 class="sec-title text-white">Apa Kata Pelanggan Setia evevlaundry?</h2>
                         </div>
-                        <div class="swiper th-slider" id="testiSlide1" data-slider-options='{"effect":"slide"}'>
+                        <div class="swiper th-slider" id="testiSlide1" data-slider-options='{"effect":"slide","autoplay":{"delay":5000}}'>
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="testi-card">
                                         <div class="testi-card_wrapp">
                                             <div class="testi-card_profile">
                                                 <div class="testi-card_avater global-img">
-                                                    <img src="assets/img/testimonial/testi_1_1.jpg" alt="Avater">
+                                                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80" alt="Ibu Ratna Kumalasari pelanggan evevlaundry" loading="lazy" style="object-fit: cover;">
                                                 </div>
                                                 <div class="star-icon">
-                                                    <a href="#"><i class="fa-solid fa-star"></i></a>
-                                                    <a href="#"><i class="fa-solid fa-star"></i></a>
-                                                    <a href="#"><i class="fa-solid fa-star"></i></a>
-                                                    <a href="#"><i class="fa-solid fa-star"></i></a>
-                                                    <a href="#"><i class="fa-regular fa-star"></i></a>
+                                                    <i class="fa-solid fa-star text-warning"></i>
+                                                    <i class="fa-solid fa-star text-warning"></i>
+                                                    <i class="fa-solid fa-star text-warning"></i>
+                                                    <i class="fa-solid fa-star text-warning"></i>
+                                                    <i class="fa-solid fa-star text-warning"></i>
                                                 </div>
                                             </div>
                                             <div class="testi-card_wrapper">
-                                                <p class="testi-card_text">â€œIf you opted for pickup and delivery, our dedicated team will bring your laundry back to your doorstep at the scheduled time. For drop-offs, your clean clothes will be waiting.â€</p>
+                                                <p class="testi-card_text">&ldquo;Sudah langganan 2 tahun untuk cucian keluarga. Paling suka karena 1 mesin 1 pelanggan jadi tenang buat baju anak. Wanginya awet banget sampai seminggu lebih di lemari!&rdquo;</p>
                                                 <div class="testimonial-author">
                                                     <div class="testi-card_content">
                                                         <h3 class="testi-card_name">Ibu Ratna Kumalasari</h3>
-                                                        <span class="testi-card_desig">Founder CEO</span>
-                                                    </div>
-                                                    <div class="testi-quote">
-                                                        <img src="assets/img/icon/quote.svg" alt="">
+                                                        <span class="testi-card_desig">Ibu Rumah Tangga — Jatinegara</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1051,25 +1373,49 @@ Testimonial Area
                                         <div class="testi-card_wrapp">
                                             <div class="testi-card_profile">
                                                 <div class="testi-card_avater global-img">
-                                                    <img src="assets/img/testimonial/testi_1_2.jpg" alt="Avater">
+                                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Dimas Nugraha pelanggan evevlaundry" loading="lazy" style="object-fit: cover;">
                                                 </div>
                                                 <div class="star-icon">
-                                                    <a href="#"><i class="fa-solid fa-star"></i></a>
-                                                    <a href="#"><i class="fa-solid fa-star"></i></a>
-                                                    <a href="#"><i class="fa-solid fa-star"></i></a>
-                                                    <a href="#"><i class="fa-solid fa-star"></i></a>
-                                                    <a href="#"><i class="fa-regular fa-star"></i></a>
+                                                    <i class="fa-solid fa-star text-warning"></i>
+                                                    <i class="fa-solid fa-star text-warning"></i>
+                                                    <i class="fa-solid fa-star text-warning"></i>
+                                                    <i class="fa-solid fa-star text-warning"></i>
+                                                    <i class="fa-solid fa-star text-warning"></i>
                                                 </div>
                                             </div>
                                             <div class="testi-card_wrapper">
-                                                <p class="testi-card_text">â€œIf you opted for pickup and delivery, our dedicated team will bring your laundry back to your doorstep at the scheduled time. For drop-offs, your clean clothes will be waiting.â€</p>
+                                                <p class="testi-card_text">&ldquo;Kemeja kantor saya jadi jauh lebih rapi dan nggak pernah ada bekas gosong karena pakai setrika uap boiler. Kurir jemputnya juga ramah dan selalu tepat waktu.&rdquo;</p>
                                                 <div class="testimonial-author">
                                                     <div class="testi-card_content">
-                                                        <h3 class="testi-card_name">Mas Dimas Nugraha</h3>
-                                                        <span class="testi-card_desig">Project Manager</span>
+                                                        <h3 class="testi-card_name">Dimas Nugraha</h3>
+                                                        <span class="testi-card_desig">Karyawan Swasta — Cawang</span>
                                                     </div>
-                                                    <div class="testi-quote">
-                                                        <img src="assets/img/icon/quote.svg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testi-card">
+                                        <div class="testi-card_wrapp">
+                                            <div class="testi-card_profile">
+                                                <div class="testi-card_avater global-img">
+                                                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Nadia Putri pelanggan evevlaundry" loading="lazy" style="object-fit: cover;">
+                                                </div>
+                                                <div class="star-icon">
+                                                    <i class="fa-solid fa-star text-warning"></i>
+                                                    <i class="fa-solid fa-star text-warning"></i>
+                                                    <i class="fa-solid fa-star text-warning"></i>
+                                                    <i class="fa-solid fa-star text-warning"></i>
+                                                    <i class="fa-solid fa-star text-warning"></i>
+                                                </div>
+                                            </div>
+                                            <div class="testi-card_wrapper">
+                                                <p class="testi-card_text">&ldquo;Pernah kepepet mau dinas luar kota, pesan Paket Express 6 Jam pagi, sore baju sudah sampai kost dalam keadaan licin dan wangi. Lifesaver banget!&rdquo;</p>
+                                                <div class="testimonial-author">
+                                                    <div class="testi-card_content">
+                                                        <h3 class="testi-card_name">Nadia Putri</h3>
+                                                        <span class="testi-card_desig">Penghuni Kost — Cipinang</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1082,374 +1428,181 @@ Testimonial Area
                 </div>
                 <div class="col-xl-6">
                     <div class="testi-area-wrapper">
-                        <form action="#" onsubmit="event.preventDefault(); window.open('https://api.whatsapp.com/send?phone=62895323418658&text=Halo%20EvEvLaundry,%20saya%20ingin%20konsultasi%20dan%20order%20laundry', '_blank');">
-                            <h3 class="sec-title text-center">Book An Appointment</h3>
+                        <form id="appointmentForm" class="appointment-form" data-wa-form="booking" action="#">
+                            <h3 class="sec-title text-center mb-2">Pesan Antar-Jemput via WhatsApp</h3>
+                            <p class="text-center mb-4" style="font-size: 14px;">Isi data singkat di bawah, pesan order akan terformat otomatis ke WhatsApp kami.</p>
                             <div class="row">
                                 <div class="form-group col-12">
-                                    <input type="text" class="form-control" name="name" id="name" placeholder="Your Name">
+                                    <input type="text" class="form-control" name="name" id="bookingName" placeholder="Nama Lengkap Anda" required>
                                     <i class="fas fa-user"></i>
                                 </div>
                                 <div class="form-group col-12">
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="Email Address">
-                                    <i class="fas fa-envelope"></i>
+                                    <input type="tel" class="form-control" name="phone" id="bookingPhone" placeholder="Nomor WhatsApp Aktif (cth: 0812-xxxx-xxxx)" required>
+                                    <i class="fab fa-whatsapp"></i>
                                 </div>
                                 <div class="form-group col-12">
-                                    <select name="subject" id="subject" class="form-select nice-select">
-                                        <option value="" disabled selected hidden>Select Service</option>
-                                        <option value="Cuci Kering Lipat Express">Cuci Kering Lipat Express</option>
-                                        <option value="Cuci + Setrika Uap Boiler">Cuci + Setrika Uap Boiler</option>
-                                        <option value="Setrika Uap Presisi Saja">Setrika Uap Presisi Saja</option>
-                                        <option value="Cuci Bedcover &amp; Selimut King">Cuci Bedcover &amp; Selimut King</option>
-                                        <option value="Laundry Karpet &amp; Gorden">Laundry Karpet &amp; Gorden</option>
-                                        <option value="Laundry Karpet &amp; Gorden">Laundry Karpet &amp; Gorden</option>
+                                    <select name="subject" id="bookingService" class="form-select" required>
+                                        <option value="" disabled selected hidden>Pilih Paket Layanan Laundry</option>
+                                        <option value="Cuci Kering Lipat Reguler (Rp 7.000/kg)">Cuci Kering Lipat Reguler — Rp 7.000/kg</option>
+                                        <option value="Cuci Komplit + Setrika Uap (Rp 10.000/kg)">Cuci Komplit + Setrika Uap — Rp 10.000/kg</option>
+                                        <option value="Paket Express Kilat 6 Jam (Rp 15.000/kg)">Paket Express Kilat 6 Jam — Rp 15.000/kg</option>
+                                        <option value="Setrika Uap Boiler Saja (Rp 6.000/kg)">Setrika Uap Boiler Saja — Rp 6.000/kg</option>
+                                        <option value="Cuci Bedcover & Selimut King (Rp 25.000/pcs)">Cuci Bedcover &amp; Selimut King — Rp 25.000/pcs</option>
+                                        <option value="Karpet, Gorden & Baby Care (Rp 18.000/m²)">Karpet, Gorden &amp; Baby Care — Rp 18.000/m²</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-12">
-                                    <textarea name="message" id="message" cols="30" rows="3" class="form-control" placeholder="Your Message"></textarea>
+                                    <input type="text" class="form-control" name="address" id="bookingAddress" placeholder="Alamat Penjemputan / Nama Kost / Apartemen" required>
+                                    <i class="fas fa-location-dot"></i>
+                                </div>
+                                <div class="form-group col-12">
+                                    <textarea name="message" id="bookingMessage" cols="30" rows="3" class="form-control" placeholder="Catatan tambahan (pilihan parfum, jam jemput, atau noda khusus)..."></textarea>
                                     <i class="fas fa-pencil"></i>
                                 </div>
                                 <div class="form-btn col-12">
-                                    <button class="th-btn btn-fw">Appointment Now</button>
+                                    <button type="submit" class="th-btn btn-fw"><i class="fab fa-whatsapp me-2"></i>Kirim Order ke WhatsApp</button>
                                 </div>
                             </div>
-                            <p class="form-messages mb-0 mt-3"></p>
+                            <p class="form-messages mb-0 mt-3 text-center"></p>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-    </section><!-- Price Area -->
-    <section class="space" id="harga">
+    </section>
+
+    <!-- Blog / Edukasi Perawatan Pakaian -->
+    <section class="overflow-hidden space" id="blog-sec" data-bg-src="assets/img/bg/blog_bg_1.jpg">
         <div class="container">
-            <div class="title-area text-center">
-                <span class="sub-title">What We Offer</span>
-                <h2 class="sec-title">Daftar Harga Laundry Kiloan &amp; Satuan</h2>
+            <div class="row justify-content-lg-between justify-content-center align-items-end mb-4">
+                <div class="col-lg">
+                    <div class="title-area text-center text-lg-start mb-0">
+                        <span class="sub-title style1">Edukasi &amp; Tips Kain</span>
+                        <h2 class="sec-title">Tips Merawat Pakaian Agar Awet &amp; Bebas Bau Apek</h2>
+                    </div>
+                </div>
             </div>
-            <div class="row gy-4 justify-content-center">
-
-                <div class="col-xl-4 col-md-6">
-                    <div class="price-card ">
-                        <h3 class="box-title">Cuci Kering Lipat Express Price</h3>
-                        <div class="price-card_content">
-                            <h4 class="price-card_price"><span class="currency">$</span>80</h4>
-                            <p class="price-card_text">20 CLOTHES PER MONTH</p>
-                            <div class="available-list">
-                                <ul>
-                                    <li>4 T-Shirts</li>
-                                    <li>3 Button-Down Shirts</li>
-                                    <li>7 Pairs of Underwear</li>
-                                    <li>6 Pairs of Socks</li>
-                                    <li class="unavailable">8 Towel</li>
-                                    <li class="unavailable">2 Set of Bed Sheets</li>
-                                </ul>
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="blog-card h-100 d-flex flex-column">
+                        <div class="blog-img">
+                            <img src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?auto=format&fit=crop&w=700&q=80" alt="Cara menjaga kemeja putih bebas kuning" loading="lazy" style="object-fit: cover;">
+                        </div>
+                        <div class="blog-content d-flex flex-column flex-grow-1">
+                            <div class="blog-meta">
+                                <span><i class="far fa-user"></i>Tim evevlaundry</span>
+                                <span><i class="far fa-calendar"></i>12 Nov 2026</span>
                             </div>
-                            <a href="#harga" class="th-btn style3">Choose Packages</a>
+                            <h3 class="box-title">Cara Menjaga Kemeja Putih Tetap Cemerlang Tanpa Pemutih Keras</h3>
+                            <p class="mb-3">Gunakan air terfiltrasi bebas zat besi dan lakukan spotting noda kerah sebelum masuk mesin agar serat kain tidak cepat rapuh.</p>
+                            <a href="https://wa.me/62895323418658?text=Halo%20evevlaundry%2C%20saya%20mau%20konsultasi%20perawatan%20baju%20putih." data-wa-general="true" class="th-btn border mt-auto text-center">Tanya Tips ke Admin</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-xl-4 col-md-6">
-                    <div class="price-card active">
-                        <h3 class="box-title">Paket Cuci + Setrika Uap</h3>
-                        <div class="price-card_content">
-                            <h4 class="price-card_price"><span class="currency">$</span>140</h4>
-                            <p class="price-card_text">28 CLOTHES PER MONTH</p>
-                            <div class="available-list">
-                                <ul>
-                                    <li>4 T-Shirts</li>
-                                    <li>3 Button-Down Shirts</li>
-                                    <li>7 Pairs of Underwear</li>
-                                    <li>6 Pairs of Socks</li>
-                                    <li>8 Towel</li>
-                                    <li class="unavailable">2 Set of Bed Sheets</li>
-                                </ul>
+                <div class="col-lg-4 col-md-6">
+                    <div class="blog-card h-100 d-flex flex-column">
+                        <div class="blog-img">
+                            <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=700&q=80" alt="Tips menghilangkan bau apek pada bedcover dan selimut" loading="lazy" style="object-fit: cover;">
+                        </div>
+                        <div class="blog-content d-flex flex-column flex-grow-1">
+                            <div class="blog-meta">
+                                <span><i class="far fa-user"></i>Tim evevlaundry</span>
+                                <span><i class="far fa-calendar"></i>16 Nov 2026</span>
                             </div>
-                            <a href="#harga" class="th-btn style3">Choose Packages</a>
+                            <h3 class="box-title">Seberapa Sering Bedcover &amp; Selimut Harus Dicuci?</h3>
+                            <p class="mb-3">Idealnya bedcover dicuci setiap 2–4 minggu sekali dengan pengeringan suhu stabil agar tungau dan bau lembap benar-benar hilang.</p>
+                            <a href="https://wa.me/62895323418658" data-wa-paket="Cuci Bedcover & Selimut King" data-wa-harga="Rp 25.000/pcs" class="th-btn border mt-auto text-center">Pesan Cuci Bedcover</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-xl-4 col-md-6">
-                    <div class="price-card ">
-                        <h3 class="box-title">Paket Super Kilat (3 Jam)</h3>
-                        <div class="price-card_content">
-                            <h4 class="price-card_price"><span class="currency">$</span>180</h4>
-                            <p class="price-card_text">30 CLOTHES PER MONTH</p>
-                            <div class="available-list">
-                                <ul>
-                                    <li>4 T-Shirts</li>
-                                    <li>3 Button-Down Shirts</li>
-                                    <li>7 Pairs of Underwear</li>
-                                    <li>6 Pairs of Socks</li>
-                                    <li>8 Towel</li>
-                                    <li>2 Set of Bed Sheets</li>
-                                </ul>
+                <div class="col-lg-4 col-md-6">
+                    <div class="blog-card h-100 d-flex flex-column">
+                        <div class="blog-img">
+                            <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=700&q=80" alt="Keunggulan sistem laundry 1 mesin 1 pelanggan" loading="lazy" style="object-fit: cover;">
+                        </div>
+                        <div class="blog-content d-flex flex-column flex-grow-1">
+                            <div class="blog-meta">
+                                <span><i class="far fa-user"></i>Tim evevlaundry</span>
+                                <span><i class="far fa-calendar"></i>20 Nov 2026</span>
                             </div>
-                            <a href="#harga" class="th-btn style3">Choose Packages</a>
+                            <h3 class="box-title">Kenapa Standar 1 Mesin 1 Pelanggan Sangat Penting?</h3>
+                            <p class="mb-3">Selain mencegah pakaian tertukar atau luntur dari baju orang lain, sistem terpisah jauh lebih higienis terutama bagi pakaian bayi dan keluarga.</p>
+                            <a href="#harga" class="th-btn border mt-auto text-center">Lihat Paket Kiloan</a>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
-    <!--==============================
-Brand Area  
-==============================-->
-    <div class="brand-area py-5 mt-1 bg-theme2">
-        <div class="container th-container">
-            <div class="swiper th-slider" id="brandSlider1" data-slider-options='{"breakpoints":{"0":{"slidesPerView":2},"576":{"slidesPerView":"2"},"768":{"slidesPerView":"3"},"992":{"slidesPerView":"4"},"1200":{"slidesPerView":"5"},"1400":{"slidesPerView":"6"}}}'>
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="brand-box">
-                            <img src="assets/img/brand/brand_1_1.svg" alt="Brand Logo">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="brand-box">
-                            <img src="assets/img/brand/brand_1_2.svg" alt="Brand Logo">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="brand-box">
-                            <img src="assets/img/brand/brand_1_3.svg" alt="Brand Logo">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="brand-box">
-                            <img src="assets/img/brand/brand_1_4.svg" alt="Brand Logo">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="brand-box">
-                            <img src="assets/img/brand/brand_1_5.svg" alt="Brand Logo">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="brand-box">
-                            <img src="assets/img/brand/brand_1_6.svg" alt="Brand Logo">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="brand-box">
-                            <img src="assets/img/brand/brand_1_7.svg" alt="Brand Logo">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="brand-box">
-                            <img src="assets/img/brand/brand_1_8.svg" alt="Brand Logo">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="brand-box">
-                            <img src="assets/img/brand/brand_1_1.svg" alt="Brand Logo">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="brand-box">
-                            <img src="assets/img/brand/brand_1_2.svg" alt="Brand Logo">
-                        </div>
-                    </div>
-                </div>
 
-            </div>
-        </div>
-    </div> <!--==============================
-Blog Area  
-==============================-->
-    <section class="overflow-hidden space" id="blog-sec" data-bg-src="assets/img/bg/blog_bg_1.jpg">
-        <div class="container">
-            <div class="row justify-content-lg-between justify-content-center align-items-end">
-                <div class="col-lg">
-                    <div class="title-area text-center text-lg-start">
-                        <span class="sub-title style1">Blog Post</span>
-                        <h2 class="sec-title">Tips &amp; Edukasi Perawatan Pakaian</h2>
-                    </div>
-                </div>
-                <div class="col-lg-auto d-none d-lg-block">
-                    <div class="sec-btn">
-                        <a href="#tentang" class="th-btn">Lihat Selengkapnya Post</a>
-                    </div>
-                </div>
-            </div>
-            <div class="slider-area">
-                <div class="swiper th-slider has-shadow" id="blogSlider1" data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"2"},"1200":{"slidesPerView":"3"}}}'>
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="blog-card">
-                                <div class="blog-img">
-                                    <img src="assets/img/blog/blog_1_1.jpg" alt="blog image">
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <a href="#tentang"><i class="far fa-user"></i>By Laun</a>
-                                        <a href="#tentang"><i class="far fa-calendar"></i>15 nov, 2023</a>
-                                    </div>
-                                    <h3 class="box-title"><a href="#tentang">Pakaian Apa Saja yang Wajib Dicelup Dry Clean?</a></h3>
-                                    <a href="#tentang" class="th-btn border">Baca Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="blog-card">
-                                <div class="blog-img">
-                                    <img src="assets/img/blog/blog_1_2.jpg" alt="blog image">
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <a href="#tentang"><i class="far fa-user"></i>By Laun</a>
-                                        <a href="#tentang"><i class="far fa-calendar"></i>16 nov, 2023</a>
-                                    </div>
-                                    <h3 class="box-title"><a href="#tentang">Perawatan Khusus Jas Wool dan Kebaya Payet</a></h3>
-                                    <a href="#tentang" class="th-btn border">Baca Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="blog-card">
-                                <div class="blog-img">
-                                    <img src="assets/img/blog/blog_1_3.jpg" alt="blog image">
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <a href="#tentang"><i class="far fa-user"></i>By Laun</a>
-                                        <a href="#tentang"><i class="far fa-calendar"></i>17 nov, 2023</a>
-                                    </div>
-                                    <h3 class="box-title"><a href="#tentang">Menghilangkan Bau Apek pada Bedcover dan Selimut</a></h3>
-                                    <a href="#tentang" class="th-btn border">Baca Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="blog-card">
-                                <div class="blog-img">
-                                    <img src="assets/img/blog/blog_1_4.jpg" alt="blog image">
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <a href="#tentang"><i class="far fa-user"></i>By Laun</a>
-                                        <a href="#tentang"><i class="far fa-calendar"></i>19 nov, 2023</a>
-                                    </div>
-                                    <h3 class="box-title"><a href="#tentang">Cara Tepat Mencuci Baju Rajut dan Wol</a></h3>
-                                    <a href="#tentang" class="th-btn border">Baca Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="blog-card">
-                                <div class="blog-img">
-                                    <img src="assets/img/blog/blog_1_1.jpg" alt="blog image">
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <a href="#tentang"><i class="far fa-user"></i>By Laun</a>
-                                        <a href="#tentang"><i class="far fa-calendar"></i>15 nov, 2023</a>
-                                    </div>
-                                    <h3 class="box-title"><a href="#tentang">Solusi Noda Minyak Membandel pada Kemeja Kerja</a></h3>
-                                    <a href="#tentang" class="th-btn border">Baca Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="blog-card">
-                                <div class="blog-img">
-                                    <img src="assets/img/blog/blog_1_2.jpg" alt="blog image">
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <a href="#tentang"><i class="far fa-user"></i>By Laun</a>
-                                        <a href="#tentang"><i class="far fa-calendar"></i>16 nov, 2023</a>
-                                    </div>
-                                    <h3 class="box-title"><a href="#tentang">Standar Higienis Cuci Pakaian 1 Mesin 1 Pelanggan</a></h3>
-                                    <a href="#tentang" class="th-btn border">Baca Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <button data-slider-prev="#blogSlider1" class="slider-arrow slider-prev"><i class="far fa-arrow-left"></i></button>
-                <button data-slider-next="#blogSlider1" class="slider-arrow slider-next"><i class="far fa-arrow-right"></i></button>
-            </div>
-        </div>
-    </section><!-- Footer Area -->
-    <footer class="footer-wrapper footer-layout1" id="kontak" data-bg-src="assets/img/bg/footer_bg_1.jpg">
+    <!-- Footer Area -->
+    <footer class="footer-wrapper footer-layout1" id="kontak">
         <div class="widget-area">
             <div class="container">
-                <div class="row justify-content-between">
+                <div class="row justify-content-between gy-4">
                     <div class="col-lg-6 col-xl-4">
                         <div class="widget footer-widget">
                             <div class="th-widget-about">
                                 <div class="about-logo">
-                                    <a href="#layanan"><img src="assets/img/logo-white.svg" alt="Laun"></a>
+                                    <a href="#hero" class="brand-logo-fallback">
+                                        <img src="assets/img/logo-white.svg" alt="Logo evevlaundry" loading="lazy" onerror="this.outerHTML='<span><i class=\'fas fa-sparkles\'></i> evevlaundry</span>';">
+                                    </a>
                                 </div>
-                                <p class="about-text">Begin by scheduling your laundry service. You can choose from our convenient options Any
-                                    visible stains are pre-treated to ensure.</p>
+                                <p class="about-text" data-config="deskripsi">Pusat jasa laundry kiloan express dan satuan modern di Jakarta Timur. SOP 1 mesin 1 pelanggan, air filtrasi 3 tahap, dan setrika uap boiler anti gosong.</p>
                                 <div class="footer-info-wrapper">
                                     <div class="footer-info">
-                                        <div class="footer-info_icon">
-                                            <i class="fa-sharp fa-solid fa-phone"></i>
-                                        </div>
-                                        <a class="text-inherit" href="https://wa.me/62895323418658?text=Halo%20evevlaundry,%20mau%20order%20laundry">+256 214 203 215</a>
+                                        <div class="footer-info_icon"><i class="fas fa-location-dot"></i></div>
+                                        <span data-config="alamat">Jl. Otista Raya No. 88, Kel. Bidara Cina, Kec. Jatinegara, Jakarta Timur 13330</span>
                                     </div>
                                     <div class="footer-info">
-                                        <div class="footer-info_icon">
-                                            <i class="fas fa-envelope"></i>
-                                        </div>
-                                        <a class="text-inherit" href="mailto:evevdigital@gmail.com">evevdigital@gmail.com</a>
+                                        <div class="footer-info_icon"><i class="fab fa-whatsapp"></i></div>
+                                        <a class="text-inherit" href="https://wa.me/62895323418658?text=Halo%20evevlaundry%2C%20saya%20ingin%20pesan%20layanan%20laundry." data-wa-general="true" data-config="whatsappDisplay">+62 895-3234-18658</a>
                                     </div>
                                     <div class="footer-info">
-                                        <div class="footer-info_icon">
-                                            <i class="fa-solid fa-clock"></i>
-                                        </div>
-                                        <span> Monday to Saturday: 9AM - 8PM</span>
+                                        <div class="footer-info_icon"><i class="fas fa-envelope"></i></div>
+                                        <a class="text-inherit" href="mailto:evevdigital@gmail.com" data-config="email">evevdigital@gmail.com</a>
+                                    </div>
+                                    <div class="footer-info">
+                                        <div class="footer-info_icon"><i class="fa-solid fa-clock"></i></div>
+                                        <span data-config="jamBukaText">Setiap Hari: 07:00 - 21:00 WIB</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-lg-6 col-xl-auto">
                         <div class="widget widget_nav_menu footer-widget">
                             <h3 class="widget_title">Layanan Pilihan</h3>
                             <div class="menu-all-pages-container">
                                 <ul class="menu style2">
-                                    <li><a href="#layanan">Cuci Kering Lipat Express</a></li>
-                                    <li><a href="#layanan">Quick Wash Express</a></li>
-                                    <li><a href="#layanan">Dust Removal</a></li>
-                                    <li><a href="#layanan">Stain Master Pro</a></li>
-                                    <li><a href="#layanan">Damage Repair</a></li>
-                                    <li><a href="#layanan">Eco Fresh Laundryy</a></li>
-                                    <li><a href="#layanan">Sanitize clothes</a></li>
-                                    <li><a href="#layanan">Bright Blitz Laundry</a></li>
-                                    <li><a href="#layanan">Carpet Rinse</a></li>
-                                    <li><a href="#layanan">Pure Care Laundering</a></li>
-                                    <li><a href="#layanan">Laundry Service</a></li>
-
+                                    <li><a href="#harga">Cuci Kering Lipat Reguler</a></li>
+                                    <li><a href="#harga">Cuci Komplit + Setrika Uap</a></li>
+                                    <li><a href="#harga">Paket Express Kilat 6 Jam</a></li>
+                                    <li><a href="#harga">Setrika Uap Boiler Saja</a></li>
+                                    <li><a href="#harga">Cuci Bedcover &amp; Selimut King</a></li>
+                                    <li><a href="#harga">Laundry Karpet &amp; Gorden</a></li>
+                                    <li><a href="template-2.html">Dry Cleaning Jas &amp; Gaun</a></li>
+                                    <li><a href="template-3.html">Spa Sepatu &amp; Kontrak B2B</a></li>
                                 </ul>
                             </div>
                         </div>
-
                     </div>
-                    <div class="col-lg-6 col-xl-auto">
+
+                    <div class="col-lg-6 col-xl-4">
                         <div class="widget footer-widget">
                             <div class="newsletter-widget style2">
-                                <h4 class="box-title text-white">Berlangganan Promo Hemat</h4>
-                                <div class="footer-search-contact mt-25">
-                                    <form>
-                                        <input class="form-control" type="email" placeholder="Enter your email">
+                                <h4 class="box-title text-white">Dapatkan Promo Member Kost &amp; Keluarga</h4>
+                                <p class="mt-2 mb-3" style="font-size: 14px;">Masukkan nomor WA atau email Anda untuk klaim voucher diskon 10% order pertama.</p>
+                                <div class="footer-search-contact">
+                                    <form data-wa-form="promo" action="#">
+                                        <input class="form-control" type="text" placeholder="Masukkan No. WhatsApp / Email Anda" required>
+                                        <div class="footer-btn mt-10">
+                                            <button type="submit" class="th-btn style2 btn-fw"><i class="fab fa-whatsapp me-2"></i>Klaim Promo via WA</button>
+                                        </div>
                                     </form>
-                                    <div class="footer-btn mt-10">
-                                        <button type="submit" class="th-btn style2 btn-fw">Subscribe Now</button>
-                                    </div>
-                                    <div class="form-group mt-20">
-                                        <input type="checkbox" id="html">
-                                        <label for="html">I agree to all terms and policies</label>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1461,129 +1614,59 @@ Blog Area
             <div class="container">
                 <div class="row gy-2 align-items-center">
                     <div class="col-md-6">
-                        <p class="copyright-text">Hak Cipta &copy; 2026 <strong>evevlaundry</strong> (PT. EVEVDIGITAL). Seluruh Hak Cipta Dilindungi.</p>
+                        <p class="copyright-text">Hak Cipta &copy; 2026 <strong>evevlaundry</strong> (EVEVDIGITAL). Seluruh Hak Cipta Dilindungi.</p>
                     </div>
                     <div class="col-md-6 text-center text-md-end">
-                        <div class="th-social"><a href="#kontak"><i class="fab fa-facebook-f"></i></a> <a href="#kontak"><i class="fab fa-twitter"></i></a> <a href="#kontak"><i class="fab fa-linkedin-in"></i></a> <a href="https://wa.me/62895323418658"><i class="fab fa-whatsapp"></i></a></div>
+                        <div class="th-social">
+                            <a href="https://wa.me/62895323418658" data-wa-general="true" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#kontak" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#kontak" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="animation-bubble">
-            <div class="bubble-1"></div>
-            <div class="bubble-2"></div>
-            <div class="bubble-3"></div>
-            <div class="bubble-4"></div>
-            <div class="bubble-5"></div>
-            <div class="bubble-6"></div>
-            <div class="bubble-7"></div>
-            <div class="bubble-8"></div>
-            <div class="bubble-9"></div>
-            <div class="bubble-10"></div>
-        </div>
-        <div class="shape-mockup jump d-none d-xl-block" data-bottom="0%" data-left="0%"><img src="assets/img/shape/footer_shape_1.png" alt="shape">
-        </div>
-        <div class="shape-mockup jump d-none d-xl-block" data-bottom="0%" data-right="0%"><img src="assets/img/shape/footer_shape_2.png" alt="shape">
-        </div>
     </footer>
-
-    <!--********************************
-			Code End  Here 
-	******************************** -->
 
     <!-- Scroll To Top -->
     <div class="scroll-top">
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;">
-            </path>
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
         </svg>
     </div>
 
-    <!--==============================
-    All Js File
-============================== -->
-    <!-- Jquery -->
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/62895323418658?text=Halo%20evevlaundry%2C%20saya%20ingin%20pesan%20layanan%20antar-jemput%20laundry." class="floating-wa-btn" data-wa-general="true" target="_blank" rel="noopener noreferrer" aria-label="Chat WhatsApp evevlaundry">
+        <i class="fab fa-whatsapp"></i>
+        <span>Pesan via WA</span>
+    </a>
+
+    <!-- Floating Dual Theme Toggle Button (Synced with theme-toggle.js) -->
+    <button type="button" class="theme-toggle-btn floating-theme-btn" title="Ganti Mode Terang/Gelap" aria-label="Ganti Mode Terang atau Gelap"></button>
+
+    <!-- Floating Template Switcher Bar -->
+    <div id="evev-template-switcher">
+        <span style="color:#94a3b8;font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;"><i class="fas fa-tshirt" style="color:#38bdf8;margin-right:6px;"></i>evevlaundry:</span>
+        <a href="template-1.html" class="switcher-pill active">1. Kiloan &amp; Lipat</a>
+        <a href="template-2.html" class="switcher-pill">2. Dry Cleaning Jas</a>
+        <a href="template-3.html" class="switcher-pill">3. Spa Sepatu &amp; B2B</a>
+    </div>
+
+    <!-- All JS Files -->
     <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
-    <!-- Swiper Js -->
     <script src="assets/js/swiper-bundle.min.js"></script>
-    <!-- Bootstrap -->
     <script src="assets/js/bootstrap.min.js"></script>
-    <!-- Magnific Popup -->
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <!-- Counter Up -->
     <script src="assets/js/jquery.counterup.min.js"></script>
-    <!-- Range Slider -->
     <script src="assets/js/jquery-ui.min.js"></script>
-    <!-- imagesloaded -->
     <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-
-    <!-- isotope -->
     <script src="assets/js/isotope.pkgd.min.js"></script>
-    <!-- nice select -->
     <script src="assets/js/nice-select.min.js"></script>
-
-    <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
 
-<!-- Floating WhatsApp Widget -->
-<a href="https://wa.me/62895323418658?text=Halo%20evevlaundry,%20saya%20mau%20order%20laundry%20antar%20jemput" class="floating-wa" target="_blank" rel="noopener noreferrer" style="position:fixed;bottom:25px;right:25px;z-index:9999;background-color:#25d366;color:#ffffff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 15px rgba(0,0,0,0.3);text-decoration:none;font-size:32px;transition:all 0.3s ease;">
-    <i class="fab fa-whatsapp"></i>
-</a>
-
-<!-- Theme Toggle Floating Button -->
-<button id="themeToggleBtn" onclick="toggleThemeMode()" title="Ganti Mode Terang/Gelap" style="position:fixed;bottom:95px;right:28px;z-index:9999;background:#0284c7;color:#ffffff;border:none;width:52px;height:52px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 15px rgba(0,0,0,0.25);font-size:22px;transition:all 0.3s ease;">
-    <i class="fas fa-moon" id="themeIcon"></i>
-</button>
-
-<!-- Floating Template Switcher Bar -->
-<div class="template-switcher-bar" style="position:fixed;bottom:25px;left:50%;transform:translateX(-50%);z-index:9999;background:rgba(15,23,42,0.92);backdrop-filter:blur(10px);padding:8px 18px;border-radius:30px;box-shadow:0 10px 25px rgba(0,0,0,0.4);display:flex;align-items:center;gap:12px;border:1px solid rgba(255,255,255,0.15);">
-    <span style="color:#94a3b8;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:1px;"><i class="fas fa-tshirt" style="color:#38bdf8;margin-right:6px;"></i>evevlaundry:</span>
-    <a href="template-1.html" class="ts-btn ts-1" style="color:#fff;text-decoration:none;font-size:13px;font-weight:600;padding:5px 12px;border-radius:20px;transition:all 0.2s;">1. Kiloan &amp; Lipat</a>
-    <span style="color:rgba(255,255,255,0.2);">|</span>
-    <a href="template-2.html" class="ts-btn ts-2" style="color:#fff;text-decoration:none;font-size:13px;font-weight:600;padding:5px 12px;border-radius:20px;transition:all 0.2s;">2. Cuci Kering Lipat Express Jas</a>
-    <span style="color:rgba(255,255,255,0.2);">|</span>
-    <a href="template-3.html" class="ts-btn ts-3" style="color:#fff;text-decoration:none;font-size:13px;font-weight:600;padding:5px 12px;border-radius:20px;transition:all 0.2s;">3. Spa Sepatu &amp; B2B</a>
-</div>
-
-<script>
-function toggleThemeMode() {
-    var body = document.body;
-    var icon = document.getElementById('themeIcon');
-    if (body.classList.contains('dark-theme')) {
-        body.classList.remove('dark-theme');
-        icon.classList.remove('fa-sun');
-        icon.classList.add('fa-moon');
-        localStorage.setItem('evev_theme', 'light');
-    } else {
-        body.classList.add('dark-theme');
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
-        localStorage.setItem('evev_theme', 'dark');
-    }
-}
-(function() {
-    if (localStorage.getItem('evev_theme') === 'dark') {
-        document.body.classList.add('dark-theme');
-        var icon = document.getElementById('themeIcon');
-        if (icon) {
-            icon.classList.remove('fa-moon');
-            icon.classList.add('fa-sun');
-        }
-    }
-    var cur = window.location.pathname.split('/').pop();
-    if (cur === 'template-1.html' || cur === 'index.html' || cur === '') {
-        var el = document.querySelector('.ts-1');
-        if (el) { el.style.background = '#0284c7'; el.style.color = '#fff'; }
-    } else if (cur === 'template-2.html') {
-        var el = document.querySelector('.ts-2');
-        if (el) { el.style.background = '#0284c7'; el.style.color = '#fff'; }
-    } else if (cur === 'template-3.html') {
-        var el = document.querySelector('.ts-3');
-        if (el) { el.style.background = '#0284c7'; el.style.color = '#fff'; }
-    }
-})();
-</script>
+    <!-- Business Profile & Theme Engine -->
+    <script src="profil-usaha.js"></script>
+    <script src="theme-toggle.js"></script>
 </body>
 
 </html>
