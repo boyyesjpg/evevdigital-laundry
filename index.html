@@ -75,11 +75,7 @@
             object-fit: cover;
             display: block;
         }
-        .th-hero-bg {
-            background-size: cover !important;
-            background-position: center !important;
-            position: relative;
-        }
+        .th-hero-bg { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; background-size: cover !important; background-position: center !important; z-index: 1 !important; }
         .th-hero-bg::after {
             content: "";
             position: absolute;
@@ -421,6 +417,7 @@
             .img-box1 .img1 img { height: 280px; }
             .faq-img1 .img1 img { height: 280px; }
         }
+      .hero-inner { position: relative !important; width: 100% !important; min-height: 680px !important; display: flex !important; align-items: center !important; }
     </style>
 </head>
 

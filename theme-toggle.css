@@ -649,3 +649,97 @@ footer {
 .wa-float-pill {
   display: none !important;
 }
+
+
+/* ==========================================================================
+   HERO FULL BLEED BACKGROUND ENGINE — Guaranteed Photo Visibility & Scrim
+   ========================================================================== */
+.th-hero-wrapper {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.th-hero-wrapper .swiper-slide {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-inner {
+  position: relative !important;
+  width: 100% !important;
+  min-height: 680px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.th-hero-bg,
+.hero-1 .th-hero-bg,
+.hero-2 .th-hero-bg,
+.hero-3 .th-hero-bg {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+  z-index: 1 !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+.th-hero-bg::after,
+.hero-1 .th-hero-bg::after,
+.hero-2 .th-hero-bg::after,
+.hero-3 .th-hero-bg::after {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(90deg, rgba(7, 15, 31, 0.92) 0%, rgba(7, 15, 31, 0.72) 55%, rgba(7, 15, 31, 0.40) 100%) !important;
+  z-index: 2 !important;
+}
+
+.th-hero-bg > img.hero-photo-bg,
+.th-hero-bg img {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  z-index: 1 !important;
+  display: block !important;
+}
+
+.hero-1 .container,
+.hero-2 .container,
+.hero-3 .container,
+.hero-inner .container {
+  position: relative !important;
+  z-index: 5 !important;
+}
+
+.hero-style1,
+.hero-style2,
+.hero-style3 {
+  position: relative !important;
+  z-index: 5 !important;
+}
+
+.hero-style1 .hero-title,
+.hero-style2 .hero-title,
+.hero-style3 .hero-title,
+.hero-style1 .hero-text,
+.hero-style2 .hero-text,
+.hero-style3 .hero-text {
+  color: #FFFFFF !important;
+}

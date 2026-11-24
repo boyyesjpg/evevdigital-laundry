@@ -68,11 +68,7 @@
         }
 
         /* Hero Scrim for > 7:1 White Text Legibility */
-        .hero-2 .th-hero-bg {
-            position: relative;
-            background-size: cover !important;
-            background-position: center !important;
-        }
+        .hero-2 .th-hero-bg { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; background-size: cover !important; background-position: center !important; z-index: 1 !important; }
         .hero-2 .th-hero-bg::after {
             content: "";
             position: absolute;
@@ -454,6 +450,7 @@
             .img-box2 .img1 img { height: 280px; }
             .appointment-img1 .img1 img { height: 280px; margin-top: 24px; }
         }
+      .hero-inner { position: relative !important; width: 100% !important; min-height: 680px !important; display: flex !important; align-items: center !important; }
     </style>
 </head>
 
