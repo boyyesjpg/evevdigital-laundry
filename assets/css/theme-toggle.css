@@ -289,12 +289,53 @@ body.dark-theme {
 [data-theme="dark"] .space-top,
 [data-theme="dark"] .space-bottom,
 [data-theme="dark"] .about-sec,
-[data-theme="dark"] .team-area,
-[data-theme="dark"] .team-area2,
-[data-theme="dark"] .testi-area,
-[data-theme="dark"] .appointment-area,
-[data-theme="dark"] .features-area {
+[data-theme="dark"] .team-area2 {
   background-color: #090D16 !important;
+}
+
+/* Photo Background Sections — Preserve Background Image and Scrim */
+.testi-area,
+.appointment-area,
+.features-area,
+.team-area {
+  position: relative;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+[data-theme="dark"] .testi-area,
+[data-theme="light"] .testi-area,
+[data-theme="dark"] .appointment-area,
+[data-theme="light"] .appointment-area {
+  background-color: transparent !important;
+}
+
+/* Ensure permanent readability over dark background images (> 10:1) */
+.testi-area .sec-title,
+.testi-area .title-area h2,
+.testi-area .text-white,
+.testi-area h2,
+.appointment-area .title-area h2.text-white {
+  color: #FFFFFF !important;
+}
+
+.testi-area .sub-title,
+.appointment-area .sub-title {
+  color: #7DD3FC !important;
+}
+
+.contact-feature_subtitle {
+  color: #7DD3FC !important;
+  font-weight: 700;
+}
+
+.contact-feature .box-title a {
+  color: #FFFFFF !important;
+}
+
+.contact-feature .box-text {
+  color: #E2E8F0 !important;
 }
 
 [data-theme="dark"] .service-card,
@@ -319,7 +360,6 @@ body.dark-theme {
 [data-theme="dark"] .accordion-item,
 [data-theme="dark"] .appointment-area-wrapper,
 [data-theme="dark"] .testi-area-wrapper,
-[data-theme="dark"] .contact-feature,
 [data-theme="dark"] .counter-card-wrap,
 [data-theme="dark"] .widget {
   background-color: #131C2E !important;
