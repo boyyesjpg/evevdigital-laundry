@@ -272,67 +272,73 @@
     });
 
      /*-----------  Hero Slider  1 Start ----------*/
-
-     var swiper = new Swiper(".hero-slider-1", { 
-        loop: true,   
-        parallax: true,
-        speed: 1500, 
-        autoplay: {
-            delay: 6500,  
-            disableOnInteraction: false, 
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-
+     if (document.querySelector(".hero-slider-1")) {
+       var swiper = new Swiper(".hero-slider-1", {
+          loop: true,
+          parallax: true,
+          speed: 1500,
+          autoplay: {
+              delay: 6500,
+              disableOnInteraction: false,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+     }
      /*-----------  Hero Slider  1 End ----------*/
 
     /*-----------  Hero Slider  2 Start ----------*/
-    var swiper = new Swiper(".thumbsSlider", {  
+    if (document.querySelector(".hero-slider2")) {
+      var thumbsSwiper = null;
+      if (document.querySelector(".thumbsSlider")) {
+        thumbsSwiper = new Swiper(".thumbsSlider", {
+          loop: true,
+          spaceBetween: 10,
+          slidesPerView: 3,
+          freeMode: true,
+          watchSlidesProgress: true,
+        });
+      }
+      var hero2Opts = {
         loop: true,
-        spaceBetween: 10,
-        slidesPerView: 3,   
-        freeMode: true,
-        watchSlidesProgress: true,
-      });
-      var swiper2 = new Swiper(".hero-slider2", {  
-        loop: true,   
         parallax: true,
-        speed: 1500,   
+        speed: 1500,
         autoplay: {
-            delay: 6500,  
+            delay: 6500,
             disableOnInteraction: false,
         },
-        spaceBetween: 10, 
+        spaceBetween: 10,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
-        },
-        thumbs: {
-          swiper: swiper,
-        }, 
-      });  
+        }
+      };
+      if (thumbsSwiper) {
+        hero2Opts.thumbs = { swiper: thumbsSwiper };
+      }
+      var swiper2 = new Swiper(".hero-slider2", hero2Opts);
+    }
+    /*-----------  Hero Slider  2 End ----------*/
 
-       /*-----------  Hero Slider  2 End ----------*/
-        /*-----------  Hero Slider  3 Start ----------*/
-
-     var swiper = new Swiper(".hero-slider-3", {
-        loop: true,   
+    /*-----------  Hero Slider  3 Start ----------*/
+    if (document.querySelector(".hero-slider-3")) {
+      var swiper3 = new Swiper(".hero-slider-3", {
+        loop: true,
         parallax: true,
-        speed: 1500, 
+        speed: 1500,
         autoplay: {
-            delay: 6500,  
-            disableOnInteraction: false, 
+            delay: 6500,
+            disableOnInteraction: false,
         },
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
       });
-      
-     /*-----------  Hero Slider  3 End ----------*/
+    }
+    /*-----------  Hero Slider  3 End ----------*/
 
     // Function to add animation classes
     function animationProperties() {
